@@ -6,7 +6,8 @@
 
 
 
-Inheritance diagram for Agent\+:\nopagebreak
+Inheritance diagram for Agent\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +16,8 @@ Inheritance diagram for Agent\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Agent\+:\nopagebreak
+Collaboration diagram for Agent\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -25,23 +27,21 @@ Collaboration diagram for Agent\+:\nopagebreak
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\hyperlink{class_agent_a24a60f1d260bf19a4f7f8a5f36881d3f}{Agent} ()
+\item 
 \hyperlink{class_agent_a0ad923f2f9966b65a5d908cb9da4217c}{Agent} (const \hyperlink{class_map}{Map} $\ast$m, const unsigned long id, const \hyperlink{class_clock}{Clock} $\ast$clock)
 \item 
 virtual \hyperlink{class_agent_a4feb26df1cf81760a0e411e393c24d4e}{$\sim$\+Agent} ()
 \item 
 bool \hyperlink{class_agent_afa2b3a408bb0694aea46fb2bb59bacf7}{operator==} (const \hyperlink{class_agent}{Agent} \&a)
 \item 
-virtual const string \hyperlink{class_agent_afe6c72d91baf9ee4fe77ea1ed7fef3ba}{get\+Name} () const =0
+virtual const \hyperlink{class_map}{Map} $\ast$ \hyperlink{class_agent_a3b60b2f0a0f41ce1f14c39a33cffcc4d}{get\+Map} () const
+\item 
+virtual const \hyperlink{class_clock}{Clock} $\ast$ \hyperlink{class_agent_ae872060d974c4a5aec875680db38cc68}{get\+Clock} () const
+\item 
+virtual const unsigned long \hyperlink{class_agent_aa5267ab07bb62f1ed3dfddca286b6ef6}{get\+Id} () const
 \item 
 virtual const string \hyperlink{class_agent_a44f291596d10c7878b0641d6ec156328}{to\+String} () const =0
-\item 
-const \hyperlink{class_map}{Map} $\ast$ \hyperlink{class_agent_ad1870edeea33b059eca75079be2eb002}{get\+Map} () const
-\item 
-void \hyperlink{class_agent_a87a661874cffb03fa9e474e872810260}{set\+Map} (const \hyperlink{class_map}{Map} $\ast$map)
-\item 
-const \hyperlink{class_clock}{Clock} $\ast$ \hyperlink{class_agent_af80a21a067d04788c23d719d07b04038}{get\+Clock} () const
-\item 
-const unsigned long \hyperlink{class_agent_a51d2d781636f524dc151f3da10955613}{get\+Id} () const
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -58,10 +58,16 @@ const \hyperlink{class_clock}{Clock} $\ast$ \hyperlink{class_agent_a534f22ebb057
 This is an abstract class, the base class for all agents involved in a simulation. 
 
 \subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_agent_a24a60f1d260bf19a4f7f8a5f36881d3f}\label{class_agent_a24a60f1d260bf19a4f7f8a5f36881d3f}} 
+\index{Agent@{Agent}!Agent@{Agent}}
+\index{Agent@{Agent}!Agent@{Agent}}
+\subsubsection{\texorpdfstring{Agent()}{Agent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Agent\+::\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{class_agent_a0ad923f2f9966b65a5d908cb9da4217c}\label{class_agent_a0ad923f2f9966b65a5d908cb9da4217c}} 
 \index{Agent@{Agent}!Agent@{Agent}}
 \index{Agent@{Agent}!Agent@{Agent}}
-\subsubsection{\texorpdfstring{Agent()}{Agent()}}
+\subsubsection{\texorpdfstring{Agent()}{Agent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Agent\+::\+Agent (\begin{DoxyParamCaption}\item[{const \hyperlink{class_map}{Map} $\ast$}]{m,  }\item[{const unsigned long}]{id,  }\item[{const \hyperlink{class_clock}{Clock} $\ast$}]{clock }\end{DoxyParamCaption})}
 
 Constructor of the class. \hyperlink{class_agent}{Agent} is the base class for all agents used in the simulator\+: persons, antennas, devices, mnos. \hyperlink{class_agent}{Agent} is an abstract class, users should build specific subclasses. 
@@ -82,46 +88,33 @@ Constructor of the class. \hyperlink{class_agent}{Agent} is the base class for a
 Default destructor of the class. 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_agent_af80a21a067d04788c23d719d07b04038}\label{class_agent_af80a21a067d04788c23d719d07b04038}} 
+\mbox{\Hypertarget{class_agent_ae872060d974c4a5aec875680db38cc68}\label{class_agent_ae872060d974c4a5aec875680db38cc68}} 
 \index{Agent@{Agent}!get\+Clock@{get\+Clock}}
 \index{get\+Clock@{get\+Clock}!Agent@{Agent}}
 \subsubsection{\texorpdfstring{get\+Clock()}{getClock()}}
-{\footnotesize\ttfamily const \hyperlink{class_clock}{Clock}$\ast$ Agent\+::get\+Clock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily virtual const \hyperlink{class_clock}{Clock}$\ast$ Agent\+::get\+Clock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
 Returns a pointer to the \hyperlink{class_clock}{Clock} object used for simulation. All Agents use the same \hyperlink{class_clock}{Clock} object for a simulation. \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_agent_a51d2d781636f524dc151f3da10955613}\label{class_agent_a51d2d781636f524dc151f3da10955613}} 
+\mbox{\Hypertarget{class_agent_aa5267ab07bb62f1ed3dfddca286b6ef6}\label{class_agent_aa5267ab07bb62f1ed3dfddca286b6ef6}} 
 \index{Agent@{Agent}!get\+Id@{get\+Id}}
 \index{get\+Id@{get\+Id}!Agent@{Agent}}
 \subsubsection{\texorpdfstring{get\+Id()}{getId()}}
-{\footnotesize\ttfamily const unsigned long Agent\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily virtual const unsigned long Agent\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
 Returns the id of the object. \begin{DoxyReturn}{Returns}
 the id of the object. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_agent_ad1870edeea33b059eca75079be2eb002}\label{class_agent_ad1870edeea33b059eca75079be2eb002}} 
+\mbox{\Hypertarget{class_agent_a3b60b2f0a0f41ce1f14c39a33cffcc4d}\label{class_agent_a3b60b2f0a0f41ce1f14c39a33cffcc4d}} 
 \index{Agent@{Agent}!get\+Map@{get\+Map}}
 \index{get\+Map@{get\+Map}!Agent@{Agent}}
 \subsubsection{\texorpdfstring{get\+Map()}{getMap()}}
-{\footnotesize\ttfamily const \hyperlink{class_map}{Map}$\ast$ Agent\+::get\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily virtual const \hyperlink{class_map}{Map}$\ast$ Agent\+::get\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
 Getter that returns a pointer to the \hyperlink{class_map}{Map} object passed to the constructor when an object was build. \begin{DoxyReturn}{Returns}
 a pointer to the \hyperlink{class_map}{Map} object that was passed to the constructor. All agents use the same map for a simulation. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_agent_afe6c72d91baf9ee4fe77ea1ed7fef3ba}\label{class_agent_afe6c72d91baf9ee4fe77ea1ed7fef3ba}} 
-\index{Agent@{Agent}!get\+Name@{get\+Name}}
-\index{get\+Name@{get\+Name}!Agent@{Agent}}
-\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
-{\footnotesize\ttfamily virtual const string Agent\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
-
-This function is used to obtain the name of the class. It is a pure virtual function, all subclasses implement it and return the actual name of the class. \begin{DoxyReturn}{Returns}
-the name of the class. 
-\end{DoxyReturn}
-
-
-Implemented in \hyperlink{class_antenna_a4ad9da1ca9d79f20b331c22b94c57a02}{Antenna}, \hyperlink{class_holdable_agent_ab330bb40de51a957ef8826af629f94a2}{Holdable\+Agent}, \hyperlink{class_person_aa2a6f8d7f1d94045a03ca578f2ed272c}{Person}, \hyperlink{class_mobile_phone_a1eeac3141baafa75ebcf26fc3a0e4068}{Mobile\+Phone}, \hyperlink{class_immovable_agent_ae8fbccc744f6f806e47dfd242fa67a1c}{Immovable\+Agent}, \hyperlink{class_mobile_operator_a2b4538d96f7aa898e6e470411d40cbf7}{Mobile\+Operator}, \hyperlink{class_movable_agent_abcc1218876c39c996f2cb1eba2b96379}{Movable\+Agent}, \hyperlink{class_locatable_agent_a754105958bb672744b525538f1584a7b}{Locatable\+Agent}, and \hyperlink{class_tablet_adc7196aaee1e9714236b7cd8825d5826}{Tablet}.
-
 \mbox{\Hypertarget{class_agent_afa2b3a408bb0694aea46fb2bb59bacf7}\label{class_agent_afa2b3a408bb0694aea46fb2bb59bacf7}} 
 \index{Agent@{Agent}!operator==@{operator==}}
 \index{operator==@{operator==}!Agent@{Agent}}
@@ -136,17 +129,6 @@ The equal operator for agents.
 \begin{DoxyReturn}{Returns}
 true if this object is the equal to a, false otherwise. Two objects are considered to be equal if they have the same id. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_agent_a87a661874cffb03fa9e474e872810260}\label{class_agent_a87a661874cffb03fa9e474e872810260}} 
-\index{Agent@{Agent}!set\+Map@{set\+Map}}
-\index{set\+Map@{set\+Map}!Agent@{Agent}}
-\subsubsection{\texorpdfstring{set\+Map()}{setMap()}}
-{\footnotesize\ttfamily void Agent\+::set\+Map (\begin{DoxyParamCaption}\item[{const \hyperlink{class_map}{Map} $\ast$}]{map }\end{DoxyParamCaption})}
-
-Sets the \hyperlink{class_map}{Map} to be used by this agent during the simulation. It is not advisable to change the map during a simulation. 
-\begin{DoxyParams}{Parameters}
-{\em map} & pointer to a \hyperlink{class_map}{Map} object. \\
-\hline
-\end{DoxyParams}
 \mbox{\Hypertarget{class_agent_a44f291596d10c7878b0641d6ec156328}\label{class_agent_a44f291596d10c7878b0641d6ec156328}} 
 \index{Agent@{Agent}!to\+String@{to\+String}}
 \index{to\+String@{to\+String}!Agent@{Agent}}
@@ -158,7 +140,7 @@ a string representation of the class content. The values of the members are writ
 \end{DoxyReturn}
 
 
-Implemented in \hyperlink{class_antenna_a7fea30e065f49a3cbcee02f60bd033c8}{Antenna}, \hyperlink{class_holdable_agent_a2c581226b8994f24b6b2306ae17dbb52}{Holdable\+Agent}, \hyperlink{class_person_a68872538da519d0a04297f43376db27c}{Person}, \hyperlink{class_mobile_phone_a2b7e556d12a43e380786ad0eccf3ce04}{Mobile\+Phone}, \hyperlink{class_mobile_operator_aa83724a149499ef10678ad651a5b40df}{Mobile\+Operator}, \hyperlink{class_movable_agent_a1dee2a6bf93f01006fadfb6fba6c9a59}{Movable\+Agent}, \hyperlink{class_locatable_agent_a88674f4c8ab9b1b2f3986b226bf4244f}{Locatable\+Agent}, \hyperlink{class_tablet_a3fae01e7d526699476221c6a686a4fba}{Tablet}, and \hyperlink{class_immovable_agent_a805b0d18035550d902d617a8c7ccc062}{Immovable\+Agent}.
+Implemented in \hyperlink{class_antenna_a7fea30e065f49a3cbcee02f60bd033c8}{Antenna}, \hyperlink{class_holdable_agent_a2c581226b8994f24b6b2306ae17dbb52}{Holdable\+Agent}, \hyperlink{class_mobile_phone_a2b7e556d12a43e380786ad0eccf3ce04}{Mobile\+Phone}, \hyperlink{class_person_a68872538da519d0a04297f43376db27c}{Person}, \hyperlink{class_mobile_operator_aa83724a149499ef10678ad651a5b40df}{Mobile\+Operator}, \hyperlink{class_movable_agent_a1dee2a6bf93f01006fadfb6fba6c9a59}{Movable\+Agent}, \hyperlink{class_immovable_agent_a805b0d18035550d902d617a8c7ccc062}{Immovable\+Agent}, \hyperlink{class_locatable_agent_a88674f4c8ab9b1b2f3986b226bf4244f}{Locatable\+Agent}, and \hyperlink{class_tablet_a3fae01e7d526699476221c6a686a4fba}{Tablet}.
 
 
 
@@ -185,4 +167,4 @@ Implemented in \hyperlink{class_antenna_a7fea30e065f49a3cbcee02f60bd033c8}{Anten
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/\hyperlink{_agent_8h}{Agent.\+h}\end{DoxyCompactItemize}
+include/agent/\hyperlink{_agent_8h}{Agent.\+h}\end{DoxyCompactItemize}

@@ -6,11 +6,12 @@
 
 
 
-Collaboration diagram for Grid\+:\nopagebreak
+Collaboration diagram for Grid\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=333pt]{class_grid__coll__graph}
+\includegraphics[width=332pt]{class_grid__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -32,23 +33,11 @@ double \hyperlink{class_grid_a08b534c7f8e1099a6903bf08d9727842}{get\+X\+Origin} 
 \item 
 double \hyperlink{class_grid_a53141770920cf261579cf164a8909af9}{get\+Y\+Origin} () const
 \item 
-string \hyperlink{class_grid_ad48d195b5e333a94a3a14d6395252b2a}{to\+String} () const
-\item 
-unsigned long \hyperlink{class_grid_af4094832e2adedbbd47889973f5a40da}{get\+Tile\+IndexX} (const Point $\ast$p) const
-\item 
-unsigned long \hyperlink{class_grid_ae1eeb3b42007ae1cf19cfaf0d846fb9a}{get\+Tile\+IndexY} (const Point $\ast$p) const
-\item 
 const unsigned long \hyperlink{class_grid_ab0a71c762b6c33e6fa2fd49dde38228b}{get\+No\+Tiles} () const
-\item 
-vector$<$ double $>$ \hyperlink{class_grid_a15b32bc4e110b63b3506cd932afa5e2a}{compute\+Probability} (unsigned long t, \hyperlink{class_mobile_phone}{Mobile\+Phone} $\ast$m, vector$<$ \hyperlink{class_antenna_info}{Antenna\+Info} $>$ \&data, pair$<$ \hyperlink{_agents_collection_8h_afde47bc45d604b8b8c72755072376679}{um\+\_\+iterator}, \hyperlink{_agents_collection_8h_afde47bc45d604b8b8c72755072376679}{um\+\_\+iterator} $>$ it, \hyperlink{_prior_type_8h_a61286c562e68de246982fc393a7c23a5}{Prior\+Type} prior) const
 \item 
 Coordinate \hyperlink{class_grid_aa8d3de015a2b22d0cd0d72b3e7c29088}{get\+Tile\+Center} (unsigned long tile\+Index) const
 \item 
 unsigned long \hyperlink{class_grid_a93e42713b7af1f188ce90f92a5e202ab}{get\+Tile\+No} (const Point $\ast$p) const
-\item 
-unsigned long \hyperlink{class_grid_a5ab67c336ac08c690a0e8b03c12f02e5}{get\+Tile\+IndexX} (double x) const
-\item 
-unsigned long \hyperlink{class_grid_ad745f856bb2b27382118ac03fafc06b4}{get\+Tile\+IndexY} (double y) const
 \item 
 unsigned long \hyperlink{class_grid_a02dee9ad3ee575623916c0041f72eb5e}{get\+Tile\+No} (double x, double y) const
 \item 
@@ -59,11 +48,17 @@ Coordinate $\ast$ \hyperlink{class_grid_aa1b1f4c938207b16694a27cb9beb66eb}{get\+
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+unsigned long \hyperlink{class_grid_a5ab67c336ac08c690a0e8b03c12f02e5}{get\+Tile\+IndexX} (double x) const
+\item 
+unsigned long \hyperlink{class_grid_ad745f856bb2b27382118ac03fafc06b4}{get\+Tile\+IndexY} (double y) const
+\item 
+unsigned long \hyperlink{class_grid_af4094832e2adedbbd47889973f5a40da}{get\+Tile\+IndexX} (const Point $\ast$p) const
+\item 
+unsigned long \hyperlink{class_grid_ae1eeb3b42007ae1cf19cfaf0d846fb9a}{get\+Tile\+IndexY} (const Point $\ast$p) const
+\item 
+string \hyperlink{class_grid_ad48d195b5e333a94a3a14d6395252b2a}{to\+String} () const
+\item 
 Coordinate $\ast$ \hyperlink{class_grid_a8948d61db8ba1bda2260590677eaaa01}{compute\+Tile\+Centers} ()
-\item 
-vector$<$ double $>$ \hyperlink{class_grid_a4bd2091f95030e86b78e7be903667e06}{use\+Network\+Prior} (unsigned long t, bool connected, vector$<$ \hyperlink{class_antenna_info}{Antenna\+Info} $>$\+::iterator ai, pair$<$ \hyperlink{_agents_collection_8h_afde47bc45d604b8b8c72755072376679}{um\+\_\+iterator}, \hyperlink{_agents_collection_8h_afde47bc45d604b8b8c72755072376679}{um\+\_\+iterator} $>$ antennas\+\_\+iterator) const
-\item 
-vector$<$ double $>$ \hyperlink{class_grid_ac77c744828c5cf70dd5650217475e25b}{use\+Uniform\+Prior} (unsigned long t, bool connected, vector$<$ \hyperlink{class_antenna_info}{Antenna\+Info} $>$\+::iterator ai, pair$<$ \hyperlink{_agents_collection_8h_afde47bc45d604b8b8c72755072376679}{um\+\_\+iterator}, \hyperlink{_agents_collection_8h_afde47bc45d604b8b8c72755072376679}{um\+\_\+iterator} $>$ antennas\+\_\+iterator) const
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -118,28 +113,6 @@ Constructor of the class. Build a \hyperlink{class_grid}{Grid} object with the s
 Default destructor. 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_grid_a15b32bc4e110b63b3506cd932afa5e2a}\label{class_grid_a15b32bc4e110b63b3506cd932afa5e2a}} 
-\index{Grid@{Grid}!compute\+Probability@{compute\+Probability}}
-\index{compute\+Probability@{compute\+Probability}!Grid@{Grid}}
-\subsubsection{\texorpdfstring{compute\+Probability()}{computeProbability()}}
-{\footnotesize\ttfamily vector$<$double$>$ Grid\+::compute\+Probability (\begin{DoxyParamCaption}\item[{unsigned long}]{t,  }\item[{\hyperlink{class_mobile_phone}{Mobile\+Phone} $\ast$}]{m,  }\item[{vector$<$ \hyperlink{class_antenna_info}{Antenna\+Info} $>$ \&}]{data,  }\item[{pair$<$ \hyperlink{_agents_collection_8h_afde47bc45d604b8b8c72755072376679}{um\+\_\+iterator}, \hyperlink{_agents_collection_8h_afde47bc45d604b8b8c72755072376679}{um\+\_\+iterator} $>$}]{it,  }\item[{\hyperlink{_prior_type_8h_a61286c562e68de246982fc393a7c23a5}{Prior\+Type}}]{prior }\end{DoxyParamCaption}) const}
-
-Computes the posterior probability of a mobile device to be in a tile of the \hyperlink{class_grid}{Grid} according to the method described in he paper \char`\"{}\+Deriving geographic location of mobile devices from network data\char`\"{} by Martijn Tennekes, Yvonne A.\+P.\+M. Gootzen, Shan H. Shah. 
-\begin{DoxyParams}{Parameters}
-{\em t} & the time instant when the posterior localization probability is computed. \\
-\hline
-{\em m} & a pointer to a \hyperlink{class_mobile_phone}{Mobile\+Phone} object for which the posterior localization probability is computed. \\
-\hline
-{\em data} & a vector of \hyperlink{class_antenna_info}{Antenna\+Info} objects generated and recorded by each antenna during the simulation. It contains the events recorder by each antenna during the simulation. \\
-\hline
-{\em it} & an iterator to access all objects of type \hyperlink{class_antenna}{Antenna} from the \hyperlink{class_agents_collection}{Agents\+Collection} container. \\
-\hline
-{\em prior} & is used to set the method of computing the prior probabilities. It could take 3 values\+: \hyperlink{_prior_type_8h_a61286c562e68de246982fc393a7c23a5a891f35a29c3d51d02ffd42dd6dcc69b2}{Prior\+Type\+::\+U\+N\+I\+F\+O\+RM}, \hyperlink{_prior_type_8h_a61286c562e68de246982fc393a7c23a5a25835188a2355e9530d3a10fcbe4c65b}{Prior\+Type\+::\+N\+E\+T\+W\+O\+RK} or \hyperlink{_prior_type_8h_a61286c562e68de246982fc393a7c23a5ad17455cfcb88a53f1603fb817e09c2d6}{Prior\+Type\+::\+R\+E\+G\+I\+S\+T\+ER}. Currently only U\+N\+I\+F\+O\+RM and N\+E\+T\+W\+O\+RK methods are implemented. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-a vector with the posterior probability of the mobile phone given by m to be localized in a tile. The index of a value in this vector indicates the corresponding tile index. The size of this vector is equal to the total number of tiles in the \hyperlink{class_grid}{Grid}. 
-\end{DoxyReturn}
 \mbox{\Hypertarget{class_grid_a8948d61db8ba1bda2260590677eaaa01}\label{class_grid_a8948d61db8ba1bda2260590677eaaa01}} 
 \index{Grid@{Grid}!compute\+Tile\+Centers@{compute\+Tile\+Centers}}
 \index{compute\+Tile\+Centers@{compute\+Tile\+Centers}!Grid@{Grid}}
@@ -207,11 +180,17 @@ the coordinates of the center of the tile.
 Returns a vector containing the coordinates of the tile centers. \begin{DoxyReturn}{Returns}
 a vector containing the coordinates of the tile centers. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_grid_af4094832e2adedbbd47889973f5a40da}\label{class_grid_af4094832e2adedbbd47889973f5a40da}} 
+\mbox{\Hypertarget{class_grid_a5ab67c336ac08c690a0e8b03c12f02e5}\label{class_grid_a5ab67c336ac08c690a0e8b03c12f02e5}} 
 \index{Grid@{Grid}!get\+Tile\+IndexX@{get\+Tile\+IndexX}}
 \index{get\+Tile\+IndexX@{get\+Tile\+IndexX}!Grid@{Grid}}
 \subsubsection{\texorpdfstring{get\+Tile\+Index\+X()}{getTileIndexX()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily unsigned long Grid\+::get\+Tile\+IndexX (\begin{DoxyParamCaption}\item[{const Point $\ast$}]{p }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily unsigned long Grid\+::get\+Tile\+IndexX (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_grid_af4094832e2adedbbd47889973f5a40da}\label{class_grid_af4094832e2adedbbd47889973f5a40da}} 
+\index{Grid@{Grid}!get\+Tile\+IndexX@{get\+Tile\+IndexX}}
+\index{get\+Tile\+IndexX@{get\+Tile\+IndexX}!Grid@{Grid}}
+\subsubsection{\texorpdfstring{get\+Tile\+Index\+X()}{getTileIndexX()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily unsigned long Grid\+::get\+Tile\+IndexX (\begin{DoxyParamCaption}\item[{const Point $\ast$}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 Returns the tile index on X axis that contains a given point in space, specified by p. 
 \begin{DoxyParams}{Parameters}
@@ -221,17 +200,17 @@ Returns the tile index on X axis that contains a given point in space, specified
 \begin{DoxyReturn}{Returns}
 the tile index on X axis that contains the point specified by p, i.\+e. a number between 0 and \hyperlink{class_grid_af29c0c404a908aa46f83afb17d7609a6}{get\+No\+Tiles\+X()} -\/ 1. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_grid_a5ab67c336ac08c690a0e8b03c12f02e5}\label{class_grid_a5ab67c336ac08c690a0e8b03c12f02e5}} 
-\index{Grid@{Grid}!get\+Tile\+IndexX@{get\+Tile\+IndexX}}
-\index{get\+Tile\+IndexX@{get\+Tile\+IndexX}!Grid@{Grid}}
-\subsubsection{\texorpdfstring{get\+Tile\+Index\+X()}{getTileIndexX()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily unsigned long Grid\+::get\+Tile\+IndexX (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{class_grid_ad745f856bb2b27382118ac03fafc06b4}\label{class_grid_ad745f856bb2b27382118ac03fafc06b4}} 
+\index{Grid@{Grid}!get\+Tile\+IndexY@{get\+Tile\+IndexY}}
+\index{get\+Tile\+IndexY@{get\+Tile\+IndexY}!Grid@{Grid}}
+\subsubsection{\texorpdfstring{get\+Tile\+Index\+Y()}{getTileIndexY()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned long Grid\+::get\+Tile\+IndexY (\begin{DoxyParamCaption}\item[{double}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{class_grid_ae1eeb3b42007ae1cf19cfaf0d846fb9a}\label{class_grid_ae1eeb3b42007ae1cf19cfaf0d846fb9a}} 
 \index{Grid@{Grid}!get\+Tile\+IndexY@{get\+Tile\+IndexY}}
 \index{get\+Tile\+IndexY@{get\+Tile\+IndexY}!Grid@{Grid}}
-\subsubsection{\texorpdfstring{get\+Tile\+Index\+Y()}{getTileIndexY()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily unsigned long Grid\+::get\+Tile\+IndexY (\begin{DoxyParamCaption}\item[{const Point $\ast$}]{p }\end{DoxyParamCaption}) const}
+\subsubsection{\texorpdfstring{get\+Tile\+Index\+Y()}{getTileIndexY()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily unsigned long Grid\+::get\+Tile\+IndexY (\begin{DoxyParamCaption}\item[{const Point $\ast$}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 Returns the tile index on Y axis that contains a given point in space, specified by p. 
 \begin{DoxyParams}{Parameters}
@@ -241,12 +220,6 @@ Returns the tile index on Y axis that contains a given point in space, specified
 \begin{DoxyReturn}{Returns}
 the tile index on Y axis that contains the point specified by p, i.\+e. a number between 0 and \hyperlink{class_grid_a783a3153d03154cfd33e6a418bb8d390}{get\+No\+Tiles\+Y()} -\/ 1. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_grid_ad745f856bb2b27382118ac03fafc06b4}\label{class_grid_ad745f856bb2b27382118ac03fafc06b4}} 
-\index{Grid@{Grid}!get\+Tile\+IndexY@{get\+Tile\+IndexY}}
-\index{get\+Tile\+IndexY@{get\+Tile\+IndexY}!Grid@{Grid}}
-\subsubsection{\texorpdfstring{get\+Tile\+Index\+Y()}{getTileIndexY()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily unsigned long Grid\+::get\+Tile\+IndexY (\begin{DoxyParamCaption}\item[{double}]{y }\end{DoxyParamCaption}) const}
-
 \mbox{\Hypertarget{class_grid_a93e42713b7af1f188ce90f92a5e202ab}\label{class_grid_a93e42713b7af1f188ce90f92a5e202ab}} 
 \index{Grid@{Grid}!get\+Tile\+No@{get\+Tile\+No}}
 \index{get\+Tile\+No@{get\+Tile\+No}!Grid@{Grid}}
@@ -317,23 +290,11 @@ the dimension of a tile on Y axis direction.
 \index{Grid@{Grid}!to\+String@{to\+String}}
 \index{to\+String@{to\+String}!Grid@{Grid}}
 \subsubsection{\texorpdfstring{to\+String()}{toString()}}
-{\footnotesize\ttfamily string Grid\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily string Grid\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 \begin{DoxyReturn}{Returns}
 a string representation of an object of type \hyperlink{class_grid}{Grid}. This is useful to write a textual description of the grid in a file for later processing. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_grid_a4bd2091f95030e86b78e7be903667e06}\label{class_grid_a4bd2091f95030e86b78e7be903667e06}} 
-\index{Grid@{Grid}!use\+Network\+Prior@{use\+Network\+Prior}}
-\index{use\+Network\+Prior@{use\+Network\+Prior}!Grid@{Grid}}
-\subsubsection{\texorpdfstring{use\+Network\+Prior()}{useNetworkPrior()}}
-{\footnotesize\ttfamily vector$<$double$>$ Grid\+::use\+Network\+Prior (\begin{DoxyParamCaption}\item[{unsigned long}]{t,  }\item[{bool}]{connected,  }\item[{vector$<$ \hyperlink{class_antenna_info}{Antenna\+Info} $>$\+::iterator}]{ai,  }\item[{pair$<$ \hyperlink{_agents_collection_8h_afde47bc45d604b8b8c72755072376679}{um\+\_\+iterator}, \hyperlink{_agents_collection_8h_afde47bc45d604b8b8c72755072376679}{um\+\_\+iterator} $>$}]{antennas\+\_\+iterator }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_grid_ac77c744828c5cf70dd5650217475e25b}\label{class_grid_ac77c744828c5cf70dd5650217475e25b}} 
-\index{Grid@{Grid}!use\+Uniform\+Prior@{use\+Uniform\+Prior}}
-\index{use\+Uniform\+Prior@{use\+Uniform\+Prior}!Grid@{Grid}}
-\subsubsection{\texorpdfstring{use\+Uniform\+Prior()}{useUniformPrior()}}
-{\footnotesize\ttfamily vector$<$double$>$ Grid\+::use\+Uniform\+Prior (\begin{DoxyParamCaption}\item[{unsigned long}]{t,  }\item[{bool}]{connected,  }\item[{vector$<$ \hyperlink{class_antenna_info}{Antenna\+Info} $>$\+::iterator}]{ai,  }\item[{pair$<$ \hyperlink{_agents_collection_8h_afde47bc45d604b8b8c72755072376679}{um\+\_\+iterator}, \hyperlink{_agents_collection_8h_afde47bc45d604b8b8c72755072376679}{um\+\_\+iterator} $>$}]{antennas\+\_\+iterator }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
-
 
 
 \subsection{Member Data Documentation}
@@ -383,4 +344,4 @@ a string representation of an object of type \hyperlink{class_grid}{Grid}. This 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/\hyperlink{_grid_8h}{Grid.\+h}\end{DoxyCompactItemize}
+include/map/\hyperlink{_grid_8h}{Grid.\+h}\end{DoxyCompactItemize}

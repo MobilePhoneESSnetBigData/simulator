@@ -6,7 +6,8 @@
 
 
 
-Inheritance diagram for Person\+:\nopagebreak
+Inheritance diagram for Person\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,11 +16,12 @@ Inheritance diagram for Person\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Person\+:\nopagebreak
+Collaboration diagram for Person\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_person__coll__graph}
+\includegraphics[height=550pt]{class_person__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Types}
@@ -28,10 +30,6 @@ Collaboration diagram for Person\+:\nopagebreak
 enum \hyperlink{class_person_aff84ca16bd4dbf364614d86f20b29dd2}{Gender} \{ \hyperlink{class_person_aff84ca16bd4dbf364614d86f20b29dd2a16691f7cc6595f87b71d9b43ad23fcb4}{M\+A\+LE}, 
 \hyperlink{class_person_aff84ca16bd4dbf364614d86f20b29dd2a8ee21010fb2d8e8794ef72be368da064}{F\+E\+M\+A\+LE}
  \}
-\item 
-enum \hyperlink{class_person_a53376a9a5852ec7760488a01c37f0b0b}{Age\+Distributions} \{ \hyperlink{class_person_a53376a9a5852ec7760488a01c37f0b0ba7e4e1da74c9858476e0149deef9458c4}{N\+O\+R\+M\+AL}, 
-\hyperlink{class_person_a53376a9a5852ec7760488a01c37f0b0ba4cf35976a167c4ac001a3eed2920a9b0}{U\+N\+I\+F\+O\+RM}
- \}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -39,8 +37,6 @@ enum \hyperlink{class_person_a53376a9a5852ec7760488a01c37f0b0b}{Age\+Distributio
 \hyperlink{class_person_a1fb64d7ef7c528d01dd09b2099b00e38}{Person} (const \hyperlink{class_map}{Map} $\ast$m, const unsigned long id, Point $\ast$init\+Position, const \hyperlink{class_clock}{Clock} $\ast$clock, double init\+Speed, int age, \hyperlink{class_person_aff84ca16bd4dbf364614d86f20b29dd2}{Gender} gender, unsigned long time\+Stay, unsigned long interval\+Between\+Stays)
 \item 
 virtual \hyperlink{class_person_a6b5729bb56531c93312b1179c8ee4b71}{$\sim$\+Person} ()
-\item 
-const string \hyperlink{class_person_aa2a6f8d7f1d94045a03ca578f2ed272c}{get\+Name} () const override
 \item 
 const string \hyperlink{class_person_a68872538da519d0a04297f43376db27c}{to\+String} () const override
 \item 
@@ -58,13 +54,12 @@ virtual void \hyperlink{class_person_a05f4ac2107d59e03f0f336eda08aa358}{set\+Loc
 \item 
 void \hyperlink{class_person_a3ce0a72a98c2e723e48dcd7b4d9af599}{add\+Device} (string type, \hyperlink{class_agent}{Agent} $\ast$agent)
 \item 
-\hyperlink{class_person_aff84ca16bd4dbf364614d86f20b29dd2}{Gender} \hyperlink{class_person_adb5a4fabaaa6bf851de701aeb9df4fdf}{get\+Gender} () const
-\item 
-unsigned long \hyperlink{class_person_a2b01d9997db6f6d4555dbc5ac9898077}{get\+Avg\+Time\+Stay} () const
-\item 
-unsigned long \hyperlink{class_person_a59d3ea8e10928537043ee7b3d24a470c}{get\+Avg\+Interval\+Between\+Stays} () const
-\item 
 void \hyperlink{class_person_a89ada26d3541bc82e514dae833dc959d}{set\+Displacement\+Method} (const shared\+\_\+ptr$<$ \hyperlink{class_displace}{Displace} $>$ \&displace)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const string \hyperlink{class_person_a6bebe59c354f26f4cb983185d6084181}{get\+Header} ()
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -91,22 +86,6 @@ shared\+\_\+ptr$<$ \hyperlink{class_displace}{Displace} $>$ \hyperlink{class_per
 This class represents a person that can have 0,1 or 2 mobile phone(s). During the simulation the person move around the map, carrying his/her mobile devices. 
 
 \subsection{Member Enumeration Documentation}
-\mbox{\Hypertarget{class_person_a53376a9a5852ec7760488a01c37f0b0b}\label{class_person_a53376a9a5852ec7760488a01c37f0b0b}} 
-\index{Person@{Person}!Age\+Distributions@{Age\+Distributions}}
-\index{Age\+Distributions@{Age\+Distributions}!Person@{Person}}
-\subsubsection{\texorpdfstring{Age\+Distributions}{AgeDistributions}}
-{\footnotesize\ttfamily enum \hyperlink{class_person_a53376a9a5852ec7760488a01c37f0b0b}{Person\+::\+Age\+Distributions}}
-
-\begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+R\+M\+AL@{N\+O\+R\+M\+AL}!Person@{Person}}\index{Person@{Person}!N\+O\+R\+M\+AL@{N\+O\+R\+M\+AL}}}\mbox{\Hypertarget{class_person_a53376a9a5852ec7760488a01c37f0b0ba7e4e1da74c9858476e0149deef9458c4}\label{class_person_a53376a9a5852ec7760488a01c37f0b0ba7e4e1da74c9858476e0149deef9458c4}} 
-N\+O\+R\+M\+AL&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+N\+I\+F\+O\+RM@{U\+N\+I\+F\+O\+RM}!Person@{Person}}\index{Person@{Person}!U\+N\+I\+F\+O\+RM@{U\+N\+I\+F\+O\+RM}}}\mbox{\Hypertarget{class_person_a53376a9a5852ec7760488a01c37f0b0ba4cf35976a167c4ac001a3eed2920a9b0}\label{class_person_a53376a9a5852ec7760488a01c37f0b0ba4cf35976a167c4ac001a3eed2920a9b0}} 
-U\+N\+I\+F\+O\+RM&\\
-\hline
-
-\end{DoxyEnumFields}
 \mbox{\Hypertarget{class_person_aff84ca16bd4dbf364614d86f20b29dd2}\label{class_person_aff84ca16bd4dbf364614d86f20b29dd2}} 
 \index{Person@{Person}!Gender@{Gender}}
 \index{Gender@{Gender}!Person@{Person}}
@@ -193,45 +172,11 @@ a string containing a list with the ids of the mobile devices that this person o
 Returns the age of the person. \begin{DoxyReturn}{Returns}
 the age of the person. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_person_a59d3ea8e10928537043ee7b3d24a470c}\label{class_person_a59d3ea8e10928537043ee7b3d24a470c}} 
-\index{Person@{Person}!get\+Avg\+Interval\+Between\+Stays@{get\+Avg\+Interval\+Between\+Stays}}
-\index{get\+Avg\+Interval\+Between\+Stays@{get\+Avg\+Interval\+Between\+Stays}!Person@{Person}}
-\subsubsection{\texorpdfstring{get\+Avg\+Interval\+Between\+Stays()}{getAvgIntervalBetweenStays()}}
-{\footnotesize\ttfamily unsigned long Person\+::get\+Avg\+Interval\+Between\+Stays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-The average time interval between two stops. It is given in the simulation.\+xml configuration file. \begin{DoxyReturn}{Returns}
-The average time interval between two stops. 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_person_a2b01d9997db6f6d4555dbc5ac9898077}\label{class_person_a2b01d9997db6f6d4555dbc5ac9898077}} 
-\index{Person@{Person}!get\+Avg\+Time\+Stay@{get\+Avg\+Time\+Stay}}
-\index{get\+Avg\+Time\+Stay@{get\+Avg\+Time\+Stay}!Person@{Person}}
-\subsubsection{\texorpdfstring{get\+Avg\+Time\+Stay()}{getAvgTimeStay()}}
-{\footnotesize\ttfamily unsigned long Person\+::get\+Avg\+Time\+Stay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-The average time interval a person stay in the same location. It is given in the simulation.\+xml configuration file. \begin{DoxyReturn}{Returns}
-the average time a person stay in the same location. 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_person_adb5a4fabaaa6bf851de701aeb9df4fdf}\label{class_person_adb5a4fabaaa6bf851de701aeb9df4fdf}} 
-\index{Person@{Person}!get\+Gender@{get\+Gender}}
-\index{get\+Gender@{get\+Gender}!Person@{Person}}
-\subsubsection{\texorpdfstring{get\+Gender()}{getGender()}}
-{\footnotesize\ttfamily \hyperlink{class_person_aff84ca16bd4dbf364614d86f20b29dd2}{Gender} Person\+::get\+Gender (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-Returns the gender of the person. \begin{DoxyReturn}{Returns}
-the gender of the person. 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_person_aa2a6f8d7f1d94045a03ca578f2ed272c}\label{class_person_aa2a6f8d7f1d94045a03ca578f2ed272c}} 
-\index{Person@{Person}!get\+Name@{get\+Name}}
-\index{get\+Name@{get\+Name}!Person@{Person}}
-\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
-{\footnotesize\ttfamily const string Person\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-Returns the name of this class. \begin{DoxyReturn}{Returns}
-the name of this class. 
-\end{DoxyReturn}
-
-
-Reimplemented from \hyperlink{class_movable_agent_abcc1218876c39c996f2cb1eba2b96379}{Movable\+Agent}.
+\mbox{\Hypertarget{class_person_a6bebe59c354f26f4cb983185d6084181}\label{class_person_a6bebe59c354f26f4cb983185d6084181}} 
+\index{Person@{Person}!get\+Header@{get\+Header}}
+\index{get\+Header@{get\+Header}!Person@{Person}}
+\subsubsection{\texorpdfstring{get\+Header()}{getHeader()}}
+{\footnotesize\ttfamily static const string Person\+::get\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{class_person_a40d6f2c716dd3c9794067817a3fb9165}\label{class_person_a40d6f2c716dd3c9794067817a3fb9165}} 
 \index{Person@{Person}!has\+Devices@{has\+Devices}}
@@ -360,4 +305,4 @@ Reimplemented from \hyperlink{class_movable_agent_a1dee2a6bf93f01006fadfb6fba6c9
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/\hyperlink{_person_8h}{Person.\+h}\end{DoxyCompactItemize}
+include/agent/\hyperlink{_person_8h}{Person.\+h}\end{DoxyCompactItemize}

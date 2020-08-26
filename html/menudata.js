@@ -59,6 +59,7 @@ var menudata={children:[
 {text:"a",url:"functions_vars.html#index_a"},
 {text:"g",url:"functions_vars.html#index_g"},
 {text:"m",url:"functions_vars.html#index_m"},
+{text:"o",url:"functions_vars.html#index_o"},
 {text:"p",url:"functions_vars.html#index_p"},
 {text:"r",url:"functions_vars.html#index_r"},
 {text:"s",url:"functions_vars.html#index_s"},

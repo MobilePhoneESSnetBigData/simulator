@@ -61,6 +61,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_person-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -74,9 +75,9 @@ Inheritance diagram for Person:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_person__inherit__graph.png" border="0" usemap="#_person_inherit__map" alt="Inheritance graph"/></div>
 <map name="_person_inherit__map" id="_person_inherit__map">
-<area shape="rect" id="node2" href="class_movable_agent.html" title="{MovableAgent\n|&#45; m_speed\l|+ MovableAgent()\l+ ~MovableAgent()\l+ getName()\l+ toString()\l+ move()\l+ getSpeed()\l+ setSpeed()\l}" alt="" coords="43,491,173,656"/>
-<area shape="rect" id="node3" href="class_locatable_agent.html" title="{LocatableAgent\n|&#45; m_location\l|+ LocatableAgent()\l+ ~LocatableAgent()\l+ getName()\l+ toString()\l+ getLocation()\l+ setLocation()\l+ dumpLocation()\l}" alt="" coords="38,277,178,443"/>
-<area shape="rect" id="node4" href="class_agent.html" title="{Agent\n|&#45; m_map\l&#45; m_id\l&#45; m_clock\l|+ Agent()\l+ ~Agent()\l+ operator==()\l+ getName()\l+ toString()\l+ getMap()\l+ setMap()\l+ getClock()\l+ getId()\l}" alt="" coords="55,5,161,229"/>
+<area shape="rect" id="node2" href="class_movable_agent.html" title="{MovableAgent\n|&#45; m_speed\l|+ MovableAgent()\l+ ~MovableAgent()\l+ toString()\l+ move()\l+ getSpeed()\l+ setSpeed()\l}" alt="" coords="35,461,166,612"/>
+<area shape="rect" id="node3" href="class_locatable_agent.html" title="{LocatableAgent\n|&#45; m_location\l|+ LocatableAgent()\l+ ~LocatableAgent()\l+ toString()\l+ getLocation()\l+ setLocation()\l+ dumpLocation()\l}" alt="" coords="31,263,171,413"/>
+<area shape="rect" id="node4" href="class_agent.html" title="{Agent\n|&#45; m_map\l&#45; m_id\l&#45; m_clock\l|+ Agent()\l+ Agent()\l+ ~Agent()\l+ operator==()\l+ getMap()\l+ getClock()\l+ getId()\l+ toString()\l}" alt="" coords="48,5,153,215"/>
 </map>
 </div>
 <div class="dynheader">
@@ -84,12 +85,12 @@ Collaboration diagram for Person:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_person__coll__graph.png" border="0" usemap="#_person_coll__map" alt="Collaboration graph"/></div>
 <map name="_person_coll__map" id="_person_coll__map">
-<area shape="rect" id="node2" href="class_movable_agent.html" title="{MovableAgent\n||+ MovableAgent()\l+ ~MovableAgent()\l+ getName()\l+ toString()\l+ move()\l+ getSpeed()\l+ setSpeed()\l}" alt="" coords="324,1367,455,1532"/>
-<area shape="rect" id="node3" href="class_locatable_agent.html" title="{LocatableAgent\n||+ LocatableAgent()\l+ ~LocatableAgent()\l+ getName()\l+ toString()\l+ getLocation()\l+ setLocation()\l+ dumpLocation()\l}" alt="" coords="319,1152,459,1317"/>
-<area shape="rect" id="node4" href="class_agent.html" title="{Agent\n||+ Agent()\l+ ~Agent()\l+ operator==()\l+ getName()\l+ toString()\l+ getMap()\l+ setMap()\l+ getClock()\l+ getId()\l}" alt="" coords="394,895,499,1089"/>
-<area shape="rect" id="node5" href="class_map.html" title="{Map\n||+ Map()\l+ Map()\l+ Map()\l+ ~Map()\l+ getGlobalFactory()\l+ getBoundary()\l+ setBoundary()\l+ getGrid()\l+ addGrid()\l&#45; create_rectangle()\l}" alt="" coords="188,593,329,803"/>
-<area shape="rect" id="node6" href="class_grid.html" title="{Grid\n||+ Grid()\l+ ~Grid()\l+ getNoTilesX()\l+ getNoTilesY()\l+ getXTileDim()\l+ getYTileDim()\l+ getXOrigin()\l+ getYOrigin()\l+ toString()\l+ getTileIndexX()\land 10 more...\l&#45; computeTileCenters()\l&#45; useNetworkPrior()\l&#45; useUniformPrior()\l}" alt="" coords="155,189,309,457"/>
-<area shape="rect" id="node12" href="class_clock.html" title="{Clock\n||+ Clock()\l+ Clock()\l+ ~Clock()\l+ tick()\l+ getCurrentTime()\l+ setCurrentTime()\l+ getIncrement()\l+ setIncrement()\l+ getInitialTime()\l+ setInitialTime()\l+ realTime()\l+ getFinalTime()\l+ setFinalTime()\l+ reset()\l}" alt="" coords="381,564,512,832"/>
+<area shape="rect" id="node2" href="class_movable_agent.html" title="{MovableAgent\n||+ MovableAgent()\l+ ~MovableAgent()\l+ toString()\l+ move()\l+ getSpeed()\l+ setSpeed()\l}" alt="" coords="189,1499,320,1649"/>
+<area shape="rect" id="node3" href="class_locatable_agent.html" title="{LocatableAgent\n||+ LocatableAgent()\l+ ~LocatableAgent()\l+ toString()\l+ getLocation()\l+ setLocation()\l+ dumpLocation()\l}" alt="" coords="185,1299,325,1449"/>
+<area shape="rect" id="node4" href="class_agent.html" title="{Agent\n||+ Agent()\l+ Agent()\l+ ~Agent()\l+ operator==()\l+ getMap()\l+ getClock()\l+ getId()\l+ toString()\l}" alt="" coords="259,1056,365,1236"/>
+<area shape="rect" id="node5" href="class_map.html" title="{Map\n||+ ~Map()\l+ getBoundary()\l+ getEnvelope()\l+ getGlobalFactory()\l+ addGrid()\l+ getNoTilesX()\l+ getNoTilesY()\l+ getXTileDim()\l+ getYTileDim()\l+ getXOrigin()\l+ getYOrigin()\l+ getNoTiles()\l+ getTileCenter()\l+ getTileNo()\l+ getTileNo()\l+ dumpGrid()\l+ getTileCenters()\l+ hasGrid()\l# Map()\l}" alt="" coords="241,652,383,993"/>
+<area shape="rect" id="node7" href="class_grid.html" title="{Grid\n||+ Grid()\l+ ~Grid()\l+ getNoTilesX()\l+ getNoTilesY()\l+ getXTileDim()\l+ getYTileDim()\l+ getXOrigin()\l+ getYOrigin()\l+ getNoTiles()\l+ getTileCenter()\l+ getTileNo()\l+ getTileNo()\l+ dumpGrid()\l+ getTileCenters()\l&#45; getTileIndexX()\l&#45; getTileIndexY()\l&#45; getTileIndexX()\l&#45; getTileIndexY()\l&#45; toString()\l&#45; computeTileCenters()\l}" alt="" coords="170,189,323,545"/>
+<area shape="rect" id="node11" href="class_clock.html" title="{Clock\n||+ Clock()\l+ Clock()\l+ ~Clock()\l+ tick()\l+ getCurrentTime()\l+ setCurrentTime()\l+ getIncrement()\l+ setIncrement()\l+ getInitialTime()\l+ setInitialTime()\l+ realTime()\l+ getFinalTime()\l+ setFinalTime()\l+ reset()\l}" alt="" coords="60,689,191,957"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -99,10 +100,6 @@ Public Types</h2></td></tr>
 <a class="el" href="class_person.html#aff84ca16bd4dbf364614d86f20b29dd2a8ee21010fb2d8e8794ef72be368da064">FEMALE</a>
  }</td></tr>
 <tr class="separator:aff84ca16bd4dbf364614d86f20b29dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53376a9a5852ec7760488a01c37f0b0b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#a53376a9a5852ec7760488a01c37f0b0b">AgeDistributions</a> { <a class="el" href="class_person.html#a53376a9a5852ec7760488a01c37f0b0ba7e4e1da74c9858476e0149deef9458c4">NORMAL</a>, 
-<a class="el" href="class_person.html#a53376a9a5852ec7760488a01c37f0b0ba4cf35976a167c4ac001a3eed2920a9b0">UNIFORM</a>
- }</td></tr>
-<tr class="separator:a53376a9a5852ec7760488a01c37f0b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -110,8 +107,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1fb64d7ef7c528d01dd09b2099b00e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b5729bb56531c93312b1179c8ee4b71"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#a6b5729bb56531c93312b1179c8ee4b71">~Person</a> ()</td></tr>
 <tr class="separator:a6b5729bb56531c93312b1179c8ee4b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2a6f8d7f1d94045a03ca578f2ed272c"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#aa2a6f8d7f1d94045a03ca578f2ed272c">getName</a> () const override</td></tr>
-<tr class="separator:aa2a6f8d7f1d94045a03ca578f2ed272c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68872538da519d0a04297f43376db27c"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#a68872538da519d0a04297f43376db27c">toString</a> () const override</td></tr>
 <tr class="separator:a68872538da519d0a04297f43376db27c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bc06f77b3e8a151f8c5cc77459895c9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#a0bc06f77b3e8a151f8c5cc77459895c9">dumpDevices</a> ()</td></tr>
@@ -128,12 +123,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a05f4ac2107d59e03f0f336eda08aa358"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ce0a72a98c2e723e48dcd7b4d9af599"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#a3ce0a72a98c2e723e48dcd7b4d9af599">addDevice</a> (string type, <a class="el" href="class_agent.html">Agent</a> *agent)</td></tr>
 <tr class="separator:a3ce0a72a98c2e723e48dcd7b4d9af599"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb5a4fabaaa6bf851de701aeb9df4fdf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_person.html#aff84ca16bd4dbf364614d86f20b29dd2">Gender</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#adb5a4fabaaa6bf851de701aeb9df4fdf">getGender</a> () const</td></tr>
-<tr class="separator:adb5a4fabaaa6bf851de701aeb9df4fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b01d9997db6f6d4555dbc5ac9898077"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#a2b01d9997db6f6d4555dbc5ac9898077">getAvgTimeStay</a> () const</td></tr>
-<tr class="separator:a2b01d9997db6f6d4555dbc5ac9898077"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59d3ea8e10928537043ee7b3d24a470c"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#a59d3ea8e10928537043ee7b3d24a470c">getAvgIntervalBetweenStays</a> () const</td></tr>
-<tr class="separator:a59d3ea8e10928537043ee7b3d24a470c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89ada26d3541bc82e514dae833dc959d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#a89ada26d3541bc82e514dae833dc959d">setDisplacementMethod</a> (const shared_ptr&lt; <a class="el" href="class_displace.html">Displace</a> &gt; &amp;displace)</td></tr>
 <tr class="separator:a89ada26d3541bc82e514dae833dc959d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_movable_agent"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_movable_agent')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_movable_agent.html">MovableAgent</a></td></tr>
@@ -155,20 +144,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af9a6dbd25b47c23a71c95b205da3a28d inherit pub_methods_class_locatable_agent"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_locatable_agent.html#af9a6dbd25b47c23a71c95b205da3a28d">dumpLocation</a> ()</td></tr>
 <tr class="separator:af9a6dbd25b47c23a71c95b205da3a28d inherit pub_methods_class_locatable_agent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_agent"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_agent')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_agent.html">Agent</a></td></tr>
+<tr class="memitem:a24a60f1d260bf19a4f7f8a5f36881d3f inherit pub_methods_class_agent"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agent.html#a24a60f1d260bf19a4f7f8a5f36881d3f">Agent</a> ()</td></tr>
+<tr class="separator:a24a60f1d260bf19a4f7f8a5f36881d3f inherit pub_methods_class_agent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ad923f2f9966b65a5d908cb9da4217c inherit pub_methods_class_agent"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agent.html#a0ad923f2f9966b65a5d908cb9da4217c">Agent</a> (const <a class="el" href="class_map.html">Map</a> *m, const unsigned long id, const <a class="el" href="class_clock.html">Clock</a> *clock)</td></tr>
 <tr class="separator:a0ad923f2f9966b65a5d908cb9da4217c inherit pub_methods_class_agent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4feb26df1cf81760a0e411e393c24d4e inherit pub_methods_class_agent"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agent.html#a4feb26df1cf81760a0e411e393c24d4e">~Agent</a> ()</td></tr>
 <tr class="separator:a4feb26df1cf81760a0e411e393c24d4e inherit pub_methods_class_agent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa2b3a408bb0694aea46fb2bb59bacf7 inherit pub_methods_class_agent"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agent.html#afa2b3a408bb0694aea46fb2bb59bacf7">operator==</a> (const <a class="el" href="class_agent.html">Agent</a> &amp;a)</td></tr>
 <tr class="separator:afa2b3a408bb0694aea46fb2bb59bacf7 inherit pub_methods_class_agent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1870edeea33b059eca75079be2eb002 inherit pub_methods_class_agent"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_map.html">Map</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agent.html#ad1870edeea33b059eca75079be2eb002">getMap</a> () const</td></tr>
-<tr class="separator:ad1870edeea33b059eca75079be2eb002 inherit pub_methods_class_agent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87a661874cffb03fa9e474e872810260 inherit pub_methods_class_agent"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agent.html#a87a661874cffb03fa9e474e872810260">setMap</a> (const <a class="el" href="class_map.html">Map</a> *map)</td></tr>
-<tr class="separator:a87a661874cffb03fa9e474e872810260 inherit pub_methods_class_agent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af80a21a067d04788c23d719d07b04038 inherit pub_methods_class_agent"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_clock.html">Clock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agent.html#af80a21a067d04788c23d719d07b04038">getClock</a> () const</td></tr>
-<tr class="separator:af80a21a067d04788c23d719d07b04038 inherit pub_methods_class_agent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51d2d781636f524dc151f3da10955613 inherit pub_methods_class_agent"><td class="memItemLeft" align="right" valign="top">const unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agent.html#a51d2d781636f524dc151f3da10955613">getId</a> () const</td></tr>
-<tr class="separator:a51d2d781636f524dc151f3da10955613 inherit pub_methods_class_agent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b60b2f0a0f41ce1f14c39a33cffcc4d inherit pub_methods_class_agent"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="class_map.html">Map</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agent.html#a3b60b2f0a0f41ce1f14c39a33cffcc4d">getMap</a> () const</td></tr>
+<tr class="separator:a3b60b2f0a0f41ce1f14c39a33cffcc4d inherit pub_methods_class_agent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae872060d974c4a5aec875680db38cc68 inherit pub_methods_class_agent"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="class_clock.html">Clock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agent.html#ae872060d974c4a5aec875680db38cc68">getClock</a> () const</td></tr>
+<tr class="separator:ae872060d974c4a5aec875680db38cc68 inherit pub_methods_class_agent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5267ab07bb62f1ed3dfddca286b6ef6 inherit pub_methods_class_agent"><td class="memItemLeft" align="right" valign="top">virtual const unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agent.html#aa5267ab07bb62f1ed3dfddca286b6ef6">getId</a> () const</td></tr>
+<tr class="separator:aa5267ab07bb62f1ed3dfddca286b6ef6 inherit pub_methods_class_agent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a6bebe59c354f26f4cb983185d6084181"><td class="memItemLeft" align="right" valign="top">static const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#a6bebe59c354f26f4cb983185d6084181">getHeader</a> ()</td></tr>
+<tr class="separator:a6bebe59c354f26f4cb983185d6084181"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -192,24 +186,6 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class represents a person that can have 0,1 or 2 mobile phone(s). During the simulation the person move around the map, carrying his/her mobile devices. </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="a53376a9a5852ec7760488a01c37f0b0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53376a9a5852ec7760488a01c37f0b0b">&#9670;&nbsp;</a></span>AgeDistributions</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="class_person.html#a53376a9a5852ec7760488a01c37f0b0b">Person::AgeDistributions</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a53376a9a5852ec7760488a01c37f0b0ba7e4e1da74c9858476e0149deef9458c4"></a>NORMAL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a53376a9a5852ec7760488a01c37f0b0ba4cf35976a167c4ac001a3eed2920a9b0"></a>UNIFORM&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
 <a id="aff84ca16bd4dbf364614d86f20b29dd2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aff84ca16bd4dbf364614d86f20b29dd2">&#9670;&nbsp;</a></span>Gender</h2>
 
@@ -419,62 +395,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a59d3ea8e10928537043ee7b3d24a470c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59d3ea8e10928537043ee7b3d24a470c">&#9670;&nbsp;</a></span>getAvgIntervalBetweenStays()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned long Person::getAvgIntervalBetweenStays </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The average time interval between two stops. It is given in the simulation.xml configuration file. </p><dl class="section return"><dt>Returns</dt><dd>The average time interval between two stops. </dd></dl>
-
-</div>
-</div>
-<a id="a2b01d9997db6f6d4555dbc5ac9898077"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b01d9997db6f6d4555dbc5ac9898077">&#9670;&nbsp;</a></span>getAvgTimeStay()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned long Person::getAvgTimeStay </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The average time interval a person stay in the same location. It is given in the simulation.xml configuration file. </p><dl class="section return"><dt>Returns</dt><dd>the average time a person stay in the same location. </dd></dl>
-
-</div>
-</div>
-<a id="adb5a4fabaaa6bf851de701aeb9df4fdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb5a4fabaaa6bf851de701aeb9df4fdf">&#9670;&nbsp;</a></span>getGender()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_person.html#aff84ca16bd4dbf364614d86f20b29dd2">Gender</a> Person::getGender </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Returns the gender of the person. </p><dl class="section return"><dt>Returns</dt><dd>the gender of the person. </dd></dl>
-
-</div>
-</div>
-<a id="aa2a6f8d7f1d94045a03ca578f2ed272c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2a6f8d7f1d94045a03ca578f2ed272c">&#9670;&nbsp;</a></span>getName()</h2>
+<a id="a6bebe59c354f26f4cb983185d6084181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bebe59c354f26f4cb983185d6084181">&#9670;&nbsp;</a></span>getHeader()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -483,21 +405,18 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const string Person::getName </td>
+          <td class="memname">static const string Person::getHeader </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the name of this class. </p><dl class="section return"><dt>Returns</dt><dd>the name of this class. </dd></dl>
-
-<p>Reimplemented from <a class="el" href="class_movable_agent.html#abcc1218876c39c996f2cb1eba2b96379">MovableAgent</a>.</p>
 
 </div>
 </div>
@@ -835,7 +754,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/<a class="el" href="_person_8h.html">Person.h</a></li>
+<li>include/agent/<a class="el" href="_person_8h.html">Person.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

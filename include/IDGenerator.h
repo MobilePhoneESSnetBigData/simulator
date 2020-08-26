@@ -27,7 +27,7 @@
 #define IDGENERATOR_H_
 
 /**
- * This singleton class is used to generate unique identifiers for all agents in the simulation. The ids are unsigned long integers.
+ * This singleton class is used to generate unique identifiers for all agents in the simulation. The identifiers are unsigned long integers.
  */
 class IDGenerator {
 public:

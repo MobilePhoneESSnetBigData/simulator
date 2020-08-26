@@ -1,4 +1,4 @@
-.TH "Person" 3 "Fri Nov 22 2019" "Simulator" \" -*- nroff -*-
+.TH "Person" 3 "Wed Aug 26 2020" "Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -16,9 +16,6 @@ Inherits \fBMovableAgent\fP\&.
 .ti -1c
 .RI "enum \fBGender\fP { \fBMALE\fP, \fBFEMALE\fP }"
 .br
-.ti -1c
-.RI "enum \fBAgeDistributions\fP { \fBNORMAL\fP, \fBUNIFORM\fP }"
-.br
 .in -1c
 .SS "Public Member Functions"
 
@@ -28,9 +25,6 @@ Inherits \fBMovableAgent\fP\&.
 .br
 .ti -1c
 .RI "virtual \fB~Person\fP ()"
-.br
-.ti -1c
-.RI "const string \fBgetName\fP () const override"
 .br
 .ti -1c
 .RI "const string \fBtoString\fP () const override"
@@ -57,16 +51,14 @@ Inherits \fBMovableAgent\fP\&.
 .RI "void \fBaddDevice\fP (string type, \fBAgent\fP *agent)"
 .br
 .ti -1c
-.RI "\fBGender\fP \fBgetGender\fP () const"
-.br
-.ti -1c
-.RI "unsigned long \fBgetAvgTimeStay\fP () const"
-.br
-.ti -1c
-.RI "unsigned long \fBgetAvgIntervalBetweenStays\fP () const"
-.br
-.ti -1c
 .RI "void \fBsetDisplacementMethod\fP (const shared_ptr< \fBDisplace\fP > &displace)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const string \fBgetHeader\fP ()"
 .br
 .in -1c
 .SS "Private Attributes"
@@ -102,15 +94,6 @@ Inherits \fBMovableAgent\fP\&.
 This class represents a person that can have 0,1 or 2 mobile phone(s)\&. During the simulation the person move around the map, carrying his/her mobile devices\&. 
 .SH "Member Enumeration Documentation"
 .PP 
-.SS "enum \fBPerson::AgeDistributions\fP"
-
-.PP
-\fBEnumerator\fP
-.in +1c
-.TP
-\fB\fINORMAL \fP\fP
-.TP
-\fB\fIUNIFORM \fP\fP
 .SS "enum \fBPerson::Gender\fP"
 
 .PP
@@ -180,44 +163,8 @@ the age of the person\&.
 .RE
 .PP
 
-.SS "unsigned long Person::getAvgIntervalBetweenStays () const"
-The average time interval between two stops\&. It is given in the simulation\&.xml configuration file\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-The average time interval between two stops\&. 
-.RE
-.PP
+.SS "static const string Person::getHeader ()\fC [static]\fP"
 
-.SS "unsigned long Person::getAvgTimeStay () const"
-The average time interval a person stay in the same location\&. It is given in the simulation\&.xml configuration file\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-the average time a person stay in the same location\&. 
-.RE
-.PP
-
-.SS "\fBGender\fP Person::getGender () const"
-Returns the gender of the person\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-the gender of the person\&. 
-.RE
-.PP
-
-.SS "const string Person::getName () const\fC [override]\fP, \fC [virtual]\fP"
-Returns the name of this class\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-the name of this class\&. 
-.RE
-.PP
-
-.PP
-Reimplemented from \fBMovableAgent\fP\&.
 .SS "bool Person::hasDevices ()"
 returns true if this person has at least a mobile device, false otherwise\&. 
 .PP

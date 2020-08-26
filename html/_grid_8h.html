@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Simulator: include/Grid.h File Reference</title>
+<title>Simulator: include/map/Grid.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -58,7 +58,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1e899e21dcf63412585e33a90ca7eaf3.html">map</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -70,45 +70,43 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;geos/geom/Coordinate.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="_mobile_phone_8h.html">MobilePhone.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_antenna_info_8h.html">AntennaInfo.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_agent_8h.html">Agent.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_agents_collection_8h.html">AgentsCollection.h</a>&gt;</code><br />
-<code>#include &lt;typeinfo&gt;</code><br />
-<code>#include &lt;unordered_map&gt;</code><br />
-<code>#include &lt;utility&gt;</code><br />
-<code>#include &lt;<a class="el" href="_prior_type_8h.html">PriorType.h</a>&gt;</code><br />
+<code>#include &lt;geos/geom/Point.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Grid.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="_grid_8h__incl.png" border="0" usemap="#include_2_grid_8h" alt=""/></div>
-<map name="include_2_grid_8h" id="include_2_grid_8h">
-<area shape="rect" id="node6" href="_mobile_phone_8h.html" title="MobilePhone.h" alt="" coords="515,80,623,107"/>
-<area shape="rect" id="node10" href="_agent_8h.html" title="Agent.h" alt="" coords="1103,453,1170,480"/>
-<area shape="rect" id="node29" href="_antenna_info_8h.html" title="AntennaInfo.h" alt="" coords="43,453,145,480"/>
-<area shape="rect" id="node30" href="_agents_collection_8h.html" title="AgentsCollection.h" alt="" coords="1371,80,1502,107"/>
-<area shape="rect" id="node33" href="_prior_type_8h.html" title="PriorType.h" alt="" coords="1910,80,1998,107"/>
-<area shape="rect" id="node7" href="_holdable_agent_8h.html" title="HoldableAgent.h" alt="" coords="127,229,245,256"/>
-<area shape="rect" id="node13" href="_clock_8h.html" title="Clock.h" alt="" coords="757,528,823,555"/>
-<area shape="rect" id="node20" href="_mobile_operator_8h.html" title="MobileOperator.h" alt="" coords="1060,229,1181,256"/>
-<area shape="rect" id="node22" href="_antenna_8h.html" title="Antenna.h" alt="" coords="713,155,795,181"/>
-<area shape="rect" id="node8" href="_movable_agent_8h.html" title="MovableAgent.h" alt="" coords="382,304,497,331"/>
-<area shape="rect" id="node9" href="_locatable_agent_8h.html" title="LocatableAgent.h" alt="" coords="859,379,982,405"/>
-<area shape="rect" id="node19" href="_movement_type_8h.html" title="MovementType.h" alt="" coords="321,379,441,405"/>
-<area shape="rect" id="node11" href="_map_8h.html" title="Map.h" alt="" coords="1071,528,1130,555"/>
-<area shape="rect" id="node23" href="_immovable_agent_8h.html" title="ImmovableAgent.h" alt="" coords="925,304,1053,331"/>
-<area shape="rect" id="node25" href="_event_type_8h.html" title="EventType.h" alt="" coords="707,229,801,256"/>
-<area shape="rect" id="node26" href="_antenna_type_8h.html" title="AntennaType.h" alt="" coords="825,229,934,256"/>
+<div class="center"><img src="_grid_8h__incl.png" border="0" usemap="#include_2map_2_grid_8h" alt=""/></div>
+<map name="include_2map_2_grid_8h" id="include_2map_2_grid_8h">
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="_grid_8h__dep__incl.png" border="0" usemap="#include_2_grid_8hdep" alt=""/></div>
-<map name="include_2_grid_8hdep" id="include_2_grid_8hdep">
-<area shape="rect" id="node2" href="_e_m_field_8h.html" title="include/EMField.h" alt="" coords="5,80,132,107"/>
+<div class="center"><img src="_grid_8h__dep__incl.png" border="0" usemap="#include_2map_2_grid_8hdep" alt=""/></div>
+<map name="include_2map_2_grid_8hdep" id="include_2map_2_grid_8hdep">
+<area shape="rect" id="node2" href="_map_8h.html" title="include/map/Map.h" alt="" coords="923,80,1055,107"/>
+<area shape="rect" id="node3" href="_agent_8h.html" title="include/agent/Agent.h" alt="" coords="437,155,585,181"/>
+<area shape="rect" id="node5" href="_post_loc_prob_8h.html" title="include/PostLocProb.h" alt="" coords="131,528,285,555"/>
+<area shape="rect" id="node12" href="_e_m_field_8h.html" title="include/EMField.h" alt="" coords="1191,528,1318,555"/>
+<area shape="rect" id="node20" href="_displace_8h.html" title="include/Displace.h" alt="" coords="925,155,1053,181"/>
+<area shape="rect" id="node24" href="_w_k_t_map_8h.html" title="include/map/WKTMap.h" alt="" coords="1590,155,1751,181"/>
+<area shape="rect" id="node4" href="_agents_collection_8h.html" title="include/agent/AgentsCollection.h" alt="" coords="102,453,314,480"/>
+<area shape="rect" id="node9" href="_locatable_agent_8h.html" title="include/agent/LocatableAgent.h" alt="" coords="478,229,682,256"/>
+<area shape="rect" id="node19" href="_mobile_operator_8h.html" title="include/agent/MobileOperator.h" alt="" coords="739,379,941,405"/>
+<area shape="rect" id="node8" href="_utils_8h.html" title="include/Utils.h" alt="" coords="345,528,449,555"/>
+<area shape="rect" id="node6" href="_net_prior_post_loc_prob_8h.html" title="include/NetPriorPostLocProb.h" alt="" coords="5,610,205,637"/>
+<area shape="rect" id="node7" href="_unif_prior_post_loc_prob_8h.html" title="include/UnifPriorPostLoc\lProb.h" alt="" coords="230,603,394,644"/>
+<area shape="rect" id="node10" href="_immovable_agent_8h.html" title="include/agent/ImmovableAgent.h" alt="" coords="817,304,1026,331"/>
+<area shape="rect" id="node14" href="_movable_agent_8h.html" title="include/agent/MovableAgent.h" alt="" coords="292,304,487,331"/>
+<area shape="rect" id="node11" href="_antenna_8h.html" title="include/agent/Antenna.h" alt="" coords="877,453,1040,480"/>
+<area shape="rect" id="node13" href="_world_8h.html" title="include/World.h" alt="" coords="733,528,845,555"/>
+<area shape="rect" id="node15" href="_holdable_agent_8h.html" title="include/agent/HoldableAgent.h" alt="" coords="337,379,535,405"/>
+<area shape="rect" id="node18" href="_person_8h.html" title="include/agent/Person.h" alt="" coords="560,379,715,405"/>
+<area shape="rect" id="node16" href="_mobile_phone_8h.html" title="include/agent/MobilePhone.h" alt="" coords="339,453,528,480"/>
+<area shape="rect" id="node17" href="_tablet_8h.html" title="include/agent/Tablet.h" alt="" coords="552,453,701,480"/>
+<area shape="rect" id="node21" href="_levy_flight_displacement_8h.html" title="include/LevyFlightDisplacement.h" alt="" coords="758,229,973,256"/>
+<area shape="rect" id="node22" href="_random_walk_displacement_8h.html" title="include/RandomWalkDisplacement.h" alt="" coords="997,229,1232,256"/>
+<area shape="rect" id="node23" href="_random_walk_drift_displacement_8h.html" title="include/RandomWalkDriftDisplacement.h" alt="" coords="1256,229,1515,256"/>
 </map>
 </div>
 </div><table class="memberdecls">

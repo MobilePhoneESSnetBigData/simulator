@@ -23,13 +23,45 @@
 #ifndef INCLUDE_AGEDISTRIBUTION_H_
 #define INCLUDE_AGEDISTRIBUTION_H_
 
+/**
+ * This is the base class for the age distribution among the individuals involved in a simulation.
+ */
 class AgeDistribution {
 public:
+	/**
+	 * Constructor of the class. It only sets the minimum and maximum age.
+	 * @param min_age the minimum age of a person.
+	 * @param max_age the maximum age of a person.
+	 */
 	AgeDistribution(int min_age, int max_age);
+
+	/**
+	 * Destructor of the class.
+	 */
 	virtual ~AgeDistribution();
+
+	/**
+	 * Returns the value of the maximum age.
+	 * @return the value of the maximum age.
+	 */
 	int getMaxAge() const;
+
+	/**
+	 * Sets the maximum age.
+	 * @param maxAge the value of the maximum age.
+	 */
 	void setMaxAge(int maxAge);
+
+	/**
+	 * Returns the value of the minimum age of a person.
+	 * @return the value of the minimum age of a person.
+	 */
 	int getMinAge() const;
+
+	/**
+	 * Sets the minimum age.
+	 * @param minAge the value of the minimum age.
+	 */
 	void setMinAge(int minAge);
 
 private:

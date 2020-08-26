@@ -32,9 +32,9 @@ bool \hyperlink{class_e_m_field_a5cd43aded41779d2d24de3f3e5c717d0}{is\+Antenna\+
 \item 
 double \hyperlink{class_e_m_field_a710da64db53718cdeed7b8c8dc11bba3}{connection\+Likelihood} (\hyperlink{class_antenna}{Antenna} $\ast$a, const Point $\ast$p)
 \item 
-vector$<$ double $>$ \hyperlink{class_e_m_field_a4995bf4b93c09f12b7aab64c7eb24603}{sum\+Signal\+Quality} (const \hyperlink{class_grid}{Grid} $\ast$grid, const unsigned long mno\+ID)
+vector$<$ double $>$ \hyperlink{class_e_m_field_acef16c598b62605a691f75f99d364447}{sum\+Signal\+Quality} (const \hyperlink{class_map}{Map} $\ast$map, const unsigned long mno\+ID)
 \item 
-double \hyperlink{class_e_m_field_a533effeee35a80746ea7e3ddc5998e48}{connection\+Likelihood\+Grid} (\hyperlink{class_antenna}{Antenna} $\ast$a, const \hyperlink{class_grid}{Grid} $\ast$g, unsigned long tile\+Index)
+double \hyperlink{class_e_m_field_af2d38429adcf17be6e9eb1e8fae6a823}{connection\+Likelihood\+Grid} (\hyperlink{class_antenna}{Antenna} $\ast$a, const \hyperlink{class_map}{Map} $\ast$, unsigned long tile\+Index)
 \item 
 const double $\ast$ \hyperlink{class_e_m_field_ab2132484b9c52f2224bc81f354b24df6}{get\+Antenna\+Min3\+Db\+Array} () const
 \item 
@@ -172,11 +172,11 @@ Computes the connection likelihood for \hyperlink{class_antenna}{Antenna} indica
 \begin{DoxyReturn}{Returns}
 the connection likelihood for \hyperlink{class_antenna}{Antenna} a in location p. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_e_m_field_a533effeee35a80746ea7e3ddc5998e48}\label{class_e_m_field_a533effeee35a80746ea7e3ddc5998e48}} 
+\mbox{\Hypertarget{class_e_m_field_af2d38429adcf17be6e9eb1e8fae6a823}\label{class_e_m_field_af2d38429adcf17be6e9eb1e8fae6a823}} 
 \index{E\+M\+Field@{E\+M\+Field}!connection\+Likelihood\+Grid@{connection\+Likelihood\+Grid}}
 \index{connection\+Likelihood\+Grid@{connection\+Likelihood\+Grid}!E\+M\+Field@{E\+M\+Field}}
 \subsubsection{\texorpdfstring{connection\+Likelihood\+Grid()}{connectionLikelihoodGrid()}}
-{\footnotesize\ttfamily double E\+M\+Field\+::connection\+Likelihood\+Grid (\begin{DoxyParamCaption}\item[{\hyperlink{class_antenna}{Antenna} $\ast$}]{a,  }\item[{const \hyperlink{class_grid}{Grid} $\ast$}]{g,  }\item[{unsigned long}]{tile\+Index }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily double E\+M\+Field\+::connection\+Likelihood\+Grid (\begin{DoxyParamCaption}\item[{\hyperlink{class_antenna}{Antenna} $\ast$}]{a,  }\item[{const \hyperlink{class_map}{Map} $\ast$}]{,  }\item[{unsigned long}]{tile\+Index }\end{DoxyParamCaption})}
 
 Computes the connection likelihood for \hyperlink{class_antenna}{Antenna} indicated by a in the center of the tile indicated by tile\+Index 
 \begin{DoxyParams}{Parameters}
@@ -257,11 +257,11 @@ true is the \hyperlink{class_antenna}{Antenna} object provide enough power or si
 \subsubsection{\texorpdfstring{operator=()}{operator=()}}
 {\footnotesize\ttfamily \hyperlink{class_e_m_field}{E\+M\+Field}\& E\+M\+Field\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_e_m_field}{E\+M\+Field} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_e_m_field_a4995bf4b93c09f12b7aab64c7eb24603}\label{class_e_m_field_a4995bf4b93c09f12b7aab64c7eb24603}} 
+\mbox{\Hypertarget{class_e_m_field_acef16c598b62605a691f75f99d364447}\label{class_e_m_field_acef16c598b62605a691f75f99d364447}} 
 \index{E\+M\+Field@{E\+M\+Field}!sum\+Signal\+Quality@{sum\+Signal\+Quality}}
 \index{sum\+Signal\+Quality@{sum\+Signal\+Quality}!E\+M\+Field@{E\+M\+Field}}
 \subsubsection{\texorpdfstring{sum\+Signal\+Quality()}{sumSignalQuality()}}
-{\footnotesize\ttfamily vector$<$double$>$ E\+M\+Field\+::sum\+Signal\+Quality (\begin{DoxyParamCaption}\item[{const \hyperlink{class_grid}{Grid} $\ast$}]{grid,  }\item[{const unsigned long}]{mno\+ID }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily vector$<$double$>$ E\+M\+Field\+::sum\+Signal\+Quality (\begin{DoxyParamCaption}\item[{const \hyperlink{class_map}{Map} $\ast$}]{map,  }\item[{const unsigned long}]{mno\+ID }\end{DoxyParamCaption})}
 
 Computes the sum of the signal quality given by all antennas belonging to an M\+NO for all tiles in the reference grid. The signal quality is computed in the center of each tile. 
 \begin{DoxyParams}{Parameters}

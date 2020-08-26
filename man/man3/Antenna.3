@@ -1,4 +1,4 @@
-.TH "Antenna" 3 "Fri Nov 22 2019" "Simulator" \" -*- nroff -*-
+.TH "Antenna" 3 "Wed Aug 26 2020" "Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,37 +14,16 @@ Inherits \fBImmovableAgent\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBAntenna\fP (const \fBMap\fP *m, const unsigned long id, Point *initPosition, const \fBClock\fP *clock, double attenuationFactor, double power, unsigned long maxConnections, double smid, double ssteep, \fBAntennaType\fP type)"
+.RI "\fBAntenna\fP (const \fBMap\fP *m, const unsigned long id, Point *initPosition, const \fBClock\fP *clock, double attenuationFactor, double power, unsigned long maxConnections, double smid, double ssteep, \fBAntennaType\fP type, string &outputDir)"
 .br
 .ti -1c
-.RI "\fBAntenna\fP (const \fBMap\fP *m, const \fBClock\fP *clock, const unsigned long id, XMLElement *el, vector< \fBMobileOperator\fP *> mnos)"
+.RI "\fBAntenna\fP (const \fBMap\fP *m, const \fBClock\fP *clock, const unsigned long id, XMLElement *el, vector< \fBMobileOperator\fP *> mnos, string &outptuDir)"
 .br
 .ti -1c
 .RI "virtual \fB~Antenna\fP ()"
 .br
 .ti -1c
-.RI "const string \fBgetName\fP () const override"
-.br
-.ti -1c
 .RI "const string \fBtoString\fP () const override"
-.br
-.ti -1c
-.RI "double \fBgetPLE\fP () const"
-.br
-.ti -1c
-.RI "void \fBsetPLE\fP (double ple)"
-.br
-.ti -1c
-.RI "double \fBgetPower\fP () const"
-.br
-.ti -1c
-.RI "void \fBsetPower\fP (double power)"
-.br
-.ti -1c
-.RI "unsigned long \fBgetMaxConnections\fP () const"
-.br
-.ti -1c
-.RI "void \fBsetMaxConnections\fP (int maxConnections)"
 .br
 .ti -1c
 .RI "bool \fBtryRegisterDevice\fP (\fBHoldableAgent\fP *device)"
@@ -59,24 +38,6 @@ Inherits \fBImmovableAgent\fP\&.
 .RI "\fBAntennaType\fP \fBgetType\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetType\fP (\fBAntennaType\fP type)"
-.br
-.ti -1c
-.RI "double \fBS\fP (double dist) const"
-.br
-.ti -1c
-.RI "double \fBgetSmid\fP () const"
-.br
-.ti -1c
-.RI "void \fBsetSmid\fP (double smid)"
-.br
-.ti -1c
-.RI "double \fBgetSSteep\fP () const"
-.br
-.ti -1c
-.RI "void \fBsetSSteep\fP (double sSteep)"
-.br
-.ti -1c
 .RI "double \fBcomputeSignalQuality\fP (const Point *p) const"
 .br
 .ti -1c
@@ -89,9 +50,6 @@ Inherits \fBImmovableAgent\fP\&.
 .RI "double \fBcomputePower\fP (const Coordinate c) const"
 .br
 .ti -1c
-.RI "Geometry * \fBgetCoverageArea\fP ()"
-.br
-.ti -1c
 .RI "\fBMobileOperator\fP * \fBgetMNO\fP () const"
 .br
 .ti -1c
@@ -101,25 +59,23 @@ Inherits \fBImmovableAgent\fP\&.
 .RI "double \fBgetRmax\fP () const"
 .br
 .ti -1c
-.RI "double \fBgetSmin\fP () const"
-.br
-.ti -1c
 .RI "string \fBdumpCell\fP () const"
 .br
 .ti -1c
 .RI "double \fBcomputeSignalStrength\fP (const Point *p) const"
 .br
 .ti -1c
-.RI "double \fBcomputeSignalStrength\fP (const Coordinate c) const"
-.br
-.ti -1c
-.RI "double \fBcomputeSignalMeasure\fP (\fBHoldableAgent::CONNECTION_TYPE\fP handoverType, const Coordinate c) const"
-.br
-.ti -1c
-.RI "\fBHoldableAgent::CONNECTION_TYPE\fP \fBgetHandoverMechanism\fP () const"
-.br
-.ti -1c
 .RI "void \fBsetHandoverMechanism\fP (\fBHoldableAgent::CONNECTION_TYPE\fP handoverMechanism)"
+.br
+.ti -1c
+.RI "void \fBdumpSignal\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const string \fBgetHeader\fP ()"
 .br
 .in -1c
 .SS "Private Member Functions"
@@ -181,6 +137,18 @@ Inherits \fBImmovableAgent\fP\&.
 .br
 .ti -1c
 .RI "Geometry * \fBgetCoverageAreaDirectional\fP ()"
+.br
+.ti -1c
+.RI "double \fBS\fP (double dist) const"
+.br
+.ti -1c
+.RI "Geometry * \fBgetCoverageArea\fP ()"
+.br
+.ti -1c
+.RI "double \fBcomputeSignalStrength\fP (const Coordinate c) const"
+.br
+.ti -1c
+.RI "double \fBcomputeSignalMeasure\fP (\fBHoldableAgent::CONNECTION_TYPE\fP handoverType, const Coordinate c) const"
 .br
 .in -1c
 .SS "Private Attributes"
@@ -270,7 +238,7 @@ Inherits \fBImmovableAgent\fP\&.
 This class simulates an antenna of the mobile phone network\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "Antenna::Antenna (const \fBMap\fP * m, const unsigned long id, Point * initPosition, const \fBClock\fP * clock, double attenuationFactor, double power, unsigned long maxConnections, double smid, double ssteep, \fBAntennaType\fP type)\fC [explicit]\fP"
+.SS "Antenna::Antenna (const \fBMap\fP * m, const unsigned long id, Point * initPosition, const \fBClock\fP * clock, double attenuationFactor, double power, unsigned long maxConnections, double smid, double ssteep, \fBAntennaType\fP type, string & outputDir)\fC [explicit]\fP"
 Constructor of the class\&. It builds an object providing directly the values for each parameter of the antenna\&. This constructor is used only for testing purposes\&. For a real simulation the other constructor of the class should be used\&. 
 .PP
 \fBParameters:\fP
@@ -297,7 +265,7 @@ Constructor of the class\&. It builds an object providing directly the values fo
 .RE
 .PP
 
-.SS "Antenna::Antenna (const \fBMap\fP * m, const \fBClock\fP * clock, const unsigned long id, XMLElement * el, vector< \fBMobileOperator\fP *> mnos)\fC [explicit]\fP"
+.SS "Antenna::Antenna (const \fBMap\fP * m, const \fBClock\fP * clock, const unsigned long id, XMLElement * el, vector< \fBMobileOperator\fP *> mnos, string & outptuDir)\fC [explicit]\fP"
 Constructor of the class\&. It builds an object taking the value of the antenna' parameters from an XML Element, usually when an \fBAntenna\fP object is built reading the xml configuration file\&. 
 .PP
 \fBParameters:\fP
@@ -357,7 +325,7 @@ the power of the signal in the location given by Coordinate c\&.
 .RE
 .PP
 
-.SS "double Antenna::computeSignalMeasure (\fBHoldableAgent::CONNECTION_TYPE\fP handoverType, const Coordinate c) const"
+.SS "double Antenna::computeSignalMeasure (\fBHoldableAgent::CONNECTION_TYPE\fP handoverType, const Coordinate c) const\fC [private]\fP"
 compute the signal strength, signal quality or signal power depending on the value of the handoverType parameter 
 .PP
 \fBParameters:\fP
@@ -419,7 +387,7 @@ the signal strength\&.
 .RE
 .PP
 
-.SS "double Antenna::computeSignalStrength (const Coordinate c) const"
+.SS "double Antenna::computeSignalStrength (const Coordinate c) const\fC [private]\fP"
 Computes the signal strength given by an antenna in a certain location\&. 
 .PP
 \fBParameters:\fP
@@ -457,6 +425,8 @@ a wkt string that represents the coverage area of this antenna\&.
 .RE
 .PP
 
+.SS "void Antenna::dumpSignal () const"
+
 .SS "double Antenna::findSD (double beamWidth, double dbBack, vector< pair< double, double >> & mapping) const\fC [private]\fP"
 
 .SS "string Antenna::getAntennaOutputFileName () const"
@@ -468,7 +438,7 @@ the name of the output file where the events registered by this antenna during a
 .RE
 .PP
 
-.SS "Geometry* Antenna::getCoverageArea ()"
+.SS "Geometry* Antenna::getCoverageArea ()\fC [private]\fP"
 Computes the coverage area of an antenna\&. It is defined as the area where the signal strength is greater than S_min 
 .PP
 \fBReturns:\fP
@@ -481,10 +451,8 @@ a Polygon* representing the coverage area of the antenna\&.
 
 .SS "Geometry* Antenna::getCoverageAreaOmnidirectional ()\fC [private]\fP"
 
-.SS "\fBHoldableAgent::CONNECTION_TYPE\fP Antenna::getHandoverMechanism () const"
+.SS "static const string Antenna::getHeader ()\fC [static]\fP"
 
-.SS "unsigned long Antenna::getMaxConnections () const"
-Returns the maximum number of mobile devices that an antenna can connect\&. 
 .SS "double Antenna::getMin3db (double sd, double dbBack) const\fC [private]\fP"
 
 .SS "\fBMobileOperator\fP* Antenna::getMNO () const"
@@ -496,36 +464,7 @@ a pointer to an MNO object representing the MNO that own this antenna\&.
 .RE
 .PP
 
-.SS "const string Antenna::getName () const\fC [override]\fP, \fC [virtual]\fP"
-Overrides the same method from the superclass\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-the name of the class, i\&.e\&. 'Antenna' 
-.RE
-.PP
-
-.PP
-Implements \fBAgent\fP\&.
 .SS "unsigned long Antenna::getNumActiveConections ()\fC [private]\fP"
-
-.SS "double Antenna::getPLE () const"
-Returns the surrounding environment' path loss exponent of the signal\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-the signals' path loss exponent of the surrounding environment\&. In real life, it takes values between 2 (in open field) and 6 (inside buildings)\&. 
-.RE
-.PP
-
-.SS "double Antenna::getPower () const"
-Returns the power of an antenna in Watts at the location of antenna\&. This power decreases with a power of the distance from antenna\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-the power of an antenna in Watts\&. 
-.RE
-.PP
 
 .SS "double Antenna::getRmax () const"
 Computes the radius of the coverage area for an omnidirectional antenna\&. This area is a circle where the signal strength is greater than S_min\&. 
@@ -533,33 +472,6 @@ Computes the radius of the coverage area for an omnidirectional antenna\&. This 
 \fBReturns:\fP
 .RS 4
 the radius of the coverage area for an omnidirectional antenna\&. 
-.RE
-.PP
-
-.SS "double Antenna::getSmid () const"
-Returns the value of the Smid antenna parameter\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-the value of the Smid antenna parameter\&. 
-.RE
-.PP
-
-.SS "double Antenna::getSmin () const"
-Returns the value of the minimum signal strength that defines the coverage area of this antenna\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-the value of the minimum signal strength that defines the coverage area of this antenna\&. 
-.RE
-.PP
-
-.SS "double Antenna::getSSteep () const"
-Returns the value of the Ssteep antenna parameter\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-the value of the Ssteep antenna parameter\&. 
 .RE
 .PP
 
@@ -580,7 +492,7 @@ the antenna type : \fBAntennaType::OMNIDIRECTIONAL\fP or \fBAntennaType::DIRECTI
 
 .SS "void Antenna::registerEvent (\fBHoldableAgent\fP * ag, const \fBEventType\fP event, const bool verbose)\fC [private]\fP"
 
-.SS "double Antenna::S (double dist) const"
+.SS "double Antenna::S (double dist) const\fC [private]\fP"
 Computes the signal strength at the distance dist from antenna location\&. 
 .PP
 \fBParameters:\fP
@@ -603,60 +515,6 @@ the signal strength\&.
 .SS "void Antenna::setHandoverMechanism (\fBHoldableAgent::CONNECTION_TYPE\fP handoverMechanism)"
 
 .SS "void Antenna::setLocationWithElevation ()\fC [private]\fP"
-
-.SS "void Antenna::setMaxConnections (int maxConnections)"
-Sets the number of mobile devices that an antenna can connect\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImaxConnections\fP the number of mobile devices that an antenna can connect\&. 
-.RE
-.PP
-
-.SS "void Antenna::setPLE (double ple)"
-Sets the surrounding environment' path loss exponent of the signal for an antenna\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIple\fP the value of the surrounding environment' path loss exponent of the signal\&. In real life, it takes values between 2 (in open field) and 6 (inside buildings)\&. 
-.RE
-.PP
-
-.SS "void Antenna::setPower (double power)"
-Sets the power of an antenna\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIpower\fP the value of the antenna's power\&. 
-.RE
-.PP
-
-.SS "void Antenna::setSmid (double smid)"
-Sets the value of the Smid antenna parameter\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIsmid\fP the value of the Smid antenna parameter\&. 
-.RE
-.PP
-
-.SS "void Antenna::setSSteep (double sSteep)"
-Sets the value of the Ssteep antenna parameter\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIsSteep\fP the value of the Ssteep antenna parameter\&. 
-.RE
-.PP
-
-.SS "void Antenna::setType (\fBAntennaType\fP type)"
-Sets the antenna type\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fItype\fP the antenna type\&. It could take the following two values: \fBAntennaType::OMNIDIRECTIONAL\fP or \fBAntennaType::DIRECTIONAL\fP\&. 
-.RE
-.PP
 
 .SS "const string Antenna::toString () const\fC [override]\fP, \fC [virtual]\fP"
 Overrides the same method from the superclass\&. It is used to write the characteristics of the \fBAntenna\fP in a file or console\&. 

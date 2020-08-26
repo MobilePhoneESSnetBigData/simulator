@@ -137,8 +137,8 @@ public:
 	/**
 	 * Computes the sum of the signal quality given by all antennas belonging to an MNO for all tiles in the reference grid.
 	 * The signal quality is computed in the center of each tile.
-	 * @param grid the grid of tiles where this method computes the sum of the signal quality. This grid is set at the beginning of
-	 * the simulation and it overlaps the Map.
+	 * @param map the of the simulation. It is needed to extract the grid of tiles where this method computes the sum of
+	 * the signal quality. This grid is set at the beginning of the simulation and it overlaps the Map.
 	 * @param mnoID the id of the MNO for which we want to compute this sum.
 	 * @return a vector containing the sum of the signal quality given by all antennas of an MNO,
 	 *  for all tiles in the reference grid. An element of the vector corresponds to a tile in the grid. The tiles
@@ -149,7 +149,7 @@ public:
 	/**
 	 * Computes the connection likelihood for Antenna indicated by a in the center of the tile indicated by tileIndex
 	 * @param a a pointer to an Antenna object.
-	 * @param g a pointer to the reference Grid object
+	 * @param map a pointer to the map of the simulation.
 	 * @param tileIndex the index of the tile where we want to compute the connection likelihood.
 	 * @return the connection likelihood for Antenna  a in the center of the tile with the index tileIndex.
 	 */

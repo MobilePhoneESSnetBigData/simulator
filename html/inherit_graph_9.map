@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_grid.html" title="Grid" alt="" coords="5,5,52,32"/>
+<area shape="rect" id="node1" href="$classexception.html" title="exception" alt="" coords="5,5,84,32"/>
+<area shape="rect" id="node2" href="$class_sim_exception.html" title="SimException" alt="" coords="132,5,235,32"/>
 </map>

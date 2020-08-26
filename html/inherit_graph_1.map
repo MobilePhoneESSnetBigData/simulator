@@ -1,3 +1,12 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_agents_collection.html" title="AgentsCollection" alt="" coords="5,5,125,32"/>
+<area shape="rect" id="node1" href="$class_agent.html" title="Agent" alt="" coords="5,56,61,83"/>
+<area shape="rect" id="node2" href="$class_locatable_agent.html" title="LocatableAgent" alt="" coords="109,31,221,57"/>
+<area shape="rect" id="node10" href="$class_mobile_operator.html" title="MobileOperator" alt="" coords="110,81,221,108"/>
+<area shape="rect" id="node3" href="$class_immovable_agent.html" title="ImmovableAgent" alt="" coords="269,5,387,32"/>
+<area shape="rect" id="node5" href="$class_movable_agent.html" title="MovableAgent" alt="" coords="277,56,379,83"/>
+<area shape="rect" id="node4" href="$class_antenna.html" title="Antenna" alt="" coords="453,5,523,32"/>
+<area shape="rect" id="node6" href="$class_holdable_agent.html" title="HoldableAgent" alt="" coords="435,56,541,83"/>
+<area shape="rect" id="node9" href="$class_person.html" title="Person" alt="" coords="457,107,519,133"/>
+<area shape="rect" id="node7" href="$class_mobile_phone.html" title="MobilePhone" alt="" coords="589,31,687,57"/>
+<area shape="rect" id="node8" href="$class_tablet.html" title="Tablet" alt="" coords="609,81,667,108"/>
 </map>

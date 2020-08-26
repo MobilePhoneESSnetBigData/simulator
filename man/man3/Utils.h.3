@@ -1,4 +1,4 @@
-.TH "include/Utils.h" 3 "Fri Nov 22 2019" "Simulator" \" -*- nroff -*-
+.TH "include/Utils.h" 3 "Wed Aug 26 2020" "Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,11 +6,19 @@ include/Utils.h
 .SH SYNOPSIS
 .br
 .PP
+\fC#include <agent/AgentsCollection\&.h>\fP
+.br
+\fC#include <agent/MobilePhone\&.h>\fP
+.br
+\fC#include <AntennaInfo\&.h>\fP
+.br
 \fC#include <geos/geom/Point\&.h>\fP
 .br
-\fC#include <TinyXML2\&.h>\fP
+\fC#include <PriorType\&.h>\fP
 .br
 \fC#include <cmath>\fP
+.br
+\fC#include <utility>\fP
 .br
 \fC#include <vector>\fP
 .br
@@ -18,6 +26,9 @@ include/Utils.h
 .SS "Namespaces"
 
 .in +1c
+.ti -1c
+.RI " \fBtinyxml2\fP"
+.br
 .ti -1c
 .RI " \fButils\fP"
 .br
@@ -30,18 +41,6 @@ include/Utils.h
 .br
 .ti -1c
 .RI "vector< Point * > \fButils::generateFixedPoints\fP (const \fBMap\fP *m, unsigned long n, unsigned seed)"
-.br
-.ti -1c
-.RI "void \fButils::printPersonHeader\fP ()"
-.br
-.ti -1c
-.RI "void \fButils::printAntennaHeader\fP ()"
-.br
-.ti -1c
-.RI "void \fButils::printPhoneHeader\fP ()"
-.br
-.ti -1c
-.RI "void \fButils::printMobileOperatorHeader\fP ()"
 .br
 .ti -1c
 .RI "double \fButils::r2d\fP (double x)"
@@ -69,6 +68,9 @@ include/Utils.h
 .br
 .ti -1c
 .RI "double \fButils::getValue\fP (XMLElement *el, const char *name)"
+.br
+.ti -1c
+.RI "double \fButils::inverseNormalCDF\fP (const double p, const double mu, const double sigma)"
 .br
 .in -1c
 .SS "Variables"

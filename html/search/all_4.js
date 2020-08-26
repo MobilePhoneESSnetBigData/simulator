@@ -11,6 +11,7 @@ var searchData=
   ['displace_2eh',['Displace.h',['../_displace_8h.html',1,'']]],
   ['dumpcell',['dumpCell',['../class_antenna.html#a8ed18205ff7c675868090e4c80454c2c',1,'Antenna']]],
   ['dumpdevices',['dumpDevices',['../class_person.html#a0bc06f77b3e8a151f8c5cc77459895c9',1,'Person']]],
-  ['dumpgrid',['dumpGrid',['../class_grid.html#a0024d8d3cdd7b95f9fd61205ce8b9dea',1,'Grid']]],
-  ['dumplocation',['dumpLocation',['../class_locatable_agent.html#af9a6dbd25b47c23a71c95b205da3a28d',1,'LocatableAgent']]]
+  ['dumpgrid',['dumpGrid',['../class_grid.html#a0024d8d3cdd7b95f9fd61205ce8b9dea',1,'Grid::dumpGrid()'],['../class_map.html#afb74aa56fb64f4ab4857269c7924ec5a',1,'Map::dumpGrid()']]],
+  ['dumplocation',['dumpLocation',['../class_locatable_agent.html#af9a6dbd25b47c23a71c95b205da3a28d',1,'LocatableAgent']]],
+  ['dumpsignal',['dumpSignal',['../class_antenna.html#ad78e7561bf98d891262e6436cd3e1df7',1,'Antenna']]]
 ];

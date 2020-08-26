@@ -1,4 +1,4 @@
-.TH "EMField" 3 "Fri Nov 22 2019" "Simulator" \" -*- nroff -*-
+.TH "EMField" 3 "Wed Aug 26 2020" "Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -36,10 +36,10 @@ EMField
 .RI "double \fBconnectionLikelihood\fP (\fBAntenna\fP *a, const Point *p)"
 .br
 .ti -1c
-.RI "vector< double > \fBsumSignalQuality\fP (const \fBGrid\fP *grid, const unsigned long mnoID)"
+.RI "vector< double > \fBsumSignalQuality\fP (const \fBMap\fP *map, const unsigned long mnoID)"
 .br
 .ti -1c
-.RI "double \fBconnectionLikelihoodGrid\fP (\fBAntenna\fP *a, const \fBGrid\fP *g, unsigned long tileIndex)"
+.RI "double \fBconnectionLikelihoodGrid\fP (\fBAntenna\fP *a, const \fBMap\fP *, unsigned long tileIndex)"
 .br
 .ti -1c
 .RI "const double * \fBgetAntennaMin3DbArray\fP () const"
@@ -177,7 +177,7 @@ the connection likelihood for \fBAntenna\fP a in location p\&.
 .RE
 .PP
 
-.SS "double EMField::connectionLikelihoodGrid (\fBAntenna\fP * a, const \fBGrid\fP * g, unsigned long tileIndex)"
+.SS "double EMField::connectionLikelihoodGrid (\fBAntenna\fP * a, const \fBMap\fP *, unsigned long tileIndex)"
 Computes the connection likelihood for \fBAntenna\fP indicated by a in the center of the tile indicated by tileIndex 
 .PP
 \fBParameters:\fP
@@ -250,7 +250,7 @@ true is the \fBAntenna\fP object provide enough power or signal quality in the l
 
 .SS "\fBEMField\fP& EMField::operator= (const \fBEMField\fP &)\fC [private]\fP"
 
-.SS "vector<double> EMField::sumSignalQuality (const \fBGrid\fP * grid, const unsigned long mnoID)"
+.SS "vector<double> EMField::sumSignalQuality (const \fBMap\fP * map, const unsigned long mnoID)"
 Computes the sum of the signal quality given by all antennas belonging to an MNO for all tiles in the reference grid\&. The signal quality is computed in the center of each tile\&. 
 .PP
 \fBParameters:\fP

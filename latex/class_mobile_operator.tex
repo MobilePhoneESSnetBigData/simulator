@@ -6,7 +6,8 @@
 
 
 
-Inheritance diagram for Mobile\+Operator\+:\nopagebreak
+Inheritance diagram for Mobile\+Operator\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +16,8 @@ Inheritance diagram for Mobile\+Operator\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Mobile\+Operator\+:\nopagebreak
+Collaboration diagram for Mobile\+Operator\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -25,11 +27,9 @@ Collaboration diagram for Mobile\+Operator\+:\nopagebreak
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_mobile_operator_a8a8ad5fccedc56a31118f248f2aa332f}{Mobile\+Operator} (const \hyperlink{class_map}{Map} $\ast$m, const unsigned long id, const \hyperlink{class_clock}{Clock} $\ast$clock, const char $\ast$name, const double prob\+Mobile\+Phone)
+\hyperlink{class_mobile_operator_ad9649aeb34789b407d712a1539f7953d}{Mobile\+Operator} (const \hyperlink{class_map}{Map} $\ast$m, const unsigned long id, const \hyperlink{class_clock}{Clock} $\ast$clock, const char $\ast$name, const double prob\+Mobile\+Phone, string \&outoup\+Dir)
 \item 
 virtual \hyperlink{class_mobile_operator_af77920475ff630755355f67b8f5f2708}{$\sim$\+Mobile\+Operator} ()
-\item 
-const string \hyperlink{class_mobile_operator_a2b4538d96f7aa898e6e470411d40cbf7}{get\+Name} () const override
 \item 
 const string \hyperlink{class_mobile_operator_aa83724a149499ef10678ad651a5b40df}{to\+String} () const override
 \item 
@@ -40,6 +40,15 @@ const double \hyperlink{class_mobile_operator_afe59edb4ba22cea7fab968fdd1e2ce31}
 ofstream \& \hyperlink{class_mobile_operator_ae6aa3043d946fa97eba7032b9707e52a}{get\+Antenna\+Cells\+File} ()
 \item 
 ofstream \& \hyperlink{class_mobile_operator_ac39217182fd0ce7ef5da3b9018bcb965}{get\+Signal\+File} ()
+\item 
+void \hyperlink{class_mobile_operator_acbb238161ef223f7862e1ad19d2ede56}{write\+Signal\+File\+Header} ()
+\item 
+const string \& \hyperlink{class_mobile_operator_a58ac70813094ddefdf0ba2552ec31fe9}{get\+Output\+Dir} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const string \hyperlink{class_mobile_operator_ad440c00732fbab02e41149fffe59a1c8}{get\+Header} ()
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -51,6 +60,8 @@ const double \hyperlink{class_mobile_operator_a4061b50b15ec5499d57ef0e85687c1a2}
 ofstream \hyperlink{class_mobile_operator_abd11e27d3ed1273be761a55da1549fa4}{m\+\_\+antenna\+Cells\+File\+Name}
 \item 
 ofstream \hyperlink{class_mobile_operator_af9c02c4088656c0f21ecc93b7023e776}{m\+\_\+signal\+Measure\+File\+Name}
+\item 
+string \& \hyperlink{class_mobile_operator_a5930a7aec20f9a9c043b955cc705dce7}{m\+\_\+output\+Dir}
 \end{DoxyCompactItemize}
 
 
@@ -58,11 +69,11 @@ ofstream \hyperlink{class_mobile_operator_af9c02c4088656c0f21ecc93b7023e776}{m\+
 This class represents a Mobile Operator company. Currently a simulation can be run with 1 or 2 mobile operators. A mobile operator own a set of antennas and has a set of mobile phone subscribed. 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_mobile_operator_a8a8ad5fccedc56a31118f248f2aa332f}\label{class_mobile_operator_a8a8ad5fccedc56a31118f248f2aa332f}} 
+\mbox{\Hypertarget{class_mobile_operator_ad9649aeb34789b407d712a1539f7953d}\label{class_mobile_operator_ad9649aeb34789b407d712a1539f7953d}} 
 \index{Mobile\+Operator@{Mobile\+Operator}!Mobile\+Operator@{Mobile\+Operator}}
 \index{Mobile\+Operator@{Mobile\+Operator}!Mobile\+Operator@{Mobile\+Operator}}
 \subsubsection{\texorpdfstring{Mobile\+Operator()}{MobileOperator()}}
-{\footnotesize\ttfamily Mobile\+Operator\+::\+Mobile\+Operator (\begin{DoxyParamCaption}\item[{const \hyperlink{class_map}{Map} $\ast$}]{m,  }\item[{const unsigned long}]{id,  }\item[{const \hyperlink{class_clock}{Clock} $\ast$}]{clock,  }\item[{const char $\ast$}]{name,  }\item[{const double}]{prob\+Mobile\+Phone }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Mobile\+Operator\+::\+Mobile\+Operator (\begin{DoxyParamCaption}\item[{const \hyperlink{class_map}{Map} $\ast$}]{m,  }\item[{const unsigned long}]{id,  }\item[{const \hyperlink{class_clock}{Clock} $\ast$}]{clock,  }\item[{const char $\ast$}]{name,  }\item[{const double}]{prob\+Mobile\+Phone,  }\item[{string \&}]{outoup\+Dir }\end{DoxyParamCaption})}
 
 Constructor of this class. It builds a \hyperlink{class_mobile_operator}{Mobile\+Operator} object with the characteristics provided by user through parameters. It builds a string representing the name of the file where the coverage area of all the antennas that belong to this \hyperlink{class_mobile_operator}{Mobile\+Operator} are saved in .csv format and then open this file and writes the header of the file. The name of this file is built concatenating \char`\"{}\+Antenna\+Cells\+\_\+\char`\"{} with the name of the Mobile Operator. The extension of the file is \char`\"{}.\+csv\char`\"{}. A line of this file contains the antenna id followed by a wkt text representing the coverage area of antenna. It also builds another string representing the name of a file where the signal quality values for all antennas that belong to this \hyperlink{class_mobile_operator}{Mobile\+Operator} are saved. The signal quality is computed in the center of each tile of the \hyperlink{class_grid}{Grid} object set for a simulation. The file is opened and then it writes the header of the file. The name of this file is built concatenating \char`\"{}\+Signal\+Quality\+\_\+\char`\"{} with the name of the Mobile Operator. The extension of the file is \char`\"{}.\+csv\char`\"{}. A line of this file contains the antenna id followed by a set of values for the signal quality computed in the center of each tile of the grid. 
 \begin{DoxyParams}{Parameters}
@@ -95,6 +106,12 @@ Default destructor.
 \begin{DoxyReturn}{Returns}
 a file where the coverage area of all the antennas that belong to this \hyperlink{class_mobile_operator}{Mobile\+Operator} are saved in csv format. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_mobile_operator_ad440c00732fbab02e41149fffe59a1c8}\label{class_mobile_operator_ad440c00732fbab02e41149fffe59a1c8}} 
+\index{Mobile\+Operator@{Mobile\+Operator}!get\+Header@{get\+Header}}
+\index{get\+Header@{get\+Header}!Mobile\+Operator@{Mobile\+Operator}}
+\subsubsection{\texorpdfstring{get\+Header()}{getHeader()}}
+{\footnotesize\ttfamily static const string Mobile\+Operator\+::get\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
 \mbox{\Hypertarget{class_mobile_operator_a003a5d91f543eaf5ff11894bd462ac77}\label{class_mobile_operator_a003a5d91f543eaf5ff11894bd462ac77}} 
 \index{Mobile\+Operator@{Mobile\+Operator}!get\+M\+N\+O\+Name@{get\+M\+N\+O\+Name}}
 \index{get\+M\+N\+O\+Name@{get\+M\+N\+O\+Name}!Mobile\+Operator@{Mobile\+Operator}}
@@ -104,18 +121,11 @@ a file where the coverage area of all the antennas that belong to this \hyperlin
 The name of the Mobile Operator. It should be provided as a parameter to the constructor of the class. \begin{DoxyReturn}{Returns}
 The name of the Mobile Operator 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_mobile_operator_a2b4538d96f7aa898e6e470411d40cbf7}\label{class_mobile_operator_a2b4538d96f7aa898e6e470411d40cbf7}} 
-\index{Mobile\+Operator@{Mobile\+Operator}!get\+Name@{get\+Name}}
-\index{get\+Name@{get\+Name}!Mobile\+Operator@{Mobile\+Operator}}
-\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
-{\footnotesize\ttfamily const string Mobile\+Operator\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-Overrides the same method from the superclass. \begin{DoxyReturn}{Returns}
-the name of the class, i.\+e. \char`\"{}\+Mobile\+Operator\char`\"{}. 
-\end{DoxyReturn}
-
-
-Implements \hyperlink{class_agent_afe6c72d91baf9ee4fe77ea1ed7fef3ba}{Agent}.
+\mbox{\Hypertarget{class_mobile_operator_a58ac70813094ddefdf0ba2552ec31fe9}\label{class_mobile_operator_a58ac70813094ddefdf0ba2552ec31fe9}} 
+\index{Mobile\+Operator@{Mobile\+Operator}!get\+Output\+Dir@{get\+Output\+Dir}}
+\index{get\+Output\+Dir@{get\+Output\+Dir}!Mobile\+Operator@{Mobile\+Operator}}
+\subsubsection{\texorpdfstring{get\+Output\+Dir()}{getOutputDir()}}
+{\footnotesize\ttfamily const string\& Mobile\+Operator\+::get\+Output\+Dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{class_mobile_operator_afe59edb4ba22cea7fab968fdd1e2ce31}\label{class_mobile_operator_afe59edb4ba22cea7fab968fdd1e2ce31}} 
 \index{Mobile\+Operator@{Mobile\+Operator}!get\+Prob\+Mobile\+Phone@{get\+Prob\+Mobile\+Phone}}
@@ -148,6 +158,12 @@ a string that describes the parameters of the Mobie\+Operator.
 
 Implements \hyperlink{class_agent_a44f291596d10c7878b0641d6ec156328}{Agent}.
 
+\mbox{\Hypertarget{class_mobile_operator_acbb238161ef223f7862e1ad19d2ede56}\label{class_mobile_operator_acbb238161ef223f7862e1ad19d2ede56}} 
+\index{Mobile\+Operator@{Mobile\+Operator}!write\+Signal\+File\+Header@{write\+Signal\+File\+Header}}
+\index{write\+Signal\+File\+Header@{write\+Signal\+File\+Header}!Mobile\+Operator@{Mobile\+Operator}}
+\subsubsection{\texorpdfstring{write\+Signal\+File\+Header()}{writeSignalFileHeader()}}
+{\footnotesize\ttfamily void Mobile\+Operator\+::write\+Signal\+File\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 \subsection{Member Data Documentation}
@@ -162,6 +178,12 @@ Implements \hyperlink{class_agent_a44f291596d10c7878b0641d6ec156328}{Agent}.
 \index{m\+\_\+name@{m\+\_\+name}!Mobile\+Operator@{Mobile\+Operator}}
 \subsubsection{\texorpdfstring{m\+\_\+name}{m\_name}}
 {\footnotesize\ttfamily const string Mobile\+Operator\+::m\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_mobile_operator_a5930a7aec20f9a9c043b955cc705dce7}\label{class_mobile_operator_a5930a7aec20f9a9c043b955cc705dce7}} 
+\index{Mobile\+Operator@{Mobile\+Operator}!m\+\_\+output\+Dir@{m\+\_\+output\+Dir}}
+\index{m\+\_\+output\+Dir@{m\+\_\+output\+Dir}!Mobile\+Operator@{Mobile\+Operator}}
+\subsubsection{\texorpdfstring{m\+\_\+output\+Dir}{m\_outputDir}}
+{\footnotesize\ttfamily string\& Mobile\+Operator\+::m\+\_\+output\+Dir\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{class_mobile_operator_a4061b50b15ec5499d57ef0e85687c1a2}\label{class_mobile_operator_a4061b50b15ec5499d57ef0e85687c1a2}} 
 \index{Mobile\+Operator@{Mobile\+Operator}!m\+\_\+prob\+Mobile\+Phone@{m\+\_\+prob\+Mobile\+Phone}}
@@ -179,4 +201,4 @@ Implements \hyperlink{class_agent_a44f291596d10c7878b0641d6ec156328}{Agent}.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/\hyperlink{_mobile_operator_8h}{Mobile\+Operator.\+h}\end{DoxyCompactItemize}
+include/agent/\hyperlink{_mobile_operator_8h}{Mobile\+Operator.\+h}\end{DoxyCompactItemize}

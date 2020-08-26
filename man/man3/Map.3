@@ -1,4 +1,4 @@
-.TH "Map" 3 "Fri Nov 22 2019" "Simulator" \" -*- nroff -*-
+.TH "Map" 3 "Wed Aug 26 2020" "Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,148 +8,136 @@ Map
 .PP
 .PP
 \fC#include <Map\&.h>\fP
+.PP
+Inherited by \fBWKTMap\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBMap\fP ()"
-.br
-.ti -1c
-.RI "\fBMap\fP (double llX, double llY, double width, double height)"
-.br
-.ti -1c
-.RI "\fBMap\fP (string wktFile)"
-.br
-.ti -1c
 .RI "virtual \fB~Map\fP ()"
 .br
 .ti -1c
-.RI "const GeometryFactory::Ptr & \fBgetGlobalFactory\fP () const"
+.RI "virtual Geometry * \fBgetBoundary\fP () const =0"
 .br
 .ti -1c
-.RI "Geometry * \fBgetBoundary\fP () const"
+.RI "virtual Geometry * \fBgetEnvelope\fP () const =0"
 .br
 .ti -1c
-.RI "void \fBsetBoundary\fP (Geometry *boundary)"
+.RI "virtual const GeometryFactory::Ptr & \fBgetGlobalFactory\fP () const =0"
 .br
 .ti -1c
-.RI "const \fBGrid\fP * \fBgetGrid\fP () const"
+.RI "virtual void \fBaddGrid\fP (double dimTileX, double dimTileY)"
 .br
 .ti -1c
-.RI "void \fBaddGrid\fP (double dimTileX, double dimTileY)"
+.RI "virtual unsigned long \fBgetNoTilesX\fP () const"
+.br
+.ti -1c
+.RI "virtual unsigned long \fBgetNoTilesY\fP () const"
+.br
+.ti -1c
+.RI "virtual double \fBgetXTileDim\fP () const"
+.br
+.ti -1c
+.RI "virtual double \fBgetYTileDim\fP () const"
+.br
+.ti -1c
+.RI "virtual double \fBgetXOrigin\fP () const"
+.br
+.ti -1c
+.RI "virtual double \fBgetYOrigin\fP () const"
+.br
+.ti -1c
+.RI "virtual const unsigned long \fBgetNoTiles\fP () const"
+.br
+.ti -1c
+.RI "virtual Coordinate \fBgetTileCenter\fP (unsigned long tileIndex) const"
+.br
+.ti -1c
+.RI "virtual unsigned long \fBgetTileNo\fP (const Point *p) const"
+.br
+.ti -1c
+.RI "virtual unsigned long \fBgetTileNo\fP (double x, double y) const"
+.br
+.ti -1c
+.RI "virtual void \fBdumpGrid\fP (const string &gridFileName) const"
+.br
+.ti -1c
+.RI "virtual Coordinate * \fBgetTileCenters\fP () const"
+.br
+.ti -1c
+.RI "virtual bool \fBhasGrid\fP () const"
 .br
 .in -1c
-.SS "Private Member Functions"
+.SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "Polygon * \fBcreate_rectangle\fP (double llX, double llY, double width, double height)"
+.RI "\fBMap\fP (string mapFileName)"
 .br
 .in -1c
-.SS "Private Attributes"
+.SS "Protected Attributes"
 
 .in +1c
-.ti -1c
-.RI "GeometryFactory::Ptr \fBm_globalFactory\fP"
-.br
-.ti -1c
-.RI "Geometry * \fBm_boundary\fP"
-.br
 .ti -1c
 .RI "\fBGrid\fP * \fBm_grid\fP"
 .br
+.ti -1c
+.RI "string \fBm_mapFileName\fP"
+.br
 .in -1c
-.SH "Detailed Description"
-.PP 
-This is the map where the simulation takes place\&. It could be a simple rectangle or any kind of geometry object(s) read from a wkt file\&. The map has a boundary that is implemented as a Geometry object, a factory object of GeometryFactory type used to create other objects\&. All geometric and geographic features of the simulator uses the GEOS library\&. GEOS is an open source C++ library which is just a port to C++ of the well known Java Topology Suite\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "Map::Map ()"
-Creates a map with a null boundary\&. The user may set the boundary later, using \fBsetBoundary()\fP method\&. 
-.SS "Map::Map (double llX, double llY, double width, double height)"
-Build a simple map of a rectangular shape\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIllX\fP X coordinate of the bottom left corner of the rectangle\&. 
-.br
-\fIllY\fP Y coordinate of the bottom left corner of the rectangle\&. 
-.br
-\fIwidth\fP the width of the rectangle\&. 
-.br
-\fIheight\fP the height of the rectangle\&. 
-.RE
-.PP
-
-.SS "Map::Map (string wktFile)"
-Builds a map reading it from a \&.wkt file\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIwktFile\fP the name of the \&.wkt file that contains the description of the map\&. Currently, the first row of this file should contain the external boundary geometry of the map\&. 
-.RE
-.PP
-
 .SS "virtual Map::~Map ()\fC [virtual]\fP"
-Default destructor 
+
+.SS "Map::Map (string mapFileName)\fC [protected]\fP"
+
 .SH "Member Function Documentation"
 .PP 
-.SS "void Map::addGrid (double dimTileX, double dimTileY)"
-Adds a \fBGrid\fP that overlaps this \fBMap\fP objects\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIdimTileX\fP the dimension on OX of a tile of the \fBGrid\fP object\&. 
-.br
-\fIdimTileY\fP the dimension on OY of a tile of the \fBGrid\fP object\&. 
-.RE
-.PP
+.SS "virtual void Map::addGrid (double dimTileX, double dimTileY)\fC [virtual]\fP"
 
-.SS "Polygon* Map::create_rectangle (double llX, double llY, double width, double height)\fC [private]\fP"
+.SS "virtual void Map::dumpGrid (const string & gridFileName) const\fC [virtual]\fP"
 
-.SS "Geometry* Map::getBoundary () const"
-Returns a pointer to the Geometry object that represents the external boundary of the map\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-a pointer to the Geometry object that represents the external boundary of the map\&. 
-.RE
-.PP
+.SS "virtual Geometry* Map::getBoundary () const\fC [pure virtual]\fP"
 
-.SS "const GeometryFactory::Ptr& Map::getGlobalFactory () const"
-Returns a pointer to the GeometryFactory object which is a factory object used to create other geometric objects\&. The GEOS library allows users to create geometric objects only using this factory, all the constructors are made private\&. 
 .PP
-\fBReturns:\fP
-.RS 4
-a pointer to the GeometryFactory object used to create other geometric objects\&. 
-.RE
-.PP
+Implemented in \fBWKTMap\fP\&.
+.SS "virtual Geometry* Map::getEnvelope () const\fC [pure virtual]\fP"
 
-.SS "const \fBGrid\fP* Map::getGrid () const"
-Returns a pointer to the \fBGrid\fP object associated with this \fBMap\fP\&. After creation of a \fBMap\fP the user should associate a \fBGrid\fP that overlaps this \fBMap\fP\&. The gird is used to compute the probability of the localization of different events during the simulation\&. 
 .PP
-\fBReturns:\fP
-.RS 4
-a pointer the \fBGrid\fP object associated with this \fBMap\fP\&. 
-.RE
-.PP
+Implemented in \fBWKTMap\fP\&.
+.SS "virtual const GeometryFactory::Ptr& Map::getGlobalFactory () const\fC [pure virtual]\fP"
 
-.SS "void Map::setBoundary (Geometry * boundary)"
-Sets the boundary of the \fBMap\fP object\&. 
 .PP
-\fBParameters:\fP
-.RS 4
-\fIboundary\fP the boundary of the \fBMap\fP object\&. 
-.RE
-.PP
+Implemented in \fBWKTMap\fP\&.
+.SS "virtual const unsigned long Map::getNoTiles () const\fC [virtual]\fP"
+
+.SS "virtual unsigned long Map::getNoTilesX () const\fC [virtual]\fP"
+
+.SS "virtual unsigned long Map::getNoTilesY () const\fC [virtual]\fP"
+
+.SS "virtual Coordinate Map::getTileCenter (unsigned long tileIndex) const\fC [virtual]\fP"
+
+.SS "virtual Coordinate* Map::getTileCenters () const\fC [virtual]\fP"
+
+.SS "virtual unsigned long Map::getTileNo (const Point * p) const\fC [virtual]\fP"
+
+.SS "virtual unsigned long Map::getTileNo (double x, double y) const\fC [virtual]\fP"
+
+.SS "virtual double Map::getXOrigin () const\fC [virtual]\fP"
+
+.SS "virtual double Map::getXTileDim () const\fC [virtual]\fP"
+
+.SS "virtual double Map::getYOrigin () const\fC [virtual]\fP"
+
+.SS "virtual double Map::getYTileDim () const\fC [virtual]\fP"
+
+.SS "virtual bool Map::hasGrid () const\fC [virtual]\fP"
 
 .SH "Member Data Documentation"
 .PP 
-.SS "Geometry* Map::m_boundary\fC [private]\fP"
+.SS "\fBGrid\fP* Map::m_grid\fC [protected]\fP"
 
-.SS "GeometryFactory::Ptr Map::m_globalFactory\fC [private]\fP"
-
-.SS "\fBGrid\fP* Map::m_grid\fC [private]\fP"
+.SS "string Map::m_mapFileName\fC [protected]\fP"
 
 
 .SH "Author"

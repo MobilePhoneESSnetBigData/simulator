@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['person',['Person',['../class_person.html',1,'']]]
+  ['netpriorpostlocprob',['NetPriorPostLocProb',['../class_net_prior_post_loc_prob.html',1,'']]]
 ];

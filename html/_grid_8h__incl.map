@@ -1,18 +1,2 @@
-<map id="include/Grid.h" name="include/Grid.h">
-<area shape="rect" id="node6" href="$_mobile_phone_8h.html" title="MobilePhone.h" alt="" coords="515,80,623,107"/>
-<area shape="rect" id="node10" href="$_agent_8h.html" title="Agent.h" alt="" coords="1103,453,1170,480"/>
-<area shape="rect" id="node29" href="$_antenna_info_8h.html" title="AntennaInfo.h" alt="" coords="43,453,145,480"/>
-<area shape="rect" id="node30" href="$_agents_collection_8h.html" title="AgentsCollection.h" alt="" coords="1371,80,1502,107"/>
-<area shape="rect" id="node33" href="$_prior_type_8h.html" title="PriorType.h" alt="" coords="1910,80,1998,107"/>
-<area shape="rect" id="node7" href="$_holdable_agent_8h.html" title="HoldableAgent.h" alt="" coords="127,229,245,256"/>
-<area shape="rect" id="node13" href="$_clock_8h.html" title="Clock.h" alt="" coords="757,528,823,555"/>
-<area shape="rect" id="node20" href="$_mobile_operator_8h.html" title="MobileOperator.h" alt="" coords="1060,229,1181,256"/>
-<area shape="rect" id="node22" href="$_antenna_8h.html" title="Antenna.h" alt="" coords="713,155,795,181"/>
-<area shape="rect" id="node8" href="$_movable_agent_8h.html" title="MovableAgent.h" alt="" coords="382,304,497,331"/>
-<area shape="rect" id="node9" href="$_locatable_agent_8h.html" title="LocatableAgent.h" alt="" coords="859,379,982,405"/>
-<area shape="rect" id="node19" href="$_movement_type_8h.html" title="MovementType.h" alt="" coords="321,379,441,405"/>
-<area shape="rect" id="node11" href="$_map_8h.html" title="Map.h" alt="" coords="1071,528,1130,555"/>
-<area shape="rect" id="node23" href="$_immovable_agent_8h.html" title="ImmovableAgent.h" alt="" coords="925,304,1053,331"/>
-<area shape="rect" id="node25" href="$_event_type_8h.html" title="EventType.h" alt="" coords="707,229,801,256"/>
-<area shape="rect" id="node26" href="$_antenna_type_8h.html" title="AntennaType.h" alt="" coords="825,229,934,256"/>
+<map id="include/map/Grid.h" name="include/map/Grid.h">
 </map>

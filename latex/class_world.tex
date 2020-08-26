@@ -6,7 +6,8 @@
 
 
 
-Collaboration diagram for World\+:\nopagebreak
+Collaboration diagram for World\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,38 +27,30 @@ void \hyperlink{class_world_aa825a43f968c8fe750c67156e64721ff}{run\+Simulation} 
 \item 
 \hyperlink{class_agents_collection}{Agents\+Collection} $\ast$ \hyperlink{class_world_a8cf8a54ae1f3cb61efeba2b3acebb7cc}{get\+Agents} () const
 \item 
-void \hyperlink{class_world_afa8e5c2943c72aa664590abbb024896b}{set\+Agents} (\hyperlink{class_agents_collection}{Agents\+Collection} $\ast$agents)
-\item 
-\hyperlink{class_clock}{Clock} $\ast$ \hyperlink{class_world_a79423d285338cbe0ea501369e93e78b4}{get\+Clock} () const
-\item 
-void \hyperlink{class_world_a52ebe3eed240fe4dd37915a1dad02efd}{set\+Clock} (\hyperlink{class_clock}{Clock} $\ast$clock)
-\item 
 const \hyperlink{class_map}{Map} $\ast$ \hyperlink{class_world_a33b8543ee812ae4f8ff93329444da4cb}{get\+Map} () const
-\item 
-void \hyperlink{class_world_a9dc80487d5c2d1d4f2af0c1d7f015204}{set\+Map} (\hyperlink{class_map}{Map} $\ast$map)
 \item 
 const string \& \hyperlink{class_world_a7d07b06f9884185161c5cc34034a7212}{get\+Grid\+Filename} () const
 \item 
+\hyperlink{class_clock}{Clock} $\ast$ \hyperlink{class_world_aa51e0799a58035305307e398a81ffeb2}{get\+Clock} ()
+\item 
+void \hyperlink{class_world_ad98b713484ef1c92ded7eec352a496a5}{compute\+Probabilities} (std\+::map$<$ unsigned long, vector$<$ \hyperlink{class_antenna_info}{Antenna\+Info} $>$$>$ data)
+\item 
 map$<$ const unsigned long, const string $>$ \hyperlink{class_world_a026bdf1e190cdaf02481c548b8ca1a6f}{get\+Prob\+Filenames} () const
 \item 
-const string \& \hyperlink{class_world_a5baa256a1e856e635830e0a1c9cce37b}{get\+Antennas\+Filename} () const
+void \hyperlink{class_world_a176205a2d3e28cca6fb7ac2fc9e8670e}{set\+Post\+Prob\+Method} (const std\+::shared\+\_\+ptr$<$ \hyperlink{class_post_loc_prob}{Post\+Loc\+Prob} $>$ \&post)
 \item 
-const string \& \hyperlink{class_world_a206508d427e13c242855d9e11e5bed72}{get\+Persons\+Filename} () const
+\hyperlink{_prior_type_8h_a61286c562e68de246982fc393a7c23a5}{Prior\+Type} \hyperlink{class_world_aeba13dcf92dac761cf5cac1c8f2266c9}{get\+Prior} ()
 \item 
-double \hyperlink{class_world_aa62f6cd42214191e37b904a672306888}{get\+Grid\+Dim\+TileX} () const
+const string \& \hyperlink{class_world_a2830d2aea7d91f98257c1e661527289e}{get\+Output\+Dir} () const
 \item 
-double \hyperlink{class_world_a99a004c6f3ce1a3a76894bb1f9625bbe}{get\+Grid\+Dim\+TileY} () const
-\item 
-\hyperlink{_prior_type_8h_a61286c562e68de246982fc393a7c23a5}{Prior\+Type} \hyperlink{class_world_a9d7c2f5e7d357b891fac1728a932885f}{get\+Prior} () const
-\item 
-\hyperlink{class_holdable_agent_ae2c334b004d7b9c5a999cf2618e4e518}{Holdable\+Agent\+::\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} \hyperlink{class_world_a35aafc469b9146b4b6f72c6adaa3e067}{get\+Connection\+Type} () const
+std\+::map$<$ unsigned long, vector$<$ \hyperlink{class_antenna_info}{Antenna\+Info} $>$ $>$ \hyperlink{class_world_a65eab81f8a895b605cbc90d887d0671a}{get\+Events} ()
 \end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 vector$<$ \hyperlink{class_person}{Person} $\ast$ $>$ \hyperlink{class_world_ada780d7d546a1dad038c83aad3f696df}{generate\+Population} (unsigned long num\+Persons, double percent\+Home)
 \item 
-vector$<$ \hyperlink{class_person}{Person} $\ast$ $>$ \hyperlink{class_world_a7648b24daba6b22f7fe85d5b1dc53d5e}{generate\+Population} (const unsigned long num\+Persons, vector$<$ double $>$ params, \hyperlink{class_person_a53376a9a5852ec7760488a01c37f0b0b}{Person\+::\+Age\+Distributions} age\+\_\+distribution, double male\+\_\+share, vector$<$ \hyperlink{class_mobile_operator}{Mobile\+Operator} $\ast$$>$ mnos, double speed\+\_\+walk, double speed\+\_\+car, double percent\+Home)
+vector$<$ \hyperlink{class_person}{Person} $\ast$ $>$ \hyperlink{class_world_aab92523ca0922b67e4ec77f37939edc1}{generate\+Population} (const unsigned long num\+Persons, shared\+\_\+ptr$<$ \hyperlink{class_age_distribution}{Age\+Distribution} $>$ age\+\_\+distribution, double male\+\_\+share, vector$<$ \hyperlink{class_mobile_operator}{Mobile\+Operator} $\ast$$>$ mnos, double speed\+\_\+walk, double speed\+\_\+car, double percent\+Home)
 \item 
 vector$<$ \hyperlink{class_antenna}{Antenna} $\ast$ $>$ \hyperlink{class_world_adbd58c8093be1ac349d929d9a4bc2ab0}{generate\+Antennas} (unsigned long num\+Antennas)
 \item 
@@ -74,6 +67,30 @@ int \hyperlink{class_world_a9a982977a44c9e8a4724eaa1e4108679}{which\+M\+NO} (vec
 string \hyperlink{class_world_a5675c3a896891827dd59255a9761f08e}{parse\+Probabilities} (const string \&probabilities\+File\+Name)
 \item 
 double \hyperlink{class_world_a5975f2673e84c87f8640737efd04590b}{get\+Default\+Connection\+Threshold} (\hyperlink{class_holdable_agent_ae2c334b004d7b9c5a999cf2618e4e518}{Holdable\+Agent\+::\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} conn\+Type)
+\item 
+void \hyperlink{class_world_ab517becd3d09009ae4b151a6ce68d073}{set\+Person\+Displacement\+Pattern} (\hyperlink{class_person}{Person} $\ast$p, \hyperlink{_movement_type_8h_a8a93b61bc797a7d1907f42796a252493}{Movement\+Type} type, \hyperlink{class_map}{Map} $\ast$map, \hyperlink{class_clock}{Clock} $\ast$clk)
+\item 
+void \hyperlink{class_world_af4389a47e4f2dd361300a1e8e78fed6c}{generate\+Phones} (vector$<$ \hyperlink{class_mobile_operator}{Mobile\+Operator} $\ast$$>$ mnos)
+\item 
+int $\ast$ \hyperlink{class_world_aa52f524e1a9116a948906592aa927285}{generate\+Ages} (int n, shared\+\_\+ptr$<$ \hyperlink{class_age_distribution}{Age\+Distribution} $>$ distr, \hyperlink{class_random_number_generator}{Random\+Number\+Generator} $\ast$rng)
+\item 
+void \hyperlink{class_world_a823ee4f34344e80a028e95211b258e7b}{set\+Phones} (int $\ast$\&ph1, int $\ast$\&ph2, double prob\+Sec\+Mobile\+Phone, double num\+Persons, \hyperlink{class_random_number_generator}{Random\+Number\+Generator} $\ast$rng, vector$<$ \hyperlink{class_mobile_operator}{Mobile\+Operator} $\ast$$>$ mnos)
+\item 
+void \hyperlink{class_world_a3f069fb694d8f17b23bda291bea47446}{write\+Signal\+And\+Cells} (ostream \&antenna\+File)
+\item 
+void \hyperlink{class_world_ac93f975e8fcbe76e92226bd0e9ba2e35}{Add\+Mobile\+Phone\+To\+Person} (\hyperlink{class_person}{Person} $\ast$p, \hyperlink{class_mobile_operator}{Mobile\+Operator} $\ast$mno, \hyperlink{class_agents_collection}{Agents\+Collection} $\ast$ag, const \hyperlink{class_map}{Map} $\ast$map, \hyperlink{class_clock}{Clock} $\ast$clock, double thres, \hyperlink{class_holdable_agent_ae2c334b004d7b9c5a999cf2618e4e518}{Holdable\+Agent\+::\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} conn)
+\item 
+\hyperlink{_movement_type_8h_a8a93b61bc797a7d1907f42796a252493}{Movement\+Type} \hyperlink{class_world_a82e2813458959f161fc116abf79f1fb3}{parse\+Movement} (X\+M\+L\+Element $\ast$el)
+\item 
+\hyperlink{class_holdable_agent_ae2c334b004d7b9c5a999cf2618e4e518}{Holdable\+Agent\+::\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} \hyperlink{class_world_a23531a124ce85f6d23418aa371081c90}{parse\+Connection\+Type} (X\+M\+L\+Element $\ast$el)
+\item 
+vector$<$ \hyperlink{class_mobile_operator}{Mobile\+Operator} $\ast$ $>$ \hyperlink{class_world_ae252bb724d2b62fb9c03e88fc91c89b8}{parse\+M\+N\+Os} (X\+M\+L\+Element $\ast$el)
+\item 
+double \hyperlink{class_world_aa62f6cd42214191e37b904a672306888}{get\+Grid\+Dim\+TileX} () const
+\item 
+double \hyperlink{class_world_a99a004c6f3ce1a3a76894bb1f9625bbe}{get\+Grid\+Dim\+TileY} () const
+\item 
+\hyperlink{class_holdable_agent_ae2c334b004d7b9c5a999cf2618e4e518}{Holdable\+Agent\+::\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} \hyperlink{class_world_a35aafc469b9146b4b6f72c6adaa3e067}{get\+Connection\+Type} () const
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -116,7 +133,11 @@ string \hyperlink{class_world_a66e68ec2220ea27e705aac88a920b6fd}{m\+\_\+persons\
 \item 
 string \hyperlink{class_world_ac38e4d56d6bcabc35cf0e6763892a7a2}{m\+\_\+antennas\+Filename}
 \item 
+string \hyperlink{class_world_a7e32421ab881331c06802e7719557e48}{m\+\_\+output\+Dir}
+\item 
 double \hyperlink{class_world_a45e13597d542b7f2eb0b0d77e1a8633f}{m\+\_\+prob\+Sec\+Mobile\+Phone}
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_post_loc_prob}{Post\+Loc\+Prob} $>$ \hyperlink{class_world_a434bcb4c18cc7b3194d1ea6c09b76284}{m\+\_\+post\+Method}
 \end{DoxyCompactItemize}
 
 
@@ -177,6 +198,24 @@ Builds a new \hyperlink{class_world}{World} object, reading the parameters for t
 Destructor It releases the memory allocated for the agents collection and the \hyperlink{class_clock}{Clock} object. 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_world_ac93f975e8fcbe76e92226bd0e9ba2e35}\label{class_world_ac93f975e8fcbe76e92226bd0e9ba2e35}} 
+\index{World@{World}!Add\+Mobile\+Phone\+To\+Person@{Add\+Mobile\+Phone\+To\+Person}}
+\index{Add\+Mobile\+Phone\+To\+Person@{Add\+Mobile\+Phone\+To\+Person}!World@{World}}
+\subsubsection{\texorpdfstring{Add\+Mobile\+Phone\+To\+Person()}{AddMobilePhoneToPerson()}}
+{\footnotesize\ttfamily void World\+::\+Add\+Mobile\+Phone\+To\+Person (\begin{DoxyParamCaption}\item[{\hyperlink{class_person}{Person} $\ast$}]{p,  }\item[{\hyperlink{class_mobile_operator}{Mobile\+Operator} $\ast$}]{mno,  }\item[{\hyperlink{class_agents_collection}{Agents\+Collection} $\ast$}]{ag,  }\item[{const \hyperlink{class_map}{Map} $\ast$}]{map,  }\item[{\hyperlink{class_clock}{Clock} $\ast$}]{clock,  }\item[{double}]{thres,  }\item[{\hyperlink{class_holdable_agent_ae2c334b004d7b9c5a999cf2618e4e518}{Holdable\+Agent\+::\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE}}]{conn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_ad98b713484ef1c92ded7eec352a496a5}\label{class_world_ad98b713484ef1c92ded7eec352a496a5}} 
+\index{World@{World}!compute\+Probabilities@{compute\+Probabilities}}
+\index{compute\+Probabilities@{compute\+Probabilities}!World@{World}}
+\subsubsection{\texorpdfstring{compute\+Probabilities()}{computeProbabilities()}}
+{\footnotesize\ttfamily void World\+::compute\+Probabilities (\begin{DoxyParamCaption}\item[{std\+::map$<$ unsigned long, vector$<$ \hyperlink{class_antenna_info}{Antenna\+Info} $>$$>$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_world_aa52f524e1a9116a948906592aa927285}\label{class_world_aa52f524e1a9116a948906592aa927285}} 
+\index{World@{World}!generate\+Ages@{generate\+Ages}}
+\index{generate\+Ages@{generate\+Ages}!World@{World}}
+\subsubsection{\texorpdfstring{generate\+Ages()}{generateAges()}}
+{\footnotesize\ttfamily int$\ast$ World\+::generate\+Ages (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{shared\+\_\+ptr$<$ \hyperlink{class_age_distribution}{Age\+Distribution} $>$}]{distr,  }\item[{\hyperlink{class_random_number_generator}{Random\+Number\+Generator} $\ast$}]{rng }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_world_adbd58c8093be1ac349d929d9a4bc2ab0}\label{class_world_adbd58c8093be1ac349d929d9a4bc2ab0}} 
 \index{World@{World}!generate\+Antennas@{generate\+Antennas}}
 \index{generate\+Antennas@{generate\+Antennas}!World@{World}}
@@ -189,17 +228,23 @@ Destructor It releases the memory allocated for the agents collection and the \h
 \subsubsection{\texorpdfstring{generate\+Mobile\+Phones()}{generateMobilePhones()}}
 {\footnotesize\ttfamily vector$<$\hyperlink{class_mobile_phone}{Mobile\+Phone}$\ast$$>$ World\+::generate\+Mobile\+Phones (\begin{DoxyParamCaption}\item[{int}]{num\+Mobile\+Phones,  }\item[{\hyperlink{class_holdable_agent_ae2c334b004d7b9c5a999cf2618e4e518}{Holdable\+Agent\+::\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE}}]{conn\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+\mbox{\Hypertarget{class_world_af4389a47e4f2dd361300a1e8e78fed6c}\label{class_world_af4389a47e4f2dd361300a1e8e78fed6c}} 
+\index{World@{World}!generate\+Phones@{generate\+Phones}}
+\index{generate\+Phones@{generate\+Phones}!World@{World}}
+\subsubsection{\texorpdfstring{generate\+Phones()}{generatePhones()}}
+{\footnotesize\ttfamily void World\+::generate\+Phones (\begin{DoxyParamCaption}\item[{vector$<$ \hyperlink{class_mobile_operator}{Mobile\+Operator} $\ast$$>$}]{mnos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_world_ada780d7d546a1dad038c83aad3f696df}\label{class_world_ada780d7d546a1dad038c83aad3f696df}} 
 \index{World@{World}!generate\+Population@{generate\+Population}}
 \index{generate\+Population@{generate\+Population}!World@{World}}
 \subsubsection{\texorpdfstring{generate\+Population()}{generatePopulation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily vector$<$\hyperlink{class_person}{Person}$\ast$$>$ World\+::generate\+Population (\begin{DoxyParamCaption}\item[{unsigned long}]{num\+Persons,  }\item[{double}]{percent\+Home }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_world_a7648b24daba6b22f7fe85d5b1dc53d5e}\label{class_world_a7648b24daba6b22f7fe85d5b1dc53d5e}} 
+\mbox{\Hypertarget{class_world_aab92523ca0922b67e4ec77f37939edc1}\label{class_world_aab92523ca0922b67e4ec77f37939edc1}} 
 \index{World@{World}!generate\+Population@{generate\+Population}}
 \index{generate\+Population@{generate\+Population}!World@{World}}
 \subsubsection{\texorpdfstring{generate\+Population()}{generatePopulation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily vector$<$\hyperlink{class_person}{Person}$\ast$$>$ World\+::generate\+Population (\begin{DoxyParamCaption}\item[{const unsigned long}]{num\+Persons,  }\item[{vector$<$ double $>$}]{params,  }\item[{\hyperlink{class_person_a53376a9a5852ec7760488a01c37f0b0b}{Person\+::\+Age\+Distributions}}]{age\+\_\+distribution,  }\item[{double}]{male\+\_\+share,  }\item[{vector$<$ \hyperlink{class_mobile_operator}{Mobile\+Operator} $\ast$$>$}]{mnos,  }\item[{double}]{speed\+\_\+walk,  }\item[{double}]{speed\+\_\+car,  }\item[{double}]{percent\+Home }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily vector$<$\hyperlink{class_person}{Person}$\ast$$>$ World\+::generate\+Population (\begin{DoxyParamCaption}\item[{const unsigned long}]{num\+Persons,  }\item[{shared\+\_\+ptr$<$ \hyperlink{class_age_distribution}{Age\+Distribution} $>$}]{age\+\_\+distribution,  }\item[{double}]{male\+\_\+share,  }\item[{vector$<$ \hyperlink{class_mobile_operator}{Mobile\+Operator} $\ast$$>$}]{mnos,  }\item[{double}]{speed\+\_\+walk,  }\item[{double}]{speed\+\_\+car,  }\item[{double}]{percent\+Home }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{class_world_a8cf8a54ae1f3cb61efeba2b3acebb7cc}\label{class_world_a8cf8a54ae1f3cb61efeba2b3acebb7cc}} 
 \index{World@{World}!get\+Agents@{get\+Agents}}
@@ -210,33 +255,19 @@ Destructor It releases the memory allocated for the agents collection and the \h
 Returns the \hyperlink{class_agents_collection}{Agents\+Collection} used in simulation. \begin{DoxyReturn}{Returns}
 a pointer to \hyperlink{class_agents_collection}{Agents\+Collection} object. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_world_a5baa256a1e856e635830e0a1c9cce37b}\label{class_world_a5baa256a1e856e635830e0a1c9cce37b}} 
-\index{World@{World}!get\+Antennas\+Filename@{get\+Antennas\+Filename}}
-\index{get\+Antennas\+Filename@{get\+Antennas\+Filename}!World@{World}}
-\subsubsection{\texorpdfstring{get\+Antennas\+Filename()}{getAntennasFilename()}}
-{\footnotesize\ttfamily const string\& World\+::get\+Antennas\+Filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-Returns the name of the file where the antennas exact locations are saved for later analysis. \begin{DoxyReturn}{Returns}
-the name of the file where the antennas exact locations are saved for later analysis. 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_world_a79423d285338cbe0ea501369e93e78b4}\label{class_world_a79423d285338cbe0ea501369e93e78b4}} 
+\mbox{\Hypertarget{class_world_aa51e0799a58035305307e398a81ffeb2}\label{class_world_aa51e0799a58035305307e398a81ffeb2}} 
 \index{World@{World}!get\+Clock@{get\+Clock}}
 \index{get\+Clock@{get\+Clock}!World@{World}}
 \subsubsection{\texorpdfstring{get\+Clock()}{getClock()}}
-{\footnotesize\ttfamily \hyperlink{class_clock}{Clock}$\ast$ World\+::get\+Clock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \hyperlink{class_clock}{Clock}$\ast$ World\+::get\+Clock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Returns a pointer to a \hyperlink{class_clock}{Clock} object used for simulation. \begin{DoxyReturn}{Returns}
-a pointer to a \hyperlink{class_clock}{Clock} object used for simulation. 
-\end{DoxyReturn}
 \mbox{\Hypertarget{class_world_a35aafc469b9146b4b6f72c6adaa3e067}\label{class_world_a35aafc469b9146b4b6f72c6adaa3e067}} 
 \index{World@{World}!get\+Connection\+Type@{get\+Connection\+Type}}
 \index{get\+Connection\+Type@{get\+Connection\+Type}!World@{World}}
 \subsubsection{\texorpdfstring{get\+Connection\+Type()}{getConnectionType()}}
-{\footnotesize\ttfamily \hyperlink{class_holdable_agent_ae2c334b004d7b9c5a999cf2618e4e518}{Holdable\+Agent\+::\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} World\+::get\+Connection\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \hyperlink{class_holdable_agent_ae2c334b004d7b9c5a999cf2618e4e518}{Holdable\+Agent\+::\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} World\+::get\+Connection\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
-Returns the type of the handover mechanism
-
-\begin{DoxyReturn}{Returns}
+Returns the type of the handover mechanism \begin{DoxyReturn}{Returns}
 the type of the handover mechanism\+: Holdable\+Agent\+::\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+::\+U\+S\+I\+N\+G\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+Q\+U\+A\+L\+I\+TY, Holdable\+Agent\+::\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+::\+U\+S\+I\+N\+G\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+S\+T\+R\+E\+N\+G\+TH, Holdable\+Agent\+::\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+::\+U\+S\+I\+N\+G\+\_\+\+P\+O\+W\+ER 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_world_a5975f2673e84c87f8640737efd04590b}\label{class_world_a5975f2673e84c87f8640737efd04590b}} 
@@ -245,11 +276,20 @@ the type of the handover mechanism\+: Holdable\+Agent\+::\+C\+O\+N\+N\+E\+C\+T\+
 \subsubsection{\texorpdfstring{get\+Default\+Connection\+Threshold()}{getDefaultConnectionThreshold()}}
 {\footnotesize\ttfamily double World\+::get\+Default\+Connection\+Threshold (\begin{DoxyParamCaption}\item[{\hyperlink{class_holdable_agent_ae2c334b004d7b9c5a999cf2618e4e518}{Holdable\+Agent\+::\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE}}]{conn\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+\mbox{\Hypertarget{class_world_a65eab81f8a895b605cbc90d887d0671a}\label{class_world_a65eab81f8a895b605cbc90d887d0671a}} 
+\index{World@{World}!get\+Events@{get\+Events}}
+\index{get\+Events@{get\+Events}!World@{World}}
+\subsubsection{\texorpdfstring{get\+Events()}{getEvents()}}
+{\footnotesize\ttfamily std\+::map$<$unsigned long, vector$<$\hyperlink{class_antenna_info}{Antenna\+Info}$>$ $>$ World\+::get\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+At the end of a simulation this method merges all the events saved by individual antennas in a single data structure. \begin{DoxyReturn}{Returns}
+a map of $<$M\+N\+O\+\_\+\+ID, vector$<$\+Antenn\+Info$>$$>$ where for each M\+NO identified by its ID has vector of all events saved by all antennas belonging to that M\+NO. This map is needed for computation of location probabilities. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_world_aa62f6cd42214191e37b904a672306888}\label{class_world_aa62f6cd42214191e37b904a672306888}} 
 \index{World@{World}!get\+Grid\+Dim\+TileX@{get\+Grid\+Dim\+TileX}}
 \index{get\+Grid\+Dim\+TileX@{get\+Grid\+Dim\+TileX}!World@{World}}
 \subsubsection{\texorpdfstring{get\+Grid\+Dim\+Tile\+X()}{getGridDimTileX()}}
-{\footnotesize\ttfamily double World\+::get\+Grid\+Dim\+TileX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily double World\+::get\+Grid\+Dim\+TileX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 Returns the dimension of tiles on OX, this number is read from simulation configuration file. \begin{DoxyReturn}{Returns}
 the dimension of tiles on OX, this number is read from simulation configuration file. 
@@ -258,7 +298,7 @@ the dimension of tiles on OX, this number is read from simulation configuration 
 \index{World@{World}!get\+Grid\+Dim\+TileY@{get\+Grid\+Dim\+TileY}}
 \index{get\+Grid\+Dim\+TileY@{get\+Grid\+Dim\+TileY}!World@{World}}
 \subsubsection{\texorpdfstring{get\+Grid\+Dim\+Tile\+Y()}{getGridDimTileY()}}
-{\footnotesize\ttfamily double World\+::get\+Grid\+Dim\+TileY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily double World\+::get\+Grid\+Dim\+TileY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 Returns the dimension of tiles on OY, this number is read from simulation configuration file. \begin{DoxyReturn}{Returns}
 the dimension of tiles on OY, this number is read from simulation configuration file. 
@@ -281,24 +321,21 @@ the file name where the grid parameters are saved.
 Returns a pointer to a \hyperlink{class_map}{Map} object where the simulation takes place. \begin{DoxyReturn}{Returns}
 a pointer to a \hyperlink{class_map}{Map} object where the simulation takes place. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_world_a206508d427e13c242855d9e11e5bed72}\label{class_world_a206508d427e13c242855d9e11e5bed72}} 
-\index{World@{World}!get\+Persons\+Filename@{get\+Persons\+Filename}}
-\index{get\+Persons\+Filename@{get\+Persons\+Filename}!World@{World}}
-\subsubsection{\texorpdfstring{get\+Persons\+Filename()}{getPersonsFilename()}}
-{\footnotesize\ttfamily const string\& World\+::get\+Persons\+Filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{class_world_a2830d2aea7d91f98257c1e661527289e}\label{class_world_a2830d2aea7d91f98257c1e661527289e}} 
+\index{World@{World}!get\+Output\+Dir@{get\+Output\+Dir}}
+\index{get\+Output\+Dir@{get\+Output\+Dir}!World@{World}}
+\subsubsection{\texorpdfstring{get\+Output\+Dir()}{getOutputDir()}}
+{\footnotesize\ttfamily const string\& World\+::get\+Output\+Dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Returns the name of the file where the persons exact locations are saved for later analysis. \begin{DoxyReturn}{Returns}
-the name of the file where the persons exact locations are saved for later analysis. 
+Returns the name of the output folder. \begin{DoxyReturn}{Returns}
+the name of the output folder. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_world_a9d7c2f5e7d357b891fac1728a932885f}\label{class_world_a9d7c2f5e7d357b891fac1728a932885f}} 
+\mbox{\Hypertarget{class_world_aeba13dcf92dac761cf5cac1c8f2266c9}\label{class_world_aeba13dcf92dac761cf5cac1c8f2266c9}} 
 \index{World@{World}!get\+Prior@{get\+Prior}}
 \index{get\+Prior@{get\+Prior}!World@{World}}
 \subsubsection{\texorpdfstring{get\+Prior()}{getPrior()}}
-{\footnotesize\ttfamily \hyperlink{_prior_type_8h_a61286c562e68de246982fc393a7c23a5}{Prior\+Type} World\+::get\+Prior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \hyperlink{_prior_type_8h_a61286c562e68de246982fc393a7c23a5}{Prior\+Type} World\+::get\+Prior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Returns the type of the prior probability used to compute the posterior localization probability. \begin{DoxyReturn}{Returns}
-the type of the prior probability used to compute the posterior localization probability. 
-\end{DoxyReturn}
 \mbox{\Hypertarget{class_world_a026bdf1e190cdaf02481c548b8ca1a6f}\label{class_world_a026bdf1e190cdaf02481c548b8ca1a6f}} 
 \index{World@{World}!get\+Prob\+Filenames@{get\+Prob\+Filenames}}
 \index{get\+Prob\+Filenames@{get\+Prob\+Filenames}!World@{World}}
@@ -313,6 +350,24 @@ the name of the file where the probabilities of mobile phones locations are save
 \index{parse\+Antennas@{parse\+Antennas}!World@{World}}
 \subsubsection{\texorpdfstring{parse\+Antennas()}{parseAntennas()}}
 {\footnotesize\ttfamily vector$<$\hyperlink{class_antenna}{Antenna}$\ast$$>$ World\+::parse\+Antennas (\begin{DoxyParamCaption}\item[{const string \&}]{config\+Antennas\+File,  }\item[{vector$<$ \hyperlink{class_mobile_operator}{Mobile\+Operator} $\ast$$>$}]{mnos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_world_a23531a124ce85f6d23418aa371081c90}\label{class_world_a23531a124ce85f6d23418aa371081c90}} 
+\index{World@{World}!parse\+Connection\+Type@{parse\+Connection\+Type}}
+\index{parse\+Connection\+Type@{parse\+Connection\+Type}!World@{World}}
+\subsubsection{\texorpdfstring{parse\+Connection\+Type()}{parseConnectionType()}}
+{\footnotesize\ttfamily \hyperlink{class_holdable_agent_ae2c334b004d7b9c5a999cf2618e4e518}{Holdable\+Agent\+::\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} World\+::parse\+Connection\+Type (\begin{DoxyParamCaption}\item[{X\+M\+L\+Element $\ast$}]{el }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_ae252bb724d2b62fb9c03e88fc91c89b8}\label{class_world_ae252bb724d2b62fb9c03e88fc91c89b8}} 
+\index{World@{World}!parse\+M\+N\+Os@{parse\+M\+N\+Os}}
+\index{parse\+M\+N\+Os@{parse\+M\+N\+Os}!World@{World}}
+\subsubsection{\texorpdfstring{parse\+M\+N\+Os()}{parseMNOs()}}
+{\footnotesize\ttfamily vector$<$\hyperlink{class_mobile_operator}{Mobile\+Operator}$\ast$$>$ World\+::parse\+M\+N\+Os (\begin{DoxyParamCaption}\item[{X\+M\+L\+Element $\ast$}]{el }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_a82e2813458959f161fc116abf79f1fb3}\label{class_world_a82e2813458959f161fc116abf79f1fb3}} 
+\index{World@{World}!parse\+Movement@{parse\+Movement}}
+\index{parse\+Movement@{parse\+Movement}!World@{World}}
+\subsubsection{\texorpdfstring{parse\+Movement()}{parseMovement()}}
+{\footnotesize\ttfamily \hyperlink{_movement_type_8h_a8a93b61bc797a7d1907f42796a252493}{Movement\+Type} World\+::parse\+Movement (\begin{DoxyParamCaption}\item[{X\+M\+L\+Element $\ast$}]{el }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{class_world_a70efdf2e1864a9711b168d0677179b34}\label{class_world_a70efdf2e1864a9711b168d0677179b34}} 
 \index{World@{World}!parse\+Persons@{parse\+Persons}}
@@ -338,44 +393,35 @@ the name of the file where the probabilities of mobile phones locations are save
 \subsubsection{\texorpdfstring{run\+Simulation()}{runSimulation()}}
 {\footnotesize\ttfamily void World\+::run\+Simulation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-This method is called to perform the actual simulation. During the simulation it outputs the exact positions of all persons in a .csv file and the positions of antennas at the starting time of the simulation. A simulation means a number of time steps, at each step every person move to another position and after arriving at their new positions the mobile phones that they carry try to connect to one of the available antennas. The antennas record these events and output them in a file. \mbox{\Hypertarget{class_world_afa8e5c2943c72aa664590abbb024896b}\label{class_world_afa8e5c2943c72aa664590abbb024896b}} 
-\index{World@{World}!set\+Agents@{set\+Agents}}
-\index{set\+Agents@{set\+Agents}!World@{World}}
-\subsubsection{\texorpdfstring{set\+Agents()}{setAgents()}}
-{\footnotesize\ttfamily void World\+::set\+Agents (\begin{DoxyParamCaption}\item[{\hyperlink{class_agents_collection}{Agents\+Collection} $\ast$}]{agents }\end{DoxyParamCaption})}
+This method is called to perform the actual simulation. During the simulation it outputs the exact positions of all persons in a .csv file and the positions of antennas at the starting time of the simulation. A simulation means a number of time steps, at each step every person move to another position and after arriving at their new positions the mobile phones that they carry try to connect to one of the available antennas. The antennas record these events and output them in a file. \mbox{\Hypertarget{class_world_ab517becd3d09009ae4b151a6ce68d073}\label{class_world_ab517becd3d09009ae4b151a6ce68d073}} 
+\index{World@{World}!set\+Person\+Displacement\+Pattern@{set\+Person\+Displacement\+Pattern}}
+\index{set\+Person\+Displacement\+Pattern@{set\+Person\+Displacement\+Pattern}!World@{World}}
+\subsubsection{\texorpdfstring{set\+Person\+Displacement\+Pattern()}{setPersonDisplacementPattern()}}
+{\footnotesize\ttfamily void World\+::set\+Person\+Displacement\+Pattern (\begin{DoxyParamCaption}\item[{\hyperlink{class_person}{Person} $\ast$}]{p,  }\item[{\hyperlink{_movement_type_8h_a8a93b61bc797a7d1907f42796a252493}{Movement\+Type}}]{type,  }\item[{\hyperlink{class_map}{Map} $\ast$}]{map,  }\item[{\hyperlink{class_clock}{Clock} $\ast$}]{clk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Sets the \hyperlink{class_agents_collection}{Agents\+Collection} to be used for simulation. 
-\begin{DoxyParams}{Parameters}
-{\em agents} & a pointer to \hyperlink{class_agents_collection}{Agents\+Collection} object. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_world_a52ebe3eed240fe4dd37915a1dad02efd}\label{class_world_a52ebe3eed240fe4dd37915a1dad02efd}} 
-\index{World@{World}!set\+Clock@{set\+Clock}}
-\index{set\+Clock@{set\+Clock}!World@{World}}
-\subsubsection{\texorpdfstring{set\+Clock()}{setClock()}}
-{\footnotesize\ttfamily void World\+::set\+Clock (\begin{DoxyParamCaption}\item[{\hyperlink{class_clock}{Clock} $\ast$}]{clock }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_world_a823ee4f34344e80a028e95211b258e7b}\label{class_world_a823ee4f34344e80a028e95211b258e7b}} 
+\index{World@{World}!set\+Phones@{set\+Phones}}
+\index{set\+Phones@{set\+Phones}!World@{World}}
+\subsubsection{\texorpdfstring{set\+Phones()}{setPhones()}}
+{\footnotesize\ttfamily void World\+::set\+Phones (\begin{DoxyParamCaption}\item[{int $\ast$\&}]{ph1,  }\item[{int $\ast$\&}]{ph2,  }\item[{double}]{prob\+Sec\+Mobile\+Phone,  }\item[{double}]{num\+Persons,  }\item[{\hyperlink{class_random_number_generator}{Random\+Number\+Generator} $\ast$}]{rng,  }\item[{vector$<$ \hyperlink{class_mobile_operator}{Mobile\+Operator} $\ast$$>$}]{mnos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Sets the \hyperlink{class_clock}{Clock} of the simulation. 
-\begin{DoxyParams}{Parameters}
-{\em clock} & a pointer to a \hyperlink{class_clock}{Clock} object used for simulation. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_world_a9dc80487d5c2d1d4f2af0c1d7f015204}\label{class_world_a9dc80487d5c2d1d4f2af0c1d7f015204}} 
-\index{World@{World}!set\+Map@{set\+Map}}
-\index{set\+Map@{set\+Map}!World@{World}}
-\subsubsection{\texorpdfstring{set\+Map()}{setMap()}}
-{\footnotesize\ttfamily void World\+::set\+Map (\begin{DoxyParamCaption}\item[{\hyperlink{class_map}{Map} $\ast$}]{map }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_world_a176205a2d3e28cca6fb7ac2fc9e8670e}\label{class_world_a176205a2d3e28cca6fb7ac2fc9e8670e}} 
+\index{World@{World}!set\+Post\+Prob\+Method@{set\+Post\+Prob\+Method}}
+\index{set\+Post\+Prob\+Method@{set\+Post\+Prob\+Method}!World@{World}}
+\subsubsection{\texorpdfstring{set\+Post\+Prob\+Method()}{setPostProbMethod()}}
+{\footnotesize\ttfamily void World\+::set\+Post\+Prob\+Method (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \hyperlink{class_post_loc_prob}{Post\+Loc\+Prob} $>$ \&}]{post }\end{DoxyParamCaption})}
 
-Sets the map where the simulation takes place. 
-\begin{DoxyParams}{Parameters}
-{\em map} & a pointer to a \hyperlink{class_map}{Map} object where the simulation takes place. \\
-\hline
-\end{DoxyParams}
 \mbox{\Hypertarget{class_world_a9a982977a44c9e8a4724eaa1e4108679}\label{class_world_a9a982977a44c9e8a4724eaa1e4108679}} 
 \index{World@{World}!which\+M\+NO@{which\+M\+NO}}
 \index{which\+M\+NO@{which\+M\+NO}!World@{World}}
 \subsubsection{\texorpdfstring{which\+M\+N\+O()}{whichMNO()}}
 {\footnotesize\ttfamily int World\+::which\+M\+NO (\begin{DoxyParamCaption}\item[{vector$<$ pair$<$ string, double $>$$>$}]{probs,  }\item[{vector$<$ \hyperlink{class_mobile_operator}{Mobile\+Operator} $\ast$$>$}]{mnos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_a3f069fb694d8f17b23bda291bea47446}\label{class_world_a3f069fb694d8f17b23bda291bea47446}} 
+\index{World@{World}!write\+Signal\+And\+Cells@{write\+Signal\+And\+Cells}}
+\index{write\+Signal\+And\+Cells@{write\+Signal\+And\+Cells}!World@{World}}
+\subsubsection{\texorpdfstring{write\+Signal\+And\+Cells()}{writeSignalAndCells()}}
+{\footnotesize\ttfamily void World\+::write\+Signal\+And\+Cells (\begin{DoxyParamCaption}\item[{ostream \&}]{antenna\+File }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -452,11 +498,23 @@ Sets the map where the simulation takes place.
 \subsubsection{\texorpdfstring{m\+\_\+mv\+Type}{m\_mvType}}
 {\footnotesize\ttfamily \hyperlink{_movement_type_8h_a8a93b61bc797a7d1907f42796a252493}{Movement\+Type} World\+::m\+\_\+mv\+Type\hspace{0.3cm}{\ttfamily [private]}}
 
+\mbox{\Hypertarget{class_world_a7e32421ab881331c06802e7719557e48}\label{class_world_a7e32421ab881331c06802e7719557e48}} 
+\index{World@{World}!m\+\_\+output\+Dir@{m\+\_\+output\+Dir}}
+\index{m\+\_\+output\+Dir@{m\+\_\+output\+Dir}!World@{World}}
+\subsubsection{\texorpdfstring{m\+\_\+output\+Dir}{m\_outputDir}}
+{\footnotesize\ttfamily string World\+::m\+\_\+output\+Dir\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_world_a66e68ec2220ea27e705aac88a920b6fd}\label{class_world_a66e68ec2220ea27e705aac88a920b6fd}} 
 \index{World@{World}!m\+\_\+persons\+Filename@{m\+\_\+persons\+Filename}}
 \index{m\+\_\+persons\+Filename@{m\+\_\+persons\+Filename}!World@{World}}
 \subsubsection{\texorpdfstring{m\+\_\+persons\+Filename}{m\_personsFilename}}
 {\footnotesize\ttfamily string World\+::m\+\_\+persons\+Filename\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_a434bcb4c18cc7b3194d1ea6c09b76284}\label{class_world_a434bcb4c18cc7b3194d1ea6c09b76284}} 
+\index{World@{World}!m\+\_\+post\+Method@{m\+\_\+post\+Method}}
+\index{m\+\_\+post\+Method@{m\+\_\+post\+Method}!World@{World}}
+\subsubsection{\texorpdfstring{m\+\_\+post\+Method}{m\_postMethod}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\hyperlink{class_post_loc_prob}{Post\+Loc\+Prob}$>$ World\+::m\+\_\+post\+Method\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{class_world_af7fca82468f73094ec5ba75577b0d96a}\label{class_world_af7fca82468f73094ec5ba75577b0d96a}} 
 \index{World@{World}!m\+\_\+prior@{m\+\_\+prior}}

@@ -1,10 +1,15 @@
 \hypertarget{_utils_8h}{}\section{include/\+Utils.h File Reference}
 \label{_utils_8h}\index{include/\+Utils.\+h@{include/\+Utils.\+h}}
+{\ttfamily \#include $<$agent/\+Agents\+Collection.\+h$>$}\newline
+{\ttfamily \#include $<$agent/\+Mobile\+Phone.\+h$>$}\newline
+{\ttfamily \#include $<$Antenna\+Info.\+h$>$}\newline
 {\ttfamily \#include $<$geos/geom/\+Point.\+h$>$}\newline
-{\ttfamily \#include $<$Tiny\+X\+M\+L2.\+h$>$}\newline
+{\ttfamily \#include $<$Prior\+Type.\+h$>$}\newline
 {\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
-Include dependency graph for Utils.\+h\+:\nopagebreak
+Include dependency graph for Utils.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -14,6 +19,8 @@ Include dependency graph for Utils.\+h\+:\nopagebreak
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
+ \hyperlink{namespacetinyxml2}{tinyxml2}
+\item 
  \hyperlink{namespaceutils}{utils}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
@@ -22,14 +29,6 @@ Include dependency graph for Utils.\+h\+:\nopagebreak
 vector$<$ Point $\ast$ $>$ \hyperlink{namespaceutils_a16e957d5c26b39c840f6e109dd19d45d}{utils\+::generate\+Points} (const \hyperlink{class_map}{Map} $\ast$m, unsigned long n, double percent\+Home, unsigned seed)
 \item 
 vector$<$ Point $\ast$ $>$ \hyperlink{namespaceutils_acd746b43155fa3033001f28a91a71cec}{utils\+::generate\+Fixed\+Points} (const \hyperlink{class_map}{Map} $\ast$m, unsigned long n, unsigned seed)
-\item 
-void \hyperlink{namespaceutils_a1978a6ccb2360773215aba027d8b6f08}{utils\+::print\+Person\+Header} ()
-\item 
-void \hyperlink{namespaceutils_a2080e7db5afc5bb1b4c9ef5336f78ccb}{utils\+::print\+Antenna\+Header} ()
-\item 
-void \hyperlink{namespaceutils_a7633a4dfe509a009f4e02850b03ba1e4}{utils\+::print\+Phone\+Header} ()
-\item 
-void \hyperlink{namespaceutils_a207e9d12cc075f601c7fa32ac010b346}{utils\+::print\+Mobile\+Operator\+Header} ()
 \item 
 double \hyperlink{namespaceutils_af70f6f3c2ac66aa3b4ce64a3b48288cb}{utils\+::r2d} (double x)
 \item 
@@ -48,6 +47,8 @@ unsigned long \hyperlink{namespaceutils_aa81758518e26568880b7d74dc182c75d}{utils
 const char $\ast$ \hyperlink{namespaceutils_ad69ebe54599ec891b3053cf9f5a1bd63}{utils\+::get\+Value} (X\+M\+L\+Element $\ast$el, const char $\ast$name, const char $\ast$default\+\_\+value)
 \item 
 double \hyperlink{namespaceutils_a7347b1fde0bc9f313cd0a7051c33818a}{utils\+::get\+Value} (X\+M\+L\+Element $\ast$el, const char $\ast$name)
+\item 
+double \hyperlink{namespaceutils_a58e0276c0ed6bb5e30e35568f1006af4}{utils\+::inverse\+Normal\+C\+DF} (const double p, const double mu, const double sigma)
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}

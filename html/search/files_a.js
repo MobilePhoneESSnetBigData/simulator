@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['randomnumbergenerator_2eh',['RandomNumberGenerator.h',['../_random_number_generator_8h.html',1,'']]],
-  ['randomwalkdisplacement_2eh',['RandomWalkDisplacement.h',['../_random_walk_displacement_8h.html',1,'']]],
-  ['randomwalkdriftdisplacement_2eh',['RandomWalkDriftDisplacement.h',['../_random_walk_drift_displacement_8h.html',1,'']]]
+  ['person_2eh',['Person.h',['../_person_8h.html',1,'']]],
+  ['postlocprob_2eh',['PostLocProb.h',['../_post_loc_prob_8h.html',1,'']]],
+  ['priortype_2eh',['PriorType.h',['../_prior_type_8h.html',1,'']]]
 ];

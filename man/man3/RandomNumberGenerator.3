@@ -1,4 +1,4 @@
-.TH "RandomNumberGenerator" 3 "Fri Nov 22 2019" "Simulator" \" -*- nroff -*-
+.TH "RandomNumberGenerator" 3 "Wed Aug 26 2020" "Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -22,6 +22,9 @@ RandomNumberGenerator
 .br
 .ti -1c
 .RI "double * \fBgenerateTruncatedNormalDouble\fP (const double a, const double b, const double m, const double sd, const unsigned long n)"
+.br
+.ti -1c
+.RI "int * \fBgenerateTruncatedNormalInt\fP (const int a, const int b, const double m, const double sd, const unsigned long n)"
 .br
 .ti -1c
 .RI "double \fBgenerateUniformDouble\fP (const double min, const double max)"
@@ -49,6 +52,12 @@ RandomNumberGenerator
 .br
 .ti -1c
 .RI "int * \fBgenerateBernoulliInt\fP (const double p, const int n)"
+.br
+.ti -1c
+.RI "double * \fBgenerateLevy\fP (const double mu, const double c, const int n)"
+.br
+.ti -1c
+.RI "double \fBgenerateLevy\fP (const double mu, const double c)"
 .br
 .ti -1c
 .RI "double \fBnormal_pdf\fP (double x, double m, double s)"
@@ -206,6 +215,26 @@ a random value distributed according to an exponential distribution with paramet
 .RE
 .PP
 
+.SS "double* RandomNumberGenerator::generateLevy (const double mu, const double c, const int n)"
+Generates n double random values from a Levy distribution 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImu\fP the displacement of the Levy distribution 
+.br
+\fIc\fP the scale parameter of the Levy distribution 
+.br
+\fIn\fP the number of values to be generated 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+an array with n double values from a Levy distribution 
+.RE
+.PP
+
+.SS "double RandomNumberGenerator::generateLevy (const double mu, const double c)"
+
 .SS "double* RandomNumberGenerator::generateNormal2Double (const double m1, const double sd1, const double m2, const double sd2, int n)"
 Generates n random numbers with a normal distribution\&. Half of them are N(m1,sd1), the other half N(m2,sd2)\&. 
 .PP
@@ -264,6 +293,28 @@ an array with n double values normally distributed with mean m and standard devi
 
 .SS "double* RandomNumberGenerator::generateTruncatedNormalDouble (const double a, const double b, const double m, const double sd, const unsigned long n)"
 Generates n double values from a truncated normal distribution\&. All values will be in [a, b]\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP the inferior limit of the truncated normal distribution\&. 
+.br
+\fIb\fP the superior limit of the truncated normal distribution\&. 
+.br
+\fIm\fP the mean of the normal distribution\&. 
+.br
+\fIsd\fP the standard deviation of the normal distribution\&. 
+.br
+\fIn\fP the number of values to be generated\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+an array with n double values from a truncated normal distribution\&. 
+.RE
+.PP
+
+.SS "int* RandomNumberGenerator::generateTruncatedNormalInt (const int a, const int b, const double m, const double sd, const unsigned long n)"
+Generates n int values from a truncated normal distribution\&. All values will be in [a, b]\&. 
 .PP
 \fBParameters:\fP
 .RS 4

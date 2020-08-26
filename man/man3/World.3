@@ -1,4 +1,4 @@
-.TH "World" 3 "Fri Nov 22 2019" "Simulator" \" -*- nroff -*-
+.TH "World" 3 "Wed Aug 26 2020" "Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -27,43 +27,31 @@ World
 .RI "\fBAgentsCollection\fP * \fBgetAgents\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetAgents\fP (\fBAgentsCollection\fP *agents)"
-.br
-.ti -1c
-.RI "\fBClock\fP * \fBgetClock\fP () const"
-.br
-.ti -1c
-.RI "void \fBsetClock\fP (\fBClock\fP *clock)"
-.br
-.ti -1c
 .RI "const \fBMap\fP * \fBgetMap\fP () const"
-.br
-.ti -1c
-.RI "void \fBsetMap\fP (\fBMap\fP *map)"
 .br
 .ti -1c
 .RI "const string & \fBgetGridFilename\fP () const"
 .br
 .ti -1c
+.RI "\fBClock\fP * \fBgetClock\fP ()"
+.br
+.ti -1c
+.RI "void \fBcomputeProbabilities\fP (std::map< unsigned long, vector< \fBAntennaInfo\fP >> data)"
+.br
+.ti -1c
 .RI "map< const unsigned long, const string > \fBgetProbFilenames\fP () const"
 .br
 .ti -1c
-.RI "const string & \fBgetAntennasFilename\fP () const"
+.RI "void \fBsetPostProbMethod\fP (const std::shared_ptr< \fBPostLocProb\fP > &post)"
 .br
 .ti -1c
-.RI "const string & \fBgetPersonsFilename\fP () const"
+.RI "\fBPriorType\fP \fBgetPrior\fP ()"
 .br
 .ti -1c
-.RI "double \fBgetGridDimTileX\fP () const"
+.RI "const string & \fBgetOutputDir\fP () const"
 .br
 .ti -1c
-.RI "double \fBgetGridDimTileY\fP () const"
-.br
-.ti -1c
-.RI "\fBPriorType\fP \fBgetPrior\fP () const"
-.br
-.ti -1c
-.RI "\fBHoldableAgent::CONNECTION_TYPE\fP \fBgetConnectionType\fP () const"
+.RI "std::map< unsigned long, vector< \fBAntennaInfo\fP > > \fBgetEvents\fP ()"
 .br
 .in -1c
 .SS "Private Member Functions"
@@ -73,7 +61,7 @@ World
 .RI "vector< \fBPerson\fP * > \fBgeneratePopulation\fP (unsigned long numPersons, double percentHome)"
 .br
 .ti -1c
-.RI "vector< \fBPerson\fP * > \fBgeneratePopulation\fP (const unsigned long numPersons, vector< double > params, \fBPerson::AgeDistributions\fP age_distribution, double male_share, vector< \fBMobileOperator\fP *> mnos, double speed_walk, double speed_car, double percentHome)"
+.RI "vector< \fBPerson\fP * > \fBgeneratePopulation\fP (const unsigned long numPersons, shared_ptr< \fBAgeDistribution\fP > age_distribution, double male_share, vector< \fBMobileOperator\fP *> mnos, double speed_walk, double speed_car, double percentHome)"
 .br
 .ti -1c
 .RI "vector< \fBAntenna\fP * > \fBgenerateAntennas\fP (unsigned long numAntennas)"
@@ -98,6 +86,42 @@ World
 .br
 .ti -1c
 .RI "double \fBgetDefaultConnectionThreshold\fP (\fBHoldableAgent::CONNECTION_TYPE\fP connType)"
+.br
+.ti -1c
+.RI "void \fBsetPersonDisplacementPattern\fP (\fBPerson\fP *p, \fBMovementType\fP type, \fBMap\fP *map, \fBClock\fP *clk)"
+.br
+.ti -1c
+.RI "void \fBgeneratePhones\fP (vector< \fBMobileOperator\fP *> mnos)"
+.br
+.ti -1c
+.RI "int * \fBgenerateAges\fP (int n, shared_ptr< \fBAgeDistribution\fP > distr, \fBRandomNumberGenerator\fP *rng)"
+.br
+.ti -1c
+.RI "void \fBsetPhones\fP (int *&ph1, int *&ph2, double probSecMobilePhone, double numPersons, \fBRandomNumberGenerator\fP *rng, vector< \fBMobileOperator\fP *> mnos)"
+.br
+.ti -1c
+.RI "void \fBwriteSignalAndCells\fP (ostream &antennaFile)"
+.br
+.ti -1c
+.RI "void \fBAddMobilePhoneToPerson\fP (\fBPerson\fP *p, \fBMobileOperator\fP *mno, \fBAgentsCollection\fP *ag, const \fBMap\fP *map, \fBClock\fP *clock, double thres, \fBHoldableAgent::CONNECTION_TYPE\fP conn)"
+.br
+.ti -1c
+.RI "\fBMovementType\fP \fBparseMovement\fP (XMLElement *el)"
+.br
+.ti -1c
+.RI "\fBHoldableAgent::CONNECTION_TYPE\fP \fBparseConnectionType\fP (XMLElement *el)"
+.br
+.ti -1c
+.RI "vector< \fBMobileOperator\fP * > \fBparseMNOs\fP (XMLElement *el)"
+.br
+.ti -1c
+.RI "double \fBgetGridDimTileX\fP () const"
+.br
+.ti -1c
+.RI "double \fBgetGridDimTileY\fP () const"
+.br
+.ti -1c
+.RI "\fBHoldableAgent::CONNECTION_TYPE\fP \fBgetConnectionType\fP () const"
 .br
 .in -1c
 .SS "Private Attributes"
@@ -161,7 +185,13 @@ World
 .RI "string \fBm_antennasFilename\fP"
 .br
 .ti -1c
+.RI "string \fBm_outputDir\fP"
+.br
+.ti -1c
 .RI "double \fBm_probSecMobilePhone\fP"
+.br
+.ti -1c
+.RI "shared_ptr< \fBPostLocProb\fP > \fBm_postMethod\fP"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -214,13 +244,21 @@ the posterior probabilities configuration file is provided through the -pb param
 Destructor It releases the memory allocated for the agents collection and the \fBClock\fP object\&. 
 .SH "Member Function Documentation"
 .PP 
+.SS "void World::AddMobilePhoneToPerson (\fBPerson\fP * p, \fBMobileOperator\fP * mno, \fBAgentsCollection\fP * ag, const \fBMap\fP * map, \fBClock\fP * clock, double thres, \fBHoldableAgent::CONNECTION_TYPE\fP conn)\fC [private]\fP"
+
+.SS "void World::computeProbabilities (std::map< unsigned long, vector< \fBAntennaInfo\fP >> data)"
+
+.SS "int* World::generateAges (int n, shared_ptr< \fBAgeDistribution\fP > distr, \fBRandomNumberGenerator\fP * rng)\fC [private]\fP"
+
 .SS "vector<\fBAntenna\fP*> World::generateAntennas (unsigned long numAntennas)\fC [private]\fP"
 
 .SS "vector<\fBMobilePhone\fP*> World::generateMobilePhones (int numMobilePhones, \fBHoldableAgent::CONNECTION_TYPE\fP connType)\fC [private]\fP"
 
+.SS "void World::generatePhones (vector< \fBMobileOperator\fP *> mnos)\fC [private]\fP"
+
 .SS "vector<\fBPerson\fP*> World::generatePopulation (unsigned long numPersons, double percentHome)\fC [private]\fP"
 
-.SS "vector<\fBPerson\fP*> World::generatePopulation (const unsigned long numPersons, vector< double > params, \fBPerson::AgeDistributions\fP age_distribution, double male_share, vector< \fBMobileOperator\fP *> mnos, double speed_walk, double speed_car, double percentHome)\fC [private]\fP"
+.SS "vector<\fBPerson\fP*> World::generatePopulation (const unsigned long numPersons, shared_ptr< \fBAgeDistribution\fP > age_distribution, double male_share, vector< \fBMobileOperator\fP *> mnos, double speed_walk, double speed_car, double percentHome)\fC [private]\fP"
 
 .SS "\fBAgentsCollection\fP* World::getAgents () const"
 Returns the \fBAgentsCollection\fP used in simulation\&. 
@@ -231,26 +269,10 @@ a pointer to \fBAgentsCollection\fP object\&.
 .RE
 .PP
 
-.SS "const string& World::getAntennasFilename () const"
-Returns the name of the file where the antennas exact locations are saved for later analysis\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-the name of the file where the antennas exact locations are saved for later analysis\&. 
-.RE
-.PP
+.SS "\fBClock\fP* World::getClock ()"
 
-.SS "\fBClock\fP* World::getClock () const"
-Returns a pointer to a \fBClock\fP object used for simulation\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-a pointer to a \fBClock\fP object used for simulation\&. 
-.RE
-.PP
-
-.SS "\fBHoldableAgent::CONNECTION_TYPE\fP World::getConnectionType () const"
-Returns the type of the handover mechanism
+.SS "\fBHoldableAgent::CONNECTION_TYPE\fP World::getConnectionType () const\fC [private]\fP"
+Returns the type of the handover mechanism 
 .PP
 \fBReturns:\fP
 .RS 4
@@ -260,7 +282,16 @@ the type of the handover mechanism: HoldableAgent::CONNECTION_TYPE::USING_SIGNAL
 
 .SS "double World::getDefaultConnectionThreshold (\fBHoldableAgent::CONNECTION_TYPE\fP connType)\fC [private]\fP"
 
-.SS "double World::getGridDimTileX () const"
+.SS "std::map<unsigned long, vector<\fBAntennaInfo\fP> > World::getEvents ()"
+At the end of a simulation this method merges all the events saved by individual antennas in a single data structure\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+a map of <MNO_ID, vector<AntennInfo>> where for each MNO identified by its ID has vector of all events saved by all antennas belonging to that MNO\&. This map is needed for computation of location probabilities\&. 
+.RE
+.PP
+
+.SS "double World::getGridDimTileX () const\fC [private]\fP"
 Returns the dimension of tiles on OX, this number is read from simulation configuration file\&. 
 .PP
 \fBReturns:\fP
@@ -269,7 +300,7 @@ the dimension of tiles on OX, this number is read from simulation configuration 
 .RE
 .PP
 
-.SS "double World::getGridDimTileY () const"
+.SS "double World::getGridDimTileY () const\fC [private]\fP"
 Returns the dimension of tiles on OY, this number is read from simulation configuration file\&. 
 .PP
 \fBReturns:\fP
@@ -296,23 +327,16 @@ a pointer to a \fBMap\fP object where the simulation takes place\&.
 .RE
 .PP
 
-.SS "const string& World::getPersonsFilename () const"
-Returns the name of the file where the persons exact locations are saved for later analysis\&. 
+.SS "const string& World::getOutputDir () const"
+Returns the name of the output folder\&. 
 .PP
 \fBReturns:\fP
 .RS 4
-the name of the file where the persons exact locations are saved for later analysis\&. 
+the name of the output folder\&. 
 .RE
 .PP
 
-.SS "\fBPriorType\fP World::getPrior () const"
-Returns the type of the prior probability used to compute the posterior localization probability\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-the type of the prior probability used to compute the posterior localization probability\&. 
-.RE
-.PP
+.SS "\fBPriorType\fP World::getPrior ()"
 
 .SS "map<const unsigned long, const string> World::getProbFilenames () const"
 Returns the name of the file where the probabilities of mobile phones locations are saved\&. 
@@ -325,6 +349,12 @@ the name of the file where the probabilities of mobile phones locations are save
 
 .SS "vector<\fBAntenna\fP*> World::parseAntennas (const string & configAntennasFile, vector< \fBMobileOperator\fP *> mnos)\fC [private]\fP, \fC [noexcept]\fP"
 
+.SS "\fBHoldableAgent::CONNECTION_TYPE\fP World::parseConnectionType (XMLElement * el)\fC [private]\fP"
+
+.SS "vector<\fBMobileOperator\fP*> World::parseMNOs (XMLElement * el)\fC [private]\fP"
+
+.SS "\fBMovementType\fP World::parseMovement (XMLElement * el)\fC [private]\fP"
+
 .SS "vector<\fBPerson\fP*> World::parsePersons (const string & personsFileName, vector< \fBMobileOperator\fP *> mnos)\fC [private]\fP, \fC [noexcept]\fP"
 
 .SS "string World::parseProbabilities (const string & probabilitiesFileName)\fC [private]\fP"
@@ -333,34 +363,15 @@ the name of the file where the probabilities of mobile phones locations are save
 
 .SS "void World::runSimulation ()\fC [noexcept]\fP"
 This method is called to perform the actual simulation\&. During the simulation it outputs the exact positions of all persons in a \&.csv file and the positions of antennas at the starting time of the simulation\&. A simulation means a number of time steps, at each step every person move to another position and after arriving at their new positions the mobile phones that they carry try to connect to one of the available antennas\&. The antennas record these events and output them in a file\&. 
-.SS "void World::setAgents (\fBAgentsCollection\fP * agents)"
-Sets the \fBAgentsCollection\fP to be used for simulation\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIagents\fP a pointer to \fBAgentsCollection\fP object\&. 
-.RE
-.PP
+.SS "void World::setPersonDisplacementPattern (\fBPerson\fP * p, \fBMovementType\fP type, \fBMap\fP * map, \fBClock\fP * clk)\fC [private]\fP"
 
-.SS "void World::setClock (\fBClock\fP * clock)"
-Sets the \fBClock\fP of the simulation\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIclock\fP a pointer to a \fBClock\fP object used for simulation\&. 
-.RE
-.PP
+.SS "void World::setPhones (int *& ph1, int *& ph2, double probSecMobilePhone, double numPersons, \fBRandomNumberGenerator\fP * rng, vector< \fBMobileOperator\fP *> mnos)\fC [private]\fP"
 
-.SS "void World::setMap (\fBMap\fP * map)"
-Sets the map where the simulation takes place\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImap\fP a pointer to a \fBMap\fP object where the simulation takes place\&. 
-.RE
-.PP
+.SS "void World::setPostProbMethod (const std::shared_ptr< \fBPostLocProb\fP > & post)"
 
 .SS "int World::whichMNO (vector< pair< string, double >> probs, vector< \fBMobileOperator\fP *> mnos)\fC [private]\fP"
+
+.SS "void World::writeSignalAndCells (ostream & antennaFile)\fC [private]\fP"
 
 .SH "Member Data Documentation"
 .PP 
@@ -388,7 +399,11 @@ Sets the map where the simulation takes place\&.
 
 .SS "\fBMovementType\fP World::m_mvType\fC [private]\fP"
 
+.SS "string World::m_outputDir\fC [private]\fP"
+
 .SS "string World::m_personsFilename\fC [private]\fP"
+
+.SS "shared_ptr<\fBPostLocProb\fP> World::m_postMethod\fC [private]\fP"
 
 .SS "\fBPriorType\fP World::m_prior\fC [private]\fP"
 

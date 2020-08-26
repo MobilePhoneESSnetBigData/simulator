@@ -1,4 +1,4 @@
-.TH "MobilePhone" 3 "Fri Nov 22 2019" "Simulator" \" -*- nroff -*-
+.TH "MobilePhone" 3 "Wed Aug 26 2020" "Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -20,9 +20,6 @@ Inherits \fBHoldableAgent\fP\&.
 .RI "virtual \fB~MobilePhone\fP ()"
 .br
 .ti -1c
-.RI "const string \fBgetName\fP () const override"
-.br
-.ti -1c
 .RI "const string \fBtoString\fP () const override"
 .br
 .ti -1c
@@ -39,6 +36,13 @@ Inherits \fBHoldableAgent\fP\&.
 .br
 .ti -1c
 .RI "double \fBgetConnectionThreshold\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const string \fBgetHeader\fP ()"
 .br
 .in -1c
 .SS "Private Attributes"
@@ -97,6 +101,8 @@ the minimum value of the signal strength/power/quality below which the phone can
 .RE
 .PP
 
+.SS "static const string MobilePhone::getHeader ()\fC [static]\fP"
+
 .SS "const \fBMobileOperator\fP* MobilePhone::getMobileOperator () const"
 Returns the \fBMobileOperator\fP object of this mobile phone\&. Each \fBMobilePhone\fP should belong to a Mobile Operator\&. 
 .PP
@@ -106,17 +112,6 @@ the \fBMobileOperator\fP object of this mobile phone\&. Each \fBMobilePhone\fP s
 .RE
 .PP
 
-.SS "const string MobilePhone::getName () const\fC [override]\fP, \fC [virtual]\fP"
-Returns the name of this class\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-the name of this class\&. 
-.RE
-.PP
-
-.PP
-Reimplemented from \fBHoldableAgent\fP\&.
 .SS "Point* MobilePhone::move ()\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
 Makes a step on the map according to an algorithm\&. The direction and the length of the step is determined by the displacement strategy and by the \fBPerson\fP object who owns this phone\&. The displacement strategy is set at the \fBPerson\fP object creation and currently two strategies are supported: \fBRandomWalkDisplacement\fP and \fBRandomWalkDriftDisplacement\fP\&. \fBRandomWalkDisplacement\fP means that at each time instant the direction is generated as a uniformly distributed random value and the step length is computed multiplying the speed with the time interval set in the simulation configuration file\&. If a step projects it outside the map, it stops on the boundary\&. \fBRandomWalkDriftDisplacement\fP means that there is a preference in the direction of the movement\&. There are two constants defined, SIM_TREND_ANGLE_1 and SIM_TREND_ANGLE_2 (3PI/4 and 5PI/4), and in the first half of the simulation the direction is generated as a normal distributed random value with the mean equals to SIM_TREND_ANGLE_1 and sd = 0\&.1 while during the second half of the simulation it is generated as a normal distributed random value with the mean equals to SIM_TREND_ANGLE_2 and the same sd\&. Again, any kind of \fBMovableAgent\fP can only move inside the map boundary\&. If a step projects it outside the map, it stops on the boundary\&. 
 .PP

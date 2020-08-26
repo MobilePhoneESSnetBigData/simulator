@@ -1,4 +1,4 @@
-.TH "include/MovementType.h" 3 "Fri Nov 22 2019" "Simulator" \" -*- nroff -*-
+.TH "include/MovementType.h" 3 "Wed Aug 26 2020" "Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,7 +10,7 @@ include/MovementType.h
 
 .in +1c
 .ti -1c
-.RI "enum \fBMovementType\fP { \fBMovementType::RANDOM_WALK_CLOSED_MAP\fP, \fBMovementType::RANDOM_WALK_CLOSED_MAP_WITH_DRIFT\fP, \fBMovementType::UNKNOWN\fP }"
+.RI "enum \fBMovementType\fP { \fBMovementType::RANDOM_WALK_CLOSED_MAP\fP, \fBMovementType::RANDOM_WALK_CLOSED_MAP_WITH_DRIFT\fP, \fBMovementType::LEVY_FLIGHT\fP, \fBMovementType::UNKNOWN\fP }"
 .br
 .in -1c
 .SH "Enumeration Type Documentation"
@@ -24,6 +24,8 @@ An enum class that enumerates the types of the methods used to move the people o
 \fB\fIRANDOM_WALK_CLOSED_MAP \fP\fP
 .TP
 \fB\fIRANDOM_WALK_CLOSED_MAP_WITH_DRIFT \fP\fP
+.TP
+\fB\fILEVY_FLIGHT \fP\fP
 .TP
 \fB\fIUNKNOWN \fP\fP
 .SH "Author"

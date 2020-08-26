@@ -6,7 +6,8 @@
 
 
 
-Collaboration diagram for Random\+Number\+Generator\+:\nopagebreak
+Collaboration diagram for Random\+Number\+Generator\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,6 +24,8 @@ double \hyperlink{class_random_number_generator_a2598d9959bf595c3703c1d8e24f6e2f
 double $\ast$ \hyperlink{class_random_number_generator_a8a08591104b4fd1943eade351aa126c9}{generate\+Normal\+Double} (const double m, const double sd, const int n)
 \item 
 double $\ast$ \hyperlink{class_random_number_generator_a4e0cc6be3677ba52821cd4e0ae92cca9}{generate\+Truncated\+Normal\+Double} (const double a, const double b, const double m, const double sd, const unsigned long n)
+\item 
+int $\ast$ \hyperlink{class_random_number_generator_a9204cf57bae1189b576307699b07747b}{generate\+Truncated\+Normal\+Int} (const int a, const int b, const double m, const double sd, const unsigned long n)
 \item 
 double \hyperlink{class_random_number_generator_a0cbfb491d75d113c5bd0816576cb56ed}{generate\+Uniform\+Double} (const double min, const double max)
 \item 
@@ -41,6 +44,10 @@ int \hyperlink{class_random_number_generator_a480c13d951cbcc9dd3a3afa29145c097}{
 int $\ast$ \hyperlink{class_random_number_generator_a5b95ab4b064f39c8bdbb14af938efc0e}{generate\+Binomial\+Int} (const int max, const double p, const int n)
 \item 
 int $\ast$ \hyperlink{class_random_number_generator_a2b52648a0de3e6da4c51a0f9b30a67f0}{generate\+Bernoulli\+Int} (const double p, const int n)
+\item 
+double $\ast$ \hyperlink{class_random_number_generator_acd8f93f595d980ee054ad4570a09b0b7}{generate\+Levy} (const double mu, const double c, const int n)
+\item 
+double \hyperlink{class_random_number_generator_af9b46e3e695ca90479236807d14e92a5}{generate\+Levy} (const double mu, const double c)
 \item 
 double \hyperlink{class_random_number_generator_a4e661a49e8dd66e13c313c99adefddb0}{normal\+\_\+pdf} (double x, double m, double s)
 \item 
@@ -191,6 +198,30 @@ Generates a random value distributed according to an exponential distribution wi
 \begin{DoxyReturn}{Returns}
 a random value distributed according to an exponential distribution with parameter lambda. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_random_number_generator_acd8f93f595d980ee054ad4570a09b0b7}\label{class_random_number_generator_acd8f93f595d980ee054ad4570a09b0b7}} 
+\index{Random\+Number\+Generator@{Random\+Number\+Generator}!generate\+Levy@{generate\+Levy}}
+\index{generate\+Levy@{generate\+Levy}!Random\+Number\+Generator@{Random\+Number\+Generator}}
+\subsubsection{\texorpdfstring{generate\+Levy()}{generateLevy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double$\ast$ Random\+Number\+Generator\+::generate\+Levy (\begin{DoxyParamCaption}\item[{const double}]{mu,  }\item[{const double}]{c,  }\item[{const int}]{n }\end{DoxyParamCaption})}
+
+Generates n double random values from a Levy distribution 
+\begin{DoxyParams}{Parameters}
+{\em mu} & the displacement of the Levy distribution \\
+\hline
+{\em c} & the scale parameter of the Levy distribution \\
+\hline
+{\em n} & the number of values to be generated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an array with n double values from a Levy distribution 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_random_number_generator_af9b46e3e695ca90479236807d14e92a5}\label{class_random_number_generator_af9b46e3e695ca90479236807d14e92a5}} 
+\index{Random\+Number\+Generator@{Random\+Number\+Generator}!generate\+Levy@{generate\+Levy}}
+\index{generate\+Levy@{generate\+Levy}!Random\+Number\+Generator@{Random\+Number\+Generator}}
+\subsubsection{\texorpdfstring{generate\+Levy()}{generateLevy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double Random\+Number\+Generator\+::generate\+Levy (\begin{DoxyParamCaption}\item[{const double}]{mu,  }\item[{const double}]{c }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{class_random_number_generator_a6a8cdbfdb3343a10aab18b83fc6ce0dc}\label{class_random_number_generator_a6a8cdbfdb3343a10aab18b83fc6ce0dc}} 
 \index{Random\+Number\+Generator@{Random\+Number\+Generator}!generate\+Normal2\+Double@{generate\+Normal2\+Double}}
 \index{generate\+Normal2\+Double@{generate\+Normal2\+Double}!Random\+Number\+Generator@{Random\+Number\+Generator}}
@@ -254,6 +285,28 @@ an array with n double values normally distributed with mean m and standard devi
 {\footnotesize\ttfamily double$\ast$ Random\+Number\+Generator\+::generate\+Truncated\+Normal\+Double (\begin{DoxyParamCaption}\item[{const double}]{a,  }\item[{const double}]{b,  }\item[{const double}]{m,  }\item[{const double}]{sd,  }\item[{const unsigned long}]{n }\end{DoxyParamCaption})}
 
 Generates n double values from a truncated normal distribution. All values will be in \mbox{[}a, b\mbox{]}. 
+\begin{DoxyParams}{Parameters}
+{\em a} & the inferior limit of the truncated normal distribution. \\
+\hline
+{\em b} & the superior limit of the truncated normal distribution. \\
+\hline
+{\em m} & the mean of the normal distribution. \\
+\hline
+{\em sd} & the standard deviation of the normal distribution. \\
+\hline
+{\em n} & the number of values to be generated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an array with n double values from a truncated normal distribution. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_random_number_generator_a9204cf57bae1189b576307699b07747b}\label{class_random_number_generator_a9204cf57bae1189b576307699b07747b}} 
+\index{Random\+Number\+Generator@{Random\+Number\+Generator}!generate\+Truncated\+Normal\+Int@{generate\+Truncated\+Normal\+Int}}
+\index{generate\+Truncated\+Normal\+Int@{generate\+Truncated\+Normal\+Int}!Random\+Number\+Generator@{Random\+Number\+Generator}}
+\subsubsection{\texorpdfstring{generate\+Truncated\+Normal\+Int()}{generateTruncatedNormalInt()}}
+{\footnotesize\ttfamily int$\ast$ Random\+Number\+Generator\+::generate\+Truncated\+Normal\+Int (\begin{DoxyParamCaption}\item[{const int}]{a,  }\item[{const int}]{b,  }\item[{const double}]{m,  }\item[{const double}]{sd,  }\item[{const unsigned long}]{n }\end{DoxyParamCaption})}
+
+Generates n int values from a truncated normal distribution. All values will be in \mbox{[}a, b\mbox{]}. 
 \begin{DoxyParams}{Parameters}
 {\em a} & the inferior limit of the truncated normal distribution. \\
 \hline

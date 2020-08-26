@@ -1,5 +1,5 @@
 <map id="Antenna" name="Antenna">
-<area shape="rect" id="node2" href="$class_immovable_agent.html" title="{ImmovableAgent\n||+ ImmovableAgent()\l+ ~ImmovableAgent()\l+ toString()\l+ getName()\l}" alt="" coords="64,491,209,612"/>
-<area shape="rect" id="node3" href="$class_locatable_agent.html" title="{LocatableAgent\n|&#45; m_location\l|+ LocatableAgent()\l+ ~LocatableAgent()\l+ getName()\l+ toString()\l+ getLocation()\l+ setLocation()\l+ dumpLocation()\l}" alt="" coords="67,277,207,443"/>
-<area shape="rect" id="node4" href="$class_agent.html" title="{Agent\n|&#45; m_map\l&#45; m_id\l&#45; m_clock\l|+ Agent()\l+ ~Agent()\l+ operator==()\l+ getName()\l+ toString()\l+ getMap()\l+ setMap()\l+ getClock()\l+ getId()\l}" alt="" coords="84,5,189,229"/>
+<area shape="rect" id="node2" href="$class_immovable_agent.html" title="{ImmovableAgent\n||+ ImmovableAgent()\l+ ~ImmovableAgent()\l+ toString()\l}" alt="" coords="64,461,209,568"/>
+<area shape="rect" id="node3" href="$class_locatable_agent.html" title="{LocatableAgent\n|&#45; m_location\l|+ LocatableAgent()\l+ ~LocatableAgent()\l+ toString()\l+ getLocation()\l+ setLocation()\l+ dumpLocation()\l}" alt="" coords="67,263,207,413"/>
+<area shape="rect" id="node4" href="$class_agent.html" title="{Agent\n|&#45; m_map\l&#45; m_id\l&#45; m_clock\l|+ Agent()\l+ Agent()\l+ ~Agent()\l+ operator==()\l+ getMap()\l+ getClock()\l+ getId()\l+ toString()\l}" alt="" coords="84,5,189,215"/>
 </map>

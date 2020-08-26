@@ -1,4 +1,5 @@
-<map id="include/Agent.h" name="include/Agent.h">
-<area shape="rect" id="node2" href="$_map_8h.html" title="Map.h" alt="" coords="153,80,212,107"/>
-<area shape="rect" id="node4" href="$_clock_8h.html" title="Clock.h" alt="" coords="271,80,337,107"/>
+<map id="include/agent/Agent.h" name="include/agent/Agent.h">
+<area shape="rect" id="node2" href="$_map_8h.html" title="map/Map.h" alt="" coords="241,80,327,107"/>
+<area shape="rect" id="node9" href="$_clock_8h.html" title="Clock.h" alt="" coords="433,80,500,107"/>
+<area shape="rect" id="node5" href="$_grid_8h.html" title="map/Grid.h" alt="" coords="283,155,370,181"/>
 </map>

@@ -1,4 +1,4 @@
-.TH "utils" 3 "Fri Nov 22 2019" "Simulator" \" -*- nroff -*-
+.TH "utils" 3 "Wed Aug 26 2020" "Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,18 +14,6 @@ utils
 .br
 .ti -1c
 .RI "vector< Point * > \fBgenerateFixedPoints\fP (const \fBMap\fP *m, unsigned long n, unsigned seed)"
-.br
-.ti -1c
-.RI "void \fBprintPersonHeader\fP ()"
-.br
-.ti -1c
-.RI "void \fBprintAntennaHeader\fP ()"
-.br
-.ti -1c
-.RI "void \fBprintPhoneHeader\fP ()"
-.br
-.ti -1c
-.RI "void \fBprintMobileOperatorHeader\fP ()"
 .br
 .ti -1c
 .RI "double \fBr2d\fP (double x)"
@@ -53,6 +41,9 @@ utils
 .br
 .ti -1c
 .RI "double \fBgetValue\fP (XMLElement *el, const char *name)"
+.br
+.ti -1c
+.RI "double \fBinverseNormalCDF\fP (const double p, const double mu, const double sigma)"
 .br
 .in -1c
 .SS "Variables"
@@ -239,14 +230,23 @@ a double value obtained by converting the text in an XMLNode to a double
 .RE
 .PP
 
-.SS "void utils::printAntennaHeader ()"
-Prints out a header containing the names of the member variables from the \fBAntenna\fP class in a human readable format It is used together with \fBAntenna::toString()\fP to output the antennas set on console 
-.SS "void utils::printMobileOperatorHeader ()"
-Prints out a header containing the names of the member variables from the \fBMobileOperator\fP class in a human readable format It is used together with \fBMobileOperator::toString()\fP to output the mobile network operators set on console 
-.SS "void utils::printPersonHeader ()"
-Prints out a header containing the names of the member variables from the \fBPerson\fP class in a human readable format\&. It is used together with \fBPerson::toString()\fP to output the Persons set on console 
-.SS "void utils::printPhoneHeader ()"
-Prints out a header containing the names of the member variables from the \fBMobilePhone\fP class in a human readable format It is used together with \fBMobilePhone::toString()\fP to output the mobile phones set on console 
+.SS "double utils::inverseNormalCDF (const double p, const double mu, const double sigma)"
+Computes the inverse of the normal CDF\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP 
+.br
+\fImu\fP 
+.br
+\fIsigma\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
 .SS "double utils::r2d (double x)\fC [inline]\fP"
 Transforms a number from radians to degrees\&. 
 .PP

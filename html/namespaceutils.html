@@ -72,14 +72,6 @@ Functions</h2></td></tr>
 <tr class="separator:a16e957d5c26b39c840f6e109dd19d45d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd746b43155fa3033001f28a91a71cec"><td class="memItemLeft" align="right" valign="top">vector&lt; Point * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#acd746b43155fa3033001f28a91a71cec">generateFixedPoints</a> (const <a class="el" href="class_map.html">Map</a> *m, unsigned long n, unsigned seed)</td></tr>
 <tr class="separator:acd746b43155fa3033001f28a91a71cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1978a6ccb2360773215aba027d8b6f08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a1978a6ccb2360773215aba027d8b6f08">printPersonHeader</a> ()</td></tr>
-<tr class="separator:a1978a6ccb2360773215aba027d8b6f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2080e7db5afc5bb1b4c9ef5336f78ccb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a2080e7db5afc5bb1b4c9ef5336f78ccb">printAntennaHeader</a> ()</td></tr>
-<tr class="separator:a2080e7db5afc5bb1b4c9ef5336f78ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7633a4dfe509a009f4e02850b03ba1e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a7633a4dfe509a009f4e02850b03ba1e4">printPhoneHeader</a> ()</td></tr>
-<tr class="separator:a7633a4dfe509a009f4e02850b03ba1e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a207e9d12cc075f601c7fa32ac010b346"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a207e9d12cc075f601c7fa32ac010b346">printMobileOperatorHeader</a> ()</td></tr>
-<tr class="separator:a207e9d12cc075f601c7fa32ac010b346"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af70f6f3c2ac66aa3b4ce64a3b48288cb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#af70f6f3c2ac66aa3b4ce64a3b48288cb">r2d</a> (double x)</td></tr>
 <tr class="separator:af70f6f3c2ac66aa3b4ce64a3b48288cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d747e438d856e6c46cd1fe558fe3821"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a1d747e438d856e6c46cd1fe558fe3821">d2r</a> (double x)</td></tr>
@@ -98,6 +90,8 @@ Functions</h2></td></tr>
 <tr class="separator:ad69ebe54599ec891b3053cf9f5a1bd63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7347b1fde0bc9f313cd0a7051c33818a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a7347b1fde0bc9f313cd0a7051c33818a">getValue</a> (XMLElement *el, const char *name)</td></tr>
 <tr class="separator:a7347b1fde0bc9f313cd0a7051c33818a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58e0276c0ed6bb5e30e35568f1006af4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a58e0276c0ed6bb5e30e35568f1006af4">inverseNormalCDF</a> (const double p, const double mu, const double sigma)</td></tr>
+<tr class="separator:a58e0276c0ed6bb5e30e35568f1006af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -145,6 +139,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node2" href="namespaceutils.html#a707d0fc1b0346b7da16a6f7714a7f24d" title="utils::getNode" alt="" coords="161,5,264,32"/>
 <area shape="rect" id="node3" href="namespaceutils.html#a929f9a6daaf5e504356ea4af5918c34b" title="utils::getFirstChildElement" alt="" coords="125,56,300,83"/>
 <area shape="rect" id="node4" href="namespaceutils.html#a7347b1fde0bc9f313cd0a7051c33818a" title="utils::getValue" alt="" coords="160,107,265,133"/>
+<area shape="rect" id="node5" href="namespaceutils.html#a58e0276c0ed6bb5e30e35568f1006af4" title="utils::inverseNormalCDF" alt="" coords="132,157,293,184"/>
 </map>
 </div>
 
@@ -555,75 +550,54 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a2080e7db5afc5bb1b4c9ef5336f78ccb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2080e7db5afc5bb1b4c9ef5336f78ccb">&#9670;&nbsp;</a></span>printAntennaHeader()</h2>
+<a id="a58e0276c0ed6bb5e30e35568f1006af4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58e0276c0ed6bb5e30e35568f1006af4">&#9670;&nbsp;</a></span>inverseNormalCDF()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void utils::printAntennaHeader </td>
+          <td class="memname">double utils::inverseNormalCDF </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-<p>Prints out a header containing the names of the member variables from the <a class="el" href="class_antenna.html">Antenna</a> class in a human readable format It is used together with <a class="el" href="class_antenna.html#a7fea30e065f49a3cbcee02f60bd033c8">Antenna::toString()</a> to output the antennas set on console </p>
-
-</div>
-</div>
-<a id="a207e9d12cc075f601c7fa32ac010b346"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a207e9d12cc075f601c7fa32ac010b346">&#9670;&nbsp;</a></span>printMobileOperatorHeader()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">void utils::printMobileOperatorHeader </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>mu</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-<p>Prints out a header containing the names of the member variables from the <a class="el" href="class_mobile_operator.html">MobileOperator</a> class in a human readable format It is used together with <a class="el" href="class_mobile_operator.html#aa83724a149499ef10678ad651a5b40df">MobileOperator::toString()</a> to output the mobile network operators set on console </p>
-
-</div>
-</div>
-<a id="a1978a6ccb2360773215aba027d8b6f08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1978a6ccb2360773215aba027d8b6f08">&#9670;&nbsp;</a></span>printPersonHeader()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">void utils::printPersonHeader </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>sigma</em>&#160;</td>
         </tr>
-      </table>
-</div><div class="memdoc">
-<p>Prints out a header containing the names of the member variables from the <a class="el" href="class_person.html">Person</a> class in a human readable format. It is used together with <a class="el" href="class_person.html#a68872538da519d0a04297f43376db27c">Person::toString()</a> to output the Persons set on console </p>
-
-</div>
-</div>
-<a id="a7633a4dfe509a009f4e02850b03ba1e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7633a4dfe509a009f4e02850b03ba1e4">&#9670;&nbsp;</a></span>printPhoneHeader()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">void utils::printPhoneHeader </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
           <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Prints out a header containing the names of the member variables from the <a class="el" href="class_mobile_phone.html">MobilePhone</a> class in a human readable format It is used together with <a class="el" href="class_mobile_phone.html#a2b7e556d12a43e380786ad0eccf3ce04">MobilePhone::toString()</a> to output the mobile phones set on console </p>
+<p>Computes the inverse of the normal CDF. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td></td></tr>
+    <tr><td class="paramname">mu</td><td></td></tr>
+    <tr><td class="paramname">sigma</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceutils_a58e0276c0ed6bb5e30e35568f1006af4_icgraph.png" border="0" usemap="#namespaceutils_a58e0276c0ed6bb5e30e35568f1006af4_icgraph" alt=""/></div>
+<map name="namespaceutils_a58e0276c0ed6bb5e30e35568f1006af4_icgraph" id="namespaceutils_a58e0276c0ed6bb5e30e35568f1006af4_icgraph">
+<area shape="rect" id="node2" href="namespaceutils.html#a1d747e438d856e6c46cd1fe558fe3821" title="utils::d2r" alt="" coords="215,5,287,32"/>
+</map>
+</div>
 
 </div>
 </div>

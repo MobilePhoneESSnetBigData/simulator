@@ -40,20 +40,23 @@ public:
 	LevyFlightDisplacement(Map* map, Clock* clk,  double speed);
 
 	/**
-	 * Implements the Levy flight behaviour. It takes a pointer to the current location, generates a uniformly distributed value
-	 * between 0 and 2 PI as the angle of displacement and computes the length of the step in this direction using the
-	 * speed and the time duration of a simulation step. If the new location is outside the map, it returns the current location, i.e. the object
-	 * will stay in the same location until the next simulation step.
+	 * Implements the Levy flight behavior. It takes a pointer to the current location, generates a uniformly distributed value
+	 * between 0 and 2*PI as the angle of displacement and computes the length of the step in this direction using the
+	 * speed and the time duration of a simulation step. To simulate a Levy flight, the value of the speed is generated at each time
+	 * instant from a Levy distribution.
+	 * If the new location is outside the map, it tries 10 times to generate another location. If after 10 trials the position
+	 * is still outside the map returns the current location, i.e. the object will stay in the same location until the next simulation step.
 	 * @param p a pointer to the current location.
 	 * @return the new location
 	 */
 	virtual Point* generateNewLocation(Point* p) override;
-	virtual ~LevyFlightDisplacement();
-private:
-	virtual Point* computeNewLocation(Point* initLocation, double theta) override;
+
 	/**
 	 * Destructor. Does nothing.
 	*/
+	virtual ~LevyFlightDisplacement();
+private:
+	virtual Point* computeNewLocation(Point* initLocation, double theta) override;
 
 };
 

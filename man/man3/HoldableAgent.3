@@ -1,4 +1,4 @@
-.TH "HoldableAgent" 3 "Fri Nov 22 2019" "Simulator" \" -*- nroff -*-
+.TH "HoldableAgent" 3 "Wed Aug 26 2020" "Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -36,9 +36,6 @@ Inherited by \fBMobilePhone\fP, and \fBTablet\fP\&.
 .br
 .ti -1c
 .RI "void \fBsetHolder\fP (\fBAgent\fP *holder)"
-.br
-.ti -1c
-.RI "const string \fBgetName\fP () const override"
 .br
 .ti -1c
 .RI "const string \fBtoString\fP () const override"
@@ -134,19 +131,6 @@ a pointer to an \fBAgent\fP object that owns this device
 .RE
 .PP
 
-.SS "const string HoldableAgent::getName () const\fC [override]\fP, \fC [virtual]\fP"
-Returns the name of the class 
-.PP
-\fBReturns:\fP
-.RS 4
-the name of the class 
-.RE
-.PP
-
-.PP
-Implements \fBAgent\fP\&.
-.PP
-Reimplemented in \fBMobilePhone\fP, and \fBTablet\fP\&.
 .SS "virtual bool HoldableAgent::isConnected () const\fC [virtual]\fP"
 check if this device is connected to an antenna 
 .PP

@@ -1,4 +1,4 @@
-.TH "Constants" 3 "Fri Nov 22 2019" "Simulator" \" -*- nroff -*-
+.TH "Constants" 3 "Wed Aug 26 2020" "Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -88,6 +88,9 @@ Constants
 .br
 .ti -1c
 .RI "static const char * \fBANTENNAS_FILE_NAME\fP"
+.br
+.ti -1c
+.RI "static const char * \fBOUTPUT_DIR\fP"
 .br
 .ti -1c
 .RI "static const \fBPriorType\fP \fBPRIOR_PROBABILITY\fP"
@@ -196,6 +199,8 @@ The name of the file where the description of the grid is saved
 
 .SS "const unsigned long Constants::GRID_Y_ORIG\fC [static]\fP"
 
+.SS "const char* Constants::OUTPUT_DIR\fC [static]\fP"
+The name of the folder where the output fle will be saved 
 .SS "const char* Constants::PERSONS_FILE_NAME\fC [static]\fP"
 The name of the file where the exact positions of the persons are saved during simulation\&. They are needed for later analysis\&. 
 .SS "const double Constants::PHONE_CONNECTION_THRESHOLD\fC [static]\fP"

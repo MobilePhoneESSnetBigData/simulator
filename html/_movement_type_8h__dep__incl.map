@@ -1,11 +1,3 @@
 <map id="include/MovementType.h" name="include/MovementType.h">
-<area shape="rect" id="node2" href="$_movable_agent_8h.html" title="include/MovableAgent.h" alt="" coords="93,80,251,107"/>
-<area shape="rect" id="node8" href="$_world_8h.html" title="include/World.h" alt="" coords="79,379,191,405"/>
-<area shape="rect" id="node9" href="$_tablet_8h.html" title="include/Tablet.h" alt="" coords="390,229,503,256"/>
-<area shape="rect" id="node3" href="$_holdable_agent_8h.html" title="include/HoldableAgent.h" alt="" coords="184,155,347,181"/>
-<area shape="rect" id="node10" href="$_person_8h.html" title="include/Person.h" alt="" coords="43,304,162,331"/>
-<area shape="rect" id="node4" href="$_antenna_8h.html" title="include/Antenna.h" alt="" coords="239,229,366,256"/>
-<area shape="rect" id="node6" href="$_mobile_phone_8h.html" title="include/MobilePhone.h" alt="" coords="186,304,339,331"/>
-<area shape="rect" id="node5" href="$_e_m_field_8h.html" title="include/EMField.h" alt="" coords="319,453,446,480"/>
-<area shape="rect" id="node7" href="$_grid_8h.html" title="include/Grid.h" alt="" coords="249,379,351,405"/>
+<area shape="rect" id="node2" href="$_world_8h.html" title="include/World.h" alt="" coords="32,80,144,107"/>
 </map>

@@ -1,6 +1,4 @@
-<map id="include/Antenna.h" name="include/Antenna.h">
-<area shape="rect" id="node2" href="$_e_m_field_8h.html" title="include/EMField.h" alt="" coords="5,229,132,256"/>
-<area shape="rect" id="node3" href="$_mobile_phone_8h.html" title="include/MobilePhone.h" alt="" coords="61,80,215,107"/>
-<area shape="rect" id="node5" href="$_world_8h.html" title="include/World.h" alt="" coords="194,155,306,181"/>
-<area shape="rect" id="node4" href="$_grid_8h.html" title="include/Grid.h" alt="" coords="63,155,165,181"/>
+<map id="include/agent/Antenna.h" name="include/agent/Antenna.h">
+<area shape="rect" id="node2" href="$_e_m_field_8h.html" title="include/EMField.h" alt="" coords="5,80,132,107"/>
+<area shape="rect" id="node3" href="$_world_8h.html" title="include/World.h" alt="" coords="157,80,269,107"/>
 </map>

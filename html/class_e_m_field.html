@@ -95,10 +95,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5cd43aded41779d2d24de3f3e5c717d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a710da64db53718cdeed7b8c8dc11bba3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_m_field.html#a710da64db53718cdeed7b8c8dc11bba3">connectionLikelihood</a> (<a class="el" href="class_antenna.html">Antenna</a> *a, const Point *p)</td></tr>
 <tr class="separator:a710da64db53718cdeed7b8c8dc11bba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4995bf4b93c09f12b7aab64c7eb24603"><td class="memItemLeft" align="right" valign="top">vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_m_field.html#a4995bf4b93c09f12b7aab64c7eb24603">sumSignalQuality</a> (const <a class="el" href="class_grid.html">Grid</a> *grid, const unsigned long mnoID)</td></tr>
-<tr class="separator:a4995bf4b93c09f12b7aab64c7eb24603"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a533effeee35a80746ea7e3ddc5998e48"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_m_field.html#a533effeee35a80746ea7e3ddc5998e48">connectionLikelihoodGrid</a> (<a class="el" href="class_antenna.html">Antenna</a> *a, const <a class="el" href="class_grid.html">Grid</a> *g, unsigned long tileIndex)</td></tr>
-<tr class="separator:a533effeee35a80746ea7e3ddc5998e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acef16c598b62605a691f75f99d364447"><td class="memItemLeft" align="right" valign="top">vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_m_field.html#acef16c598b62605a691f75f99d364447">sumSignalQuality</a> (const <a class="el" href="class_map.html">Map</a> *map, const unsigned long mnoID)</td></tr>
+<tr class="separator:acef16c598b62605a691f75f99d364447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2d38429adcf17be6e9eb1e8fae6a823"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_m_field.html#af2d38429adcf17be6e9eb1e8fae6a823">connectionLikelihoodGrid</a> (<a class="el" href="class_antenna.html">Antenna</a> *a, const <a class="el" href="class_map.html">Map</a> *, unsigned long tileIndex)</td></tr>
+<tr class="separator:af2d38429adcf17be6e9eb1e8fae6a823"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2132484b9c52f2224bc81f354b24df6"><td class="memItemLeft" align="right" valign="top">const double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_m_field.html#ab2132484b9c52f2224bc81f354b24df6">getAntennaMin3DbArray</a> () const</td></tr>
 <tr class="separator:ab2132484b9c52f2224bc81f354b24df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fea003948a67df01174480480376169"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_m_field.html#a0fea003948a67df01174480480376169">getSd</a> () const</td></tr>
@@ -383,8 +383,8 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a533effeee35a80746ea7e3ddc5998e48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a533effeee35a80746ea7e3ddc5998e48">&#9670;&nbsp;</a></span>connectionLikelihoodGrid()</h2>
+<a id="af2d38429adcf17be6e9eb1e8fae6a823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2d38429adcf17be6e9eb1e8fae6a823">&#9670;&nbsp;</a></span>connectionLikelihoodGrid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -398,8 +398,8 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="class_grid.html">Grid</a> *&#160;</td>
-          <td class="paramname"><em>g</em>, </td>
+          <td class="paramtype">const <a class="el" href="class_map.html">Map</a> *&#160;</td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -612,8 +612,8 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a4995bf4b93c09f12b7aab64c7eb24603"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4995bf4b93c09f12b7aab64c7eb24603">&#9670;&nbsp;</a></span>sumSignalQuality()</h2>
+<a id="acef16c598b62605a691f75f99d364447"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acef16c598b62605a691f75f99d364447">&#9670;&nbsp;</a></span>sumSignalQuality()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -621,8 +621,8 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">vector&lt;double&gt; EMField::sumSignalQuality </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_grid.html">Grid</a> *&#160;</td>
-          <td class="paramname"><em>grid</em>, </td>
+          <td class="paramtype">const <a class="el" href="class_map.html">Map</a> *&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

@@ -1,4 +1,4 @@
-.TH "MobileOperator" 3 "Fri Nov 22 2019" "Simulator" \" -*- nroff -*-
+.TH "MobileOperator" 3 "Wed Aug 26 2020" "Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,13 +14,10 @@ Inherits \fBAgent\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBMobileOperator\fP (const \fBMap\fP *m, const unsigned long id, const \fBClock\fP *clock, const char *name, const double probMobilePhone)"
+.RI "\fBMobileOperator\fP (const \fBMap\fP *m, const unsigned long id, const \fBClock\fP *clock, const char *name, const double probMobilePhone, string &outoupDir)"
 .br
 .ti -1c
 .RI "virtual \fB~MobileOperator\fP ()"
-.br
-.ti -1c
-.RI "const string \fBgetName\fP () const override"
 .br
 .ti -1c
 .RI "const string \fBtoString\fP () const override"
@@ -36,6 +33,19 @@ Inherits \fBAgent\fP\&.
 .br
 .ti -1c
 .RI "ofstream & \fBgetSignalFile\fP ()"
+.br
+.ti -1c
+.RI "void \fBwriteSignalFileHeader\fP ()"
+.br
+.ti -1c
+.RI "const string & \fBgetOutputDir\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const string \fBgetHeader\fP ()"
 .br
 .in -1c
 .SS "Private Attributes"
@@ -53,13 +63,16 @@ Inherits \fBAgent\fP\&.
 .ti -1c
 .RI "ofstream \fBm_signalMeasureFileName\fP"
 .br
+.ti -1c
+.RI "string & \fBm_outputDir\fP"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
 This class represents a Mobile Operator company\&. Currently a simulation can be run with 1 or 2 mobile operators\&. A mobile operator own a set of antennas and has a set of mobile phone subscribed\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "MobileOperator::MobileOperator (const \fBMap\fP * m, const unsigned long id, const \fBClock\fP * clock, const char * name, const double probMobilePhone)"
+.SS "MobileOperator::MobileOperator (const \fBMap\fP * m, const unsigned long id, const \fBClock\fP * clock, const char * name, const double probMobilePhone, string & outoupDir)"
 Constructor of this class\&. It builds a \fBMobileOperator\fP object with the characteristics provided by user through parameters\&. It builds a string representing the name of the file where the coverage area of all the antennas that belong to this \fBMobileOperator\fP are saved in \&.csv format and then open this file and writes the header of the file\&. The name of this file is built concatenating 'AntennaCells_' with the name of the Mobile Operator\&. The extension of the file is '\&.csv'\&. A line of this file contains the antenna id followed by a wkt text representing the coverage area of antenna\&. It also builds another string representing the name of a file where the signal quality values for all antennas that belong to this \fBMobileOperator\fP are saved\&. The signal quality is computed in the center of each tile of the \fBGrid\fP object set for a simulation\&. The file is opened and then it writes the header of the file\&. The name of this file is built concatenating 'SignalQuality_' with the name of the Mobile Operator\&. The extension of the file is '\&.csv'\&. A line of this file contains the antenna id followed by a set of values for the signal quality computed in the center of each tile of the grid\&. 
 .PP
 \fBParameters:\fP
@@ -89,6 +102,8 @@ a file where the coverage area of all the antennas that belong to this \fBMobile
 .RE
 .PP
 
+.SS "static const string MobileOperator::getHeader ()\fC [static]\fP"
+
 .SS "const string MobileOperator::getMNOName () const"
 The name of the Mobile Operator\&. It should be provided as a parameter to the constructor of the class\&. 
 .PP
@@ -98,17 +113,8 @@ The name of the Mobile Operator
 .RE
 .PP
 
-.SS "const string MobileOperator::getName () const\fC [override]\fP, \fC [virtual]\fP"
-Overrides the same method from the superclass\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-the name of the class, i\&.e\&. 'MobileOperator'\&. 
-.RE
-.PP
+.SS "const string& MobileOperator::getOutputDir () const"
 
-.PP
-Implements \fBAgent\fP\&.
 .SS "const double MobileOperator::getProbMobilePhone () const"
 The probability that a person will have a cell phone at this company\&. It should be provided as a parameter to the constructor of the class\&. 
 .PP
@@ -138,11 +144,15 @@ a string that describes the parameters of the MobieOperator\&.
 
 .PP
 Implements \fBAgent\fP\&.
+.SS "void MobileOperator::writeSignalFileHeader ()"
+
 .SH "Member Data Documentation"
 .PP 
 .SS "ofstream MobileOperator::m_antennaCellsFileName\fC [private]\fP"
 
 .SS "const string MobileOperator::m_name\fC [private]\fP"
+
+.SS "string& MobileOperator::m_outputDir\fC [private]\fP"
 
 .SS "const double MobileOperator::m_probMobilePhone\fC [private]\fP"
 

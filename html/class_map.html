@@ -60,153 +60,84 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_map-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Map Class Reference</div>  </div>
+<div class="title">Map Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;Map.h&gt;</code></p>
 <div class="dynheader">
+Inheritance diagram for Map:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_map__inherit__graph.png" border="0" usemap="#_map_inherit__map" alt="Inheritance graph"/></div>
+<map name="_map_inherit__map" id="_map_inherit__map">
+<area shape="rect" id="node2" href="class_w_k_t_map.html" title="{WKTMap\n|&#45; m_globalFactory\l&#45; m_boundary\l|+ WKTMap()\l+ ~WKTMap()\l+ getGlobalFactory()\l+ getBoundary()\l+ getEnvelope()\l}" alt="" coords="5,409,147,560"/>
+</map>
+</div>
+<div class="dynheader">
 Collaboration diagram for Map:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_map__coll__graph.png" border="0" usemap="#_map_coll__map" alt="Collaboration graph"/></div>
 <map name="_map_coll__map" id="_map_coll__map">
-<area shape="rect" id="node2" href="class_grid.html" title="{Grid\n||+ Grid()\l+ ~Grid()\l+ getNoTilesX()\l+ getNoTilesY()\l+ getXTileDim()\l+ getYTileDim()\l+ getXOrigin()\l+ getYOrigin()\l+ toString()\l+ getTileIndexX()\land 10 more...\l&#45; computeTileCenters()\l&#45; useNetworkPrior()\l&#45; useUniformPrior()\l}" alt="" coords="95,189,249,457"/>
+<area shape="rect" id="node3" href="class_grid.html" title="{Grid\n||+ Grid()\l+ ~Grid()\l+ getNoTilesX()\l+ getNoTilesY()\l+ getXTileDim()\l+ getYTileDim()\l+ getXOrigin()\l+ getYOrigin()\l+ getNoTiles()\l+ getTileCenter()\l+ getTileNo()\l+ getTileNo()\l+ dumpGrid()\l+ getTileCenters()\l&#45; getTileIndexX()\l&#45; getTileIndexY()\l&#45; getTileIndexX()\l&#45; getTileIndexY()\l&#45; toString()\l&#45; computeTileCenters()\l}" alt="" coords="96,189,249,545"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0f5ad0fd4563497b4214038cbca8b582"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a0f5ad0fd4563497b4214038cbca8b582">Map</a> ()</td></tr>
-<tr class="separator:a0f5ad0fd4563497b4214038cbca8b582"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c9545a0252613e2a6808932fe83f9ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a4c9545a0252613e2a6808932fe83f9ad">Map</a> (double llX, double llY, double width, double height)</td></tr>
-<tr class="separator:a4c9545a0252613e2a6808932fe83f9ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8beab7a7dce782a23db740cd7132552"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ab8beab7a7dce782a23db740cd7132552">Map</a> (string wktFile)</td></tr>
-<tr class="separator:ab8beab7a7dce782a23db740cd7132552"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1ab46138aa61acd0a58b1fd21e0df37"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ac1ab46138aa61acd0a58b1fd21e0df37">~Map</a> ()</td></tr>
 <tr class="separator:ac1ab46138aa61acd0a58b1fd21e0df37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69bd639b05daa393b051c76f0dc4af7c"><td class="memItemLeft" align="right" valign="top">const GeometryFactory::Ptr &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a69bd639b05daa393b051c76f0dc4af7c">getGlobalFactory</a> () const</td></tr>
-<tr class="separator:a69bd639b05daa393b051c76f0dc4af7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74dd5445ed90bea2a9cc3240bc23f1bc"><td class="memItemLeft" align="right" valign="top">Geometry *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a74dd5445ed90bea2a9cc3240bc23f1bc">getBoundary</a> () const</td></tr>
-<tr class="separator:a74dd5445ed90bea2a9cc3240bc23f1bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acede2ccba9bf0f987f3dde8c332bec17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#acede2ccba9bf0f987f3dde8c332bec17">setBoundary</a> (Geometry *boundary)</td></tr>
-<tr class="separator:acede2ccba9bf0f987f3dde8c332bec17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9bf1c29b844f3b7fbf7a3153c24fef0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_grid.html">Grid</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#aa9bf1c29b844f3b7fbf7a3153c24fef0">getGrid</a> () const</td></tr>
-<tr class="separator:aa9bf1c29b844f3b7fbf7a3153c24fef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3dba78a0b52b304c39d1fa6bff71b00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#aa3dba78a0b52b304c39d1fa6bff71b00">addGrid</a> (double dimTileX, double dimTileY)</td></tr>
-<tr class="separator:aa3dba78a0b52b304c39d1fa6bff71b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6b66dc80060a42151228f3764db539f"><td class="memItemLeft" align="right" valign="top">virtual Geometry *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#aa6b66dc80060a42151228f3764db539f">getBoundary</a> () const =0</td></tr>
+<tr class="separator:aa6b66dc80060a42151228f3764db539f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40854af632e83500ca5b44180eae8e87"><td class="memItemLeft" align="right" valign="top">virtual Geometry *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a40854af632e83500ca5b44180eae8e87">getEnvelope</a> () const =0</td></tr>
+<tr class="separator:a40854af632e83500ca5b44180eae8e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4dd1529d5c9ba2232108a2de2095b76"><td class="memItemLeft" align="right" valign="top">virtual const GeometryFactory::Ptr &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ab4dd1529d5c9ba2232108a2de2095b76">getGlobalFactory</a> () const =0</td></tr>
+<tr class="separator:ab4dd1529d5c9ba2232108a2de2095b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24246583fbf3bbed56bfb5cd595f941f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a24246583fbf3bbed56bfb5cd595f941f">addGrid</a> (double dimTileX, double dimTileY)</td></tr>
+<tr class="separator:a24246583fbf3bbed56bfb5cd595f941f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aace69b7294f0da0e2ca000dfa2a29606"><td class="memItemLeft" align="right" valign="top">virtual unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#aace69b7294f0da0e2ca000dfa2a29606">getNoTilesX</a> () const</td></tr>
+<tr class="separator:aace69b7294f0da0e2ca000dfa2a29606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13ff108a9b56c432665d36ba1cbad1d0"><td class="memItemLeft" align="right" valign="top">virtual unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a13ff108a9b56c432665d36ba1cbad1d0">getNoTilesY</a> () const</td></tr>
+<tr class="separator:a13ff108a9b56c432665d36ba1cbad1d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a7326f8167effc1b6c0329de3c29d60"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a0a7326f8167effc1b6c0329de3c29d60">getXTileDim</a> () const</td></tr>
+<tr class="separator:a0a7326f8167effc1b6c0329de3c29d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af36385173af71e8e0cd989dceb8f8aea"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#af36385173af71e8e0cd989dceb8f8aea">getYTileDim</a> () const</td></tr>
+<tr class="separator:af36385173af71e8e0cd989dceb8f8aea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3e4dc640ee38ff6e77ab41435fcc42d"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#af3e4dc640ee38ff6e77ab41435fcc42d">getXOrigin</a> () const</td></tr>
+<tr class="separator:af3e4dc640ee38ff6e77ab41435fcc42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bf4ef0a81f82df90465136c61a440bc"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a5bf4ef0a81f82df90465136c61a440bc">getYOrigin</a> () const</td></tr>
+<tr class="separator:a5bf4ef0a81f82df90465136c61a440bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89abf4b20e4b0e54b706452e5caa61b3"><td class="memItemLeft" align="right" valign="top">virtual const unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a89abf4b20e4b0e54b706452e5caa61b3">getNoTiles</a> () const</td></tr>
+<tr class="separator:a89abf4b20e4b0e54b706452e5caa61b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ade598881798896b554f2ba34d8b499"><td class="memItemLeft" align="right" valign="top">virtual Coordinate&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a3ade598881798896b554f2ba34d8b499">getTileCenter</a> (unsigned long tileIndex) const</td></tr>
+<tr class="separator:a3ade598881798896b554f2ba34d8b499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9727bc4d5a77cb35b60d92d0e176171"><td class="memItemLeft" align="right" valign="top">virtual unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#af9727bc4d5a77cb35b60d92d0e176171">getTileNo</a> (const Point *p) const</td></tr>
+<tr class="separator:af9727bc4d5a77cb35b60d92d0e176171"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab68490803824fc485652757d992af18e"><td class="memItemLeft" align="right" valign="top">virtual unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ab68490803824fc485652757d992af18e">getTileNo</a> (double x, double y) const</td></tr>
+<tr class="separator:ab68490803824fc485652757d992af18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb74aa56fb64f4ab4857269c7924ec5a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#afb74aa56fb64f4ab4857269c7924ec5a">dumpGrid</a> (const string &amp;gridFileName) const</td></tr>
+<tr class="separator:afb74aa56fb64f4ab4857269c7924ec5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ff5cb95191b3a749f9a14b72eba2584"><td class="memItemLeft" align="right" valign="top">virtual Coordinate *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a6ff5cb95191b3a749f9a14b72eba2584">getTileCenters</a> () const</td></tr>
+<tr class="separator:a6ff5cb95191b3a749f9a14b72eba2584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca471e63e8f9f9a892a5491aee94eada"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#aca471e63e8f9f9a892a5491aee94eada">hasGrid</a> () const</td></tr>
+<tr class="separator:aca471e63e8f9f9a892a5491aee94eada"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a36539152d451138361d82469218b4661"><td class="memItemLeft" align="right" valign="top">Polygon *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a36539152d451138361d82469218b4661">create_rectangle</a> (double llX, double llY, double width, double height)</td></tr>
-<tr class="separator:a36539152d451138361d82469218b4661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aa9b06672216e01d51b96cc4f70d3206d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#aa9b06672216e01d51b96cc4f70d3206d">Map</a> (string mapFileName)</td></tr>
+<tr class="separator:aa9b06672216e01d51b96cc4f70d3206d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:ac5f30e6c144955a3638192495fd7d843"><td class="memItemLeft" align="right" valign="top">GeometryFactory::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ac5f30e6c144955a3638192495fd7d843">m_globalFactory</a></td></tr>
-<tr class="separator:ac5f30e6c144955a3638192495fd7d843"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2c95561cb4ff3b9950240351cf4303c"><td class="memItemLeft" align="right" valign="top">Geometry *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#af2c95561cb4ff3b9950240351cf4303c">m_boundary</a></td></tr>
-<tr class="separator:af2c95561cb4ff3b9950240351cf4303c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
 <tr class="memitem:a0fc16621dbe307d36170c3a96b24b7d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_grid.html">Grid</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a0fc16621dbe307d36170c3a96b24b7d9">m_grid</a></td></tr>
 <tr class="separator:a0fc16621dbe307d36170c3a96b24b7d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54e527b86ef517e67b299ef06233addc"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a54e527b86ef517e67b299ef06233addc">m_mapFileName</a></td></tr>
+<tr class="separator:a54e527b86ef517e67b299ef06233addc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This is the map where the simulation takes place. It could be a simple rectangle or any kind of geometry object(s) read from a wkt file. The map has a boundary that is implemented as a Geometry object, a factory object of GeometryFactory type used to create other objects. All geometric and geographic features of the simulator uses the GEOS library. GEOS is an open source C++ library which is just a port to C++ of the well known Java Topology Suite. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0f5ad0fd4563497b4214038cbca8b582"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f5ad0fd4563497b4214038cbca8b582">&#9670;&nbsp;</a></span>Map() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Map::Map </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Creates a map with a null boundary. The user may set the boundary later, using <a class="el" href="class_map.html#acede2ccba9bf0f987f3dde8c332bec17">setBoundary()</a> method. </p>
-
-</div>
-</div>
-<a id="a4c9545a0252613e2a6808932fe83f9ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c9545a0252613e2a6808932fe83f9ad">&#9670;&nbsp;</a></span>Map() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Map::Map </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>llX</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>llY</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>width</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>height</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Build a simple map of a rectangular shape. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">llX</td><td>X coordinate of the bottom left corner of the rectangle. </td></tr>
-    <tr><td class="paramname">llY</td><td>Y coordinate of the bottom left corner of the rectangle. </td></tr>
-    <tr><td class="paramname">width</td><td>the width of the rectangle. </td></tr>
-    <tr><td class="paramname">height</td><td>the height of the rectangle. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ab8beab7a7dce782a23db740cd7132552"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8beab7a7dce782a23db740cd7132552">&#9670;&nbsp;</a></span>Map() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Map::Map </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>wktFile</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Builds a map reading it from a .wkt file. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">wktFile</td><td>the name of the .wkt file that contains the description of the map. Currently, the first row of this file should contain the external boundary geometry of the map. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac1ab46138aa61acd0a58b1fd21e0df37"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac1ab46138aa61acd0a58b1fd21e0df37">&#9670;&nbsp;</a></span>~Map()</h2>
 
@@ -229,19 +160,47 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Default destructor </p>
+
+</div>
+</div>
+<a id="aa9b06672216e01d51b96cc4f70d3206d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9b06672216e01d51b96cc4f70d3206d">&#9670;&nbsp;</a></span>Map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Map::Map </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>mapFileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa3dba78a0b52b304c39d1fa6bff71b00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3dba78a0b52b304c39d1fa6bff71b00">&#9670;&nbsp;</a></span>addGrid()</h2>
+<a id="a24246583fbf3bbed56bfb5cd595f941f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24246583fbf3bbed56bfb5cd595f941f">&#9670;&nbsp;</a></span>addGrid()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Map::addGrid </td>
+          <td class="memname">virtual void Map::addGrid </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>dimTileX</em>, </td>
@@ -258,19 +217,17 @@ Private Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Adds a <a class="el" href="class_grid.html">Grid</a> that overlaps this <a class="el" href="class_map.html">Map</a> objects. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dimTileX</td><td>the dimension on OX of a tile of the <a class="el" href="class_grid.html">Grid</a> object. </td></tr>
-    <tr><td class="paramname">dimTileY</td><td>the dimension on OY of a tile of the <a class="el" href="class_grid.html">Grid</a> object. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
-<a id="a36539152d451138361d82469218b4661"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36539152d451138361d82469218b4661">&#9670;&nbsp;</a></span>create_rectangle()</h2>
+<a id="afb74aa56fb64f4ab4857269c7924ec5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb74aa56fb64f4ab4857269c7924ec5a">&#9670;&nbsp;</a></span>dumpGrid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,167 +236,417 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Polygon* Map::create_rectangle </td>
+          <td class="memname">virtual void Map::dumpGrid </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>gridFileName</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa6b66dc80060a42151228f3764db539f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6b66dc80060a42151228f3764db539f">&#9670;&nbsp;</a></span>getBoundary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Geometry* Map::getBoundary </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_w_k_t_map.html#a0b326822ab1bcfc0765e97f3acb545b0">WKTMap</a>.</p>
+
+</div>
+</div>
+<a id="a40854af632e83500ca5b44180eae8e87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40854af632e83500ca5b44180eae8e87">&#9670;&nbsp;</a></span>getEnvelope()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Geometry* Map::getEnvelope </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_w_k_t_map.html#af117af8392fc33f1e603f10ea57ac6b0">WKTMap</a>.</p>
+
+</div>
+</div>
+<a id="ab4dd1529d5c9ba2232108a2de2095b76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4dd1529d5c9ba2232108a2de2095b76">&#9670;&nbsp;</a></span>getGlobalFactory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const GeometryFactory::Ptr&amp; Map::getGlobalFactory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_w_k_t_map.html#a566b85bafc53e2013e0a21d4a387ce91">WKTMap</a>.</p>
+
+</div>
+</div>
+<a id="a89abf4b20e4b0e54b706452e5caa61b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89abf4b20e4b0e54b706452e5caa61b3">&#9670;&nbsp;</a></span>getNoTiles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const unsigned long Map::getNoTiles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aace69b7294f0da0e2ca000dfa2a29606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aace69b7294f0da0e2ca000dfa2a29606">&#9670;&nbsp;</a></span>getNoTilesX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned long Map::getNoTilesX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13ff108a9b56c432665d36ba1cbad1d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13ff108a9b56c432665d36ba1cbad1d0">&#9670;&nbsp;</a></span>getNoTilesY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned long Map::getNoTilesY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ade598881798896b554f2ba34d8b499"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ade598881798896b554f2ba34d8b499">&#9670;&nbsp;</a></span>getTileCenter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Coordinate Map::getTileCenter </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>tileIndex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ff5cb95191b3a749f9a14b72eba2584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ff5cb95191b3a749f9a14b72eba2584">&#9670;&nbsp;</a></span>getTileCenters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Coordinate* Map::getTileCenters </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9727bc4d5a77cb35b60d92d0e176171"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9727bc4d5a77cb35b60d92d0e176171">&#9670;&nbsp;</a></span>getTileNo() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned long Map::getTileNo </td>
+          <td>(</td>
+          <td class="paramtype">const Point *&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab68490803824fc485652757d992af18e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab68490803824fc485652757d992af18e">&#9670;&nbsp;</a></span>getTileNo() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned long Map::getTileNo </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>llX</em>, </td>
+          <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>llY</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>width</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>height</em>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a74dd5445ed90bea2a9cc3240bc23f1bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74dd5445ed90bea2a9cc3240bc23f1bc">&#9670;&nbsp;</a></span>getBoundary()</h2>
+<a id="af3e4dc640ee38ff6e77ab41435fcc42d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3e4dc640ee38ff6e77ab41435fcc42d">&#9670;&nbsp;</a></span>getXOrigin()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Geometry* Map::getBoundary </td>
+          <td class="memname">virtual double Map::getXOrigin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Returns a pointer to the Geometry object that represents the external boundary of the map. </p><dl class="section return"><dt>Returns</dt><dd>a pointer to the Geometry object that represents the external boundary of the map. </dd></dl>
 
 </div>
 </div>
-<a id="a69bd639b05daa393b051c76f0dc4af7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69bd639b05daa393b051c76f0dc4af7c">&#9670;&nbsp;</a></span>getGlobalFactory()</h2>
+<a id="a0a7326f8167effc1b6c0329de3c29d60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a7326f8167effc1b6c0329de3c29d60">&#9670;&nbsp;</a></span>getXTileDim()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const GeometryFactory::Ptr&amp; Map::getGlobalFactory </td>
+          <td class="memname">virtual double Map::getXTileDim </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Returns a pointer to the GeometryFactory object which is a factory object used to create other geometric objects. The GEOS library allows users to create geometric objects only using this factory, all the constructors are made private. </p><dl class="section return"><dt>Returns</dt><dd>a pointer to the GeometryFactory object used to create other geometric objects. </dd></dl>
 
 </div>
 </div>
-<a id="aa9bf1c29b844f3b7fbf7a3153c24fef0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9bf1c29b844f3b7fbf7a3153c24fef0">&#9670;&nbsp;</a></span>getGrid()</h2>
+<a id="a5bf4ef0a81f82df90465136c61a440bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bf4ef0a81f82df90465136c61a440bc">&#9670;&nbsp;</a></span>getYOrigin()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_grid.html">Grid</a>* Map::getGrid </td>
+          <td class="memname">virtual double Map::getYOrigin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Returns a pointer to the <a class="el" href="class_grid.html">Grid</a> object associated with this <a class="el" href="class_map.html">Map</a>. After creation of a <a class="el" href="class_map.html">Map</a> the user should associate a <a class="el" href="class_grid.html">Grid</a> that overlaps this <a class="el" href="class_map.html">Map</a>. The gird is used to compute the probability of the localization of different events during the simulation. </p><dl class="section return"><dt>Returns</dt><dd>a pointer the <a class="el" href="class_grid.html">Grid</a> object associated with this <a class="el" href="class_map.html">Map</a>. </dd></dl>
 
 </div>
 </div>
-<a id="acede2ccba9bf0f987f3dde8c332bec17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acede2ccba9bf0f987f3dde8c332bec17">&#9670;&nbsp;</a></span>setBoundary()</h2>
+<a id="af36385173af71e8e0cd989dceb8f8aea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af36385173af71e8e0cd989dceb8f8aea">&#9670;&nbsp;</a></span>getYTileDim()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Map::setBoundary </td>
+          <td class="memname">virtual double Map::getYTileDim </td>
           <td>(</td>
-          <td class="paramtype">Geometry *&#160;</td>
-          <td class="paramname"><em>boundary</em></td><td>)</td>
-          <td></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Sets the boundary of the <a class="el" href="class_map.html">Map</a> object. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">boundary</td><td>the boundary of the <a class="el" href="class_map.html">Map</a> object. </td></tr>
-  </table>
-  </dd>
-</dl>
+
+</div>
+</div>
+<a id="aca471e63e8f9f9a892a5491aee94eada"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca471e63e8f9f9a892a5491aee94eada">&#9670;&nbsp;</a></span>hasGrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Map::hasGrid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="af2c95561cb4ff3b9950240351cf4303c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2c95561cb4ff3b9950240351cf4303c">&#9670;&nbsp;</a></span>m_boundary</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Geometry* Map::m_boundary</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac5f30e6c144955a3638192495fd7d843"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5f30e6c144955a3638192495fd7d843">&#9670;&nbsp;</a></span>m_globalFactory</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">GeometryFactory::Ptr Map::m_globalFactory</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a0fc16621dbe307d36170c3a96b24b7d9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0fc16621dbe307d36170c3a96b24b7d9">&#9670;&nbsp;</a></span>m_grid</h2>
 
@@ -455,7 +662,29 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54e527b86ef517e67b299ef06233addc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54e527b86ef517e67b299ef06233addc">&#9670;&nbsp;</a></span>m_mapFileName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Map::m_mapFileName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -463,7 +692,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/<a class="el" href="_map_8h.html">Map.h</a></li>
+<li>include/map/<a class="el" href="_map_8h.html">Map.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

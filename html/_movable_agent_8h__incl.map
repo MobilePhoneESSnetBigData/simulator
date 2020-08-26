@@ -1,7 +1,7 @@
-<map id="include/MovableAgent.h" name="include/MovableAgent.h">
-<area shape="rect" id="node2" href="$_locatable_agent_8h.html" title="LocatableAgent.h" alt="" coords="251,80,373,107"/>
-<area shape="rect" id="node6" href="$_clock_8h.html" title="Clock.h" alt="" coords="85,229,152,256"/>
-<area shape="rect" id="node13" href="$_movement_type_8h.html" title="MovementType.h" alt="" coords="593,80,713,107"/>
-<area shape="rect" id="node3" href="$_agent_8h.html" title="Agent.h" alt="" coords="156,155,223,181"/>
-<area shape="rect" id="node4" href="$_map_8h.html" title="Map.h" alt="" coords="332,229,391,256"/>
+<map id="include/agent/MovableAgent.h" name="include/agent/MovableAgent.h">
+<area shape="rect" id="node2" href="$_locatable_agent_8h.html" title="agent/LocatableAgent.h" alt="" coords="510,80,669,107"/>
+<area shape="rect" id="node3" href="$_agent_8h.html" title="agent/Agent.h" alt="" coords="457,155,559,181"/>
+<area shape="rect" id="node4" href="$_map_8h.html" title="map/Map.h" alt="" coords="274,229,361,256"/>
+<area shape="rect" id="node11" href="$_clock_8h.html" title="Clock.h" alt="" coords="475,229,541,256"/>
+<area shape="rect" id="node7" href="$_grid_8h.html" title="map/Grid.h" alt="" coords="233,304,319,331"/>
 </map>

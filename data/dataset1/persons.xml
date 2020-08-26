@@ -1,5 +1,5 @@
 <persons>
-	<num_persons>50</num_persons>
+	<num_persons>100</num_persons>
 	<min_age>10</min_age>
 	<max_age>87</max_age>
 	<age_distribution>

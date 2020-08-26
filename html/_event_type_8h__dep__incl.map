@@ -1,7 +1,5 @@
 <map id="include/EventType.h" name="include/EventType.h">
-<area shape="rect" id="node2" href="$_antenna_8h.html" title="include/Antenna.h" alt="" coords="75,80,201,107"/>
-<area shape="rect" id="node3" href="$_e_m_field_8h.html" title="include/EMField.h" alt="" coords="5,304,132,331"/>
-<area shape="rect" id="node4" href="$_mobile_phone_8h.html" title="include/MobilePhone.h" alt="" coords="61,155,215,181"/>
-<area shape="rect" id="node6" href="$_world_8h.html" title="include/World.h" alt="" coords="194,229,306,256"/>
-<area shape="rect" id="node5" href="$_grid_8h.html" title="include/Grid.h" alt="" coords="63,229,165,256"/>
+<area shape="rect" id="node2" href="$_antenna_8h.html" title="include/agent/Antenna.h" alt="" coords="59,80,222,107"/>
+<area shape="rect" id="node3" href="$_e_m_field_8h.html" title="include/EMField.h" alt="" coords="5,155,132,181"/>
+<area shape="rect" id="node4" href="$_world_8h.html" title="include/World.h" alt="" coords="157,155,269,181"/>
 </map>

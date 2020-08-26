@@ -1,30 +1,30 @@
-.TH "include/Antenna.h" 3 "Fri Nov 22 2019" "Simulator" \" -*- nroff -*-
+.TH "include/agent/Antenna.h" 3 "Wed Aug 26 2020" "Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-include/Antenna.h
+include/agent/Antenna.h
 .SH SYNOPSIS
 .br
 .PP
-\fC#include <ImmovableAgent\&.h>\fP
+\fC#include <agent/HoldableAgent\&.h>\fP
 .br
-\fC#include <HoldableAgent\&.h>\fP
+\fC#include <agent/ImmovableAgent\&.h>\fP
 .br
-\fC#include <geos/geom/Polygon\&.h>\fP
-.br
-\fC#include <EventType\&.h>\fP
+\fC#include <agent/MobileOperator\&.h>\fP
 .br
 \fC#include <AntennaType\&.h>\fP
 .br
-\fC#include <MobileOperator\&.h>\fP
+\fC#include <EventType\&.h>\fP
 .br
-\fC#include <TinyXML2\&.h>\fP
+\fC#include <geos/geom/Coordinate\&.h>\fP
+.br
+\fC#include <iostream>\fP
 .br
 \fC#include <string>\fP
 .br
-\fC#include <fstream>\fP
-.br
 \fC#include <utility>\fP
+.br
+\fC#include <vector>\fP
 .br
 
 .SS "Classes"
@@ -32,6 +32,13 @@ include/Antenna.h
 .in +1c
 .ti -1c
 .RI "class \fBAntenna\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBtinyxml2\fP"
 .br
 .in -1c
 .SH "Author"

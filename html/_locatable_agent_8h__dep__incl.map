@@ -1,12 +1,15 @@
-<map id="include/LocatableAgent.h" name="include/LocatableAgent.h">
-<area shape="rect" id="node2" href="$_immovable_agent_8h.html" title="include/ImmovableAgent.h" alt="" coords="5,80,179,107"/>
-<area shape="rect" id="node8" href="$_movable_agent_8h.html" title="include/MovableAgent.h" alt="" coords="203,80,362,107"/>
-<area shape="rect" id="node3" href="$_antenna_8h.html" title="include/Antenna.h" alt="" coords="29,229,155,256"/>
-<area shape="rect" id="node4" href="$_e_m_field_8h.html" title="include/EMField.h" alt="" coords="105,453,231,480"/>
-<area shape="rect" id="node5" href="$_mobile_phone_8h.html" title="include/MobilePhone.h" alt="" coords="145,304,298,331"/>
-<area shape="rect" id="node7" href="$_world_8h.html" title="include/World.h" alt="" coords="93,379,205,405"/>
-<area shape="rect" id="node6" href="$_grid_8h.html" title="include/Grid.h" alt="" coords="230,379,333,405"/>
-<area shape="rect" id="node9" href="$_holdable_agent_8h.html" title="include/HoldableAgent.h" alt="" coords="168,155,331,181"/>
-<area shape="rect" id="node11" href="$_person_8h.html" title="include/Person.h" alt="" coords="322,304,441,331"/>
-<area shape="rect" id="node10" href="$_tablet_8h.html" title="include/Tablet.h" alt="" coords="179,229,293,256"/>
+<map id="include/agent/LocatableAgent.h" name="include/agent/LocatableAgent.h">
+<area shape="rect" id="node2" href="$_immovable_agent_8h.html" title="include/agent/ImmovableAgent.h" alt="" coords="5,80,215,107"/>
+<area shape="rect" id="node6" href="$_movable_agent_8h.html" title="include/agent/MovableAgent.h" alt="" coords="239,80,434,107"/>
+<area shape="rect" id="node3" href="$_antenna_8h.html" title="include/agent/Antenna.h" alt="" coords="46,229,209,256"/>
+<area shape="rect" id="node4" href="$_e_m_field_8h.html" title="include/EMField.h" alt="" coords="64,304,191,331"/>
+<area shape="rect" id="node5" href="$_world_8h.html" title="include/World.h" alt="" coords="233,304,345,331"/>
+<area shape="rect" id="node7" href="$_holdable_agent_8h.html" title="include/agent/HoldableAgent.h" alt="" coords="327,155,525,181"/>
+<area shape="rect" id="node14" href="$_person_8h.html" title="include/agent/Person.h" alt="" coords="147,155,302,181"/>
+<area shape="rect" id="node8" href="$_mobile_phone_8h.html" title="include/agent/MobilePhone.h" alt="" coords="507,229,697,256"/>
+<area shape="rect" id="node13" href="$_tablet_8h.html" title="include/agent/Tablet.h" alt="" coords="334,229,483,256"/>
+<area shape="rect" id="node9" href="$_post_loc_prob_8h.html" title="include/PostLocProb.h" alt="" coords="379,304,532,331"/>
+<area shape="rect" id="node12" href="$_utils_8h.html" title="include/Utils.h" alt="" coords="557,304,661,331"/>
+<area shape="rect" id="node10" href="$_net_prior_post_loc_prob_8h.html" title="include/NetPriorPostLocProb.h" alt="" coords="251,386,451,413"/>
+<area shape="rect" id="node11" href="$_unif_prior_post_loc_prob_8h.html" title="include/UnifPriorPostLoc\lProb.h" alt="" coords="476,379,640,420"/>
 </map>

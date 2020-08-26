@@ -1,5 +1,6 @@
-<map id="include/LocatableAgent.h" name="include/LocatableAgent.h">
-<area shape="rect" id="node2" href="$_agent_8h.html" title="Agent.h" alt="" coords="191,80,257,107"/>
-<area shape="rect" id="node3" href="$_map_8h.html" title="Map.h" alt="" coords="113,155,172,181"/>
-<area shape="rect" id="node5" href="$_clock_8h.html" title="Clock.h" alt="" coords="276,155,343,181"/>
+<map id="include/agent/LocatableAgent.h" name="include/agent/LocatableAgent.h">
+<area shape="rect" id="node2" href="$_agent_8h.html" title="agent/Agent.h" alt="" coords="590,80,693,107"/>
+<area shape="rect" id="node3" href="$_map_8h.html" title="map/Map.h" alt="" coords="378,155,465,181"/>
+<area shape="rect" id="node10" href="$_clock_8h.html" title="Clock.h" alt="" coords="608,155,675,181"/>
+<area shape="rect" id="node6" href="$_grid_8h.html" title="map/Grid.h" alt="" coords="139,229,226,256"/>
 </map>

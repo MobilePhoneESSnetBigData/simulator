@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['omnidirectional',['OMNIDIRECTIONAL',['../_antenna_type_8h.html#a7b678b5cb9dedc607131200119d96b16a8ff57fa72952e98025e600a041b8b8de',1,'AntennaType.h']]]
+  ['network',['NETWORK',['../_prior_type_8h.html#a61286c562e68de246982fc393a7c23a5a25835188a2355e9530d3a10fcbe4c65b',1,'PriorType.h']]]
 ];

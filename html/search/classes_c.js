@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tablet',['Tablet',['../class_tablet.html',1,'']]]
+  ['simexception',['SimException',['../class_sim_exception.html',1,'']]]
 ];

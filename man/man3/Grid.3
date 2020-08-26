@@ -1,4 +1,4 @@
-.TH "Grid" 3 "Fri Nov 22 2019" "Simulator" \" -*- nroff -*-
+.TH "Grid" 3 "Wed Aug 26 2020" "Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -36,31 +36,13 @@ Grid
 .RI "double \fBgetYOrigin\fP () const"
 .br
 .ti -1c
-.RI "string \fBtoString\fP () const"
-.br
-.ti -1c
-.RI "unsigned long \fBgetTileIndexX\fP (const Point *p) const"
-.br
-.ti -1c
-.RI "unsigned long \fBgetTileIndexY\fP (const Point *p) const"
-.br
-.ti -1c
 .RI "const unsigned long \fBgetNoTiles\fP () const"
-.br
-.ti -1c
-.RI "vector< double > \fBcomputeProbability\fP (unsigned long t, \fBMobilePhone\fP *m, vector< \fBAntennaInfo\fP > &data, pair< \fBum_iterator\fP, \fBum_iterator\fP > it, \fBPriorType\fP prior) const"
 .br
 .ti -1c
 .RI "Coordinate \fBgetTileCenter\fP (unsigned long tileIndex) const"
 .br
 .ti -1c
 .RI "unsigned long \fBgetTileNo\fP (const Point *p) const"
-.br
-.ti -1c
-.RI "unsigned long \fBgetTileIndexX\fP (double x) const"
-.br
-.ti -1c
-.RI "unsigned long \fBgetTileIndexY\fP (double y) const"
 .br
 .ti -1c
 .RI "unsigned long \fBgetTileNo\fP (double x, double y) const"
@@ -76,13 +58,22 @@ Grid
 
 .in +1c
 .ti -1c
+.RI "unsigned long \fBgetTileIndexX\fP (double x) const"
+.br
+.ti -1c
+.RI "unsigned long \fBgetTileIndexY\fP (double y) const"
+.br
+.ti -1c
+.RI "unsigned long \fBgetTileIndexX\fP (const Point *p) const"
+.br
+.ti -1c
+.RI "unsigned long \fBgetTileIndexY\fP (const Point *p) const"
+.br
+.ti -1c
+.RI "string \fBtoString\fP () const"
+.br
+.ti -1c
 .RI "Coordinate * \fBcomputeTileCenters\fP ()"
-.br
-.ti -1c
-.RI "vector< double > \fBuseNetworkPrior\fP (unsigned long t, bool connected, vector< \fBAntennaInfo\fP >::iterator ai, pair< \fBum_iterator\fP, \fBum_iterator\fP > antennas_iterator) const"
-.br
-.ti -1c
-.RI "vector< double > \fBuseUniformPrior\fP (unsigned long t, bool connected, vector< \fBAntennaInfo\fP >::iterator ai, pair< \fBum_iterator\fP, \fBum_iterator\fP > antennas_iterator) const"
 .br
 .in -1c
 .SS "Private Attributes"
@@ -138,28 +129,6 @@ Constructor of the class\&. Build a \fBGrid\fP object with the specified paramet
 Default destructor\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "vector<double> Grid::computeProbability (unsigned long t, \fBMobilePhone\fP * m, vector< \fBAntennaInfo\fP > & data, pair< \fBum_iterator\fP, \fBum_iterator\fP > it, \fBPriorType\fP prior) const"
-Computes the posterior probability of a mobile device to be in a tile of the \fBGrid\fP according to the method described in he paper 'Deriving geographic location of mobile devices from network data' by Martijn Tennekes, Yvonne A\&.P\&.M\&. Gootzen, Shan H\&. Shah\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIt\fP the time instant when the posterior localization probability is computed\&. 
-.br
-\fIm\fP a pointer to a \fBMobilePhone\fP object for which the posterior localization probability is computed\&. 
-.br
-\fIdata\fP a vector of \fBAntennaInfo\fP objects generated and recorded by each antenna during the simulation\&. It contains the events recorder by each antenna during the simulation\&. 
-.br
-\fIit\fP an iterator to access all objects of type \fBAntenna\fP from the \fBAgentsCollection\fP container\&. 
-.br
-\fIprior\fP is used to set the method of computing the prior probabilities\&. It could take 3 values: \fBPriorType::UNIFORM\fP, \fBPriorType::NETWORK\fP or \fBPriorType::REGISTER\fP\&. Currently only UNIFORM and NETWORK methods are implemented\&. 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-a vector with the posterior probability of the mobile phone given by m to be localized in a tile\&. The index of a value in this vector indicates the corresponding tile index\&. The size of this vector is equal to the total number of tiles in the \fBGrid\fP\&. 
-.RE
-.PP
-
 .SS "Coordinate* Grid::computeTileCenters ()\fC [private]\fP"
 
 .SS "void Grid::dumpGrid (const string & gridFileName) const"
@@ -221,7 +190,9 @@ a vector containing the coordinates of the tile centers\&.
 .RE
 .PP
 
-.SS "unsigned long Grid::getTileIndexX (const Point * p) const"
+.SS "unsigned long Grid::getTileIndexX (double x) const\fC [private]\fP"
+
+.SS "unsigned long Grid::getTileIndexX (const Point * p) const\fC [private]\fP"
 Returns the tile index on X axis that contains a given point in space, specified by p\&. 
 .PP
 \fBParameters:\fP
@@ -235,9 +206,9 @@ the tile index on X axis that contains the point specified by p, i\&.e\&. a numb
 .RE
 .PP
 
-.SS "unsigned long Grid::getTileIndexX (double x) const"
+.SS "unsigned long Grid::getTileIndexY (double y) const\fC [private]\fP"
 
-.SS "unsigned long Grid::getTileIndexY (const Point * p) const"
+.SS "unsigned long Grid::getTileIndexY (const Point * p) const\fC [private]\fP"
 Returns the tile index on Y axis that contains a given point in space, specified by p\&. 
 .PP
 \fBParameters:\fP
@@ -250,8 +221,6 @@ Returns the tile index on Y axis that contains a given point in space, specified
 the tile index on Y axis that contains the point specified by p, i\&.e\&. a number between 0 and \fBgetNoTilesY()\fP - 1\&. 
 .RE
 .PP
-
-.SS "unsigned long Grid::getTileIndexY (double y) const"
 
 .SS "unsigned long Grid::getTileNo (const Point * p) const"
 Computes the tile index of the tile that contains the Point indicated by p\&. 
@@ -319,7 +288,7 @@ the dimension of a tile on Y axis direction\&.
 .RE
 .PP
 
-.SS "string Grid::toString () const"
+.SS "string Grid::toString () const\fC [private]\fP"
 
 .PP
 \fBReturns:\fP
@@ -327,10 +296,6 @@ the dimension of a tile on Y axis direction\&.
 a string representation of an object of type \fBGrid\fP\&. This is useful to write a textual description of the grid in a file for later processing\&. 
 .RE
 .PP
-
-.SS "vector<double> Grid::useNetworkPrior (unsigned long t, bool connected, vector< \fBAntennaInfo\fP >::iterator ai, pair< \fBum_iterator\fP, \fBum_iterator\fP > antennas_iterator) const\fC [private]\fP"
-
-.SS "vector<double> Grid::useUniformPrior (unsigned long t, bool connected, vector< \fBAntennaInfo\fP >::iterator ai, pair< \fBum_iterator\fP, \fBum_iterator\fP > antennas_iterator) const\fC [private]\fP"
 
 .SH "Member Data Documentation"
 .PP 

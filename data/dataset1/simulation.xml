@@ -1,8 +1,8 @@
 <simulation>
 	<start_time>0</start_time>
-	<end_time>200</end_time>
+	<end_time>900</end_time>
 	<time_increment>1</time_increment>
-	<time_stay>10</time_stay>
+	<time_stay>0</time_stay>
 	<interval_between_stays>25</interval_between_stays>
 	<mno>
 		<mno_name>MNO1</mno_name>
@@ -13,7 +13,7 @@
 		<prob_mobile_phone>0.35</prob_mobile_phone>
 	</mno>
 	<prob_sec_mobile_phone>0.15</prob_sec_mobile_phone>
-	<movement_type>random_walk_closed_map_drift</movement_type>
+	<movement_type>levy_flight</movement_type>
 	<connection_type>strength</connection_type>
 	<conn_threshold>-80</conn_threshold>
 	<grid_file>grid.csv</grid_file>

@@ -75,6 +75,8 @@ $(function() {
 Collaboration diagram for RandomNumberGenerator:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_random_number_generator__coll__graph.png" border="0" usemap="#_random_number_generator_coll__map" alt="Collaboration graph"/></div>
+<map name="_random_number_generator_coll__map" id="_random_number_generator_coll__map">
+</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -87,6 +89,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8a08591104b4fd1943eade351aa126c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e0cc6be3677ba52821cd4e0ae92cca9"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_random_number_generator.html#a4e0cc6be3677ba52821cd4e0ae92cca9">generateTruncatedNormalDouble</a> (const double a, const double b, const double m, const double sd, const unsigned long n)</td></tr>
 <tr class="separator:a4e0cc6be3677ba52821cd4e0ae92cca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9204cf57bae1189b576307699b07747b"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_random_number_generator.html#a9204cf57bae1189b576307699b07747b">generateTruncatedNormalInt</a> (const int a, const int b, const double m, const double sd, const unsigned long n)</td></tr>
+<tr class="separator:a9204cf57bae1189b576307699b07747b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cbfb491d75d113c5bd0816576cb56ed"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_random_number_generator.html#a0cbfb491d75d113c5bd0816576cb56ed">generateUniformDouble</a> (const double min, const double max)</td></tr>
 <tr class="separator:a0cbfb491d75d113c5bd0816576cb56ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a208c3dcccf6aa6a62151a98d58264d08"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_random_number_generator.html#a208c3dcccf6aa6a62151a98d58264d08">generateUniformDouble</a> (const double min, const double max, const int n)</td></tr>
@@ -105,6 +109,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5b95ab4b064f39c8bdbb14af938efc0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b52648a0de3e6da4c51a0f9b30a67f0"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_random_number_generator.html#a2b52648a0de3e6da4c51a0f9b30a67f0">generateBernoulliInt</a> (const double p, const int n)</td></tr>
 <tr class="separator:a2b52648a0de3e6da4c51a0f9b30a67f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd8f93f595d980ee054ad4570a09b0b7"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_random_number_generator.html#acd8f93f595d980ee054ad4570a09b0b7">generateLevy</a> (const double mu, const double c, const int n)</td></tr>
+<tr class="separator:acd8f93f595d980ee054ad4570a09b0b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9b46e3e695ca90479236807d14e92a5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_random_number_generator.html#af9b46e3e695ca90479236807d14e92a5">generateLevy</a> (const double mu, const double c)</td></tr>
+<tr class="separator:af9b46e3e695ca90479236807d14e92a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e661a49e8dd66e13c313c99adefddb0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_random_number_generator.html#a4e661a49e8dd66e13c313c99adefddb0">normal_pdf</a> (double x, double m, double s)</td></tr>
 <tr class="separator:a4e661a49e8dd66e13c313c99adefddb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20e812772b0544720b32256911e372e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_random_number_generator.html#a20e812772b0544720b32256911e372e2">setSeed</a> (unsigned seed)</td></tr>
@@ -396,6 +404,77 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="acd8f93f595d980ee054ad4570a09b0b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd8f93f595d980ee054ad4570a09b0b7">&#9670;&nbsp;</a></span>generateLevy() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double* RandomNumberGenerator::generateLevy </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>mu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Generates n double random values from a Levy distribution </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mu</td><td>the displacement of the Levy distribution </td></tr>
+    <tr><td class="paramname">c</td><td>the scale parameter of the Levy distribution </td></tr>
+    <tr><td class="paramname">n</td><td>the number of values to be generated </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an array with n double values from a Levy distribution </dd></dl>
+
+</div>
+</div>
+<a id="af9b46e3e695ca90479236807d14e92a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9b46e3e695ca90479236807d14e92a5">&#9670;&nbsp;</a></span>generateLevy() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double RandomNumberGenerator::generateLevy </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>mu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6a8cdbfdb3343a10aab18b83fc6ce0dc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6a8cdbfdb3343a10aab18b83fc6ce0dc">&#9670;&nbsp;</a></span>generateNormal2Double()</h2>
 
@@ -576,6 +655,63 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Generates n double values from a truncated normal distribution. All values will be in [a, b]. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>the inferior limit of the truncated normal distribution. </td></tr>
+    <tr><td class="paramname">b</td><td>the superior limit of the truncated normal distribution. </td></tr>
+    <tr><td class="paramname">m</td><td>the mean of the normal distribution. </td></tr>
+    <tr><td class="paramname">sd</td><td>the standard deviation of the normal distribution. </td></tr>
+    <tr><td class="paramname">n</td><td>the number of values to be generated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an array with n double values from a truncated normal distribution. </dd></dl>
+
+</div>
+</div>
+<a id="a9204cf57bae1189b576307699b07747b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9204cf57bae1189b576307699b07747b">&#9670;&nbsp;</a></span>generateTruncatedNormalInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* RandomNumberGenerator::generateTruncatedNormalInt </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>sd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned long&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Generates n int values from a truncated normal distribution. All values will be in [a, b]. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>the inferior limit of the truncated normal distribution. </td></tr>
     <tr><td class="paramname">b</td><td>the superior limit of the truncated normal distribution. </td></tr>

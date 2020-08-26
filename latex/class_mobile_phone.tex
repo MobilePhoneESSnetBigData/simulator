@@ -6,7 +6,8 @@
 
 
 
-Inheritance diagram for Mobile\+Phone\+:\nopagebreak
+Inheritance diagram for Mobile\+Phone\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,11 +16,12 @@ Inheritance diagram for Mobile\+Phone\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Mobile\+Phone\+:\nopagebreak
+Collaboration diagram for Mobile\+Phone\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_mobile_phone__coll__graph}
+\includegraphics[height=550pt]{class_mobile_phone__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -28,8 +30,6 @@ Collaboration diagram for Mobile\+Phone\+:\nopagebreak
 \hyperlink{class_mobile_phone_afd7beed70eb2af3baecd9521332ba8eb}{Mobile\+Phone} (const \hyperlink{class_map}{Map} $\ast$m, const unsigned long id, Point $\ast$init\+Position, \hyperlink{class_agent}{Agent} $\ast$holder, const \hyperlink{class_clock}{Clock} $\ast$clock, double threshold, \hyperlink{class_holdable_agent_ae2c334b004d7b9c5a999cf2618e4e518}{Holdable\+Agent\+::\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} conn\+Type)
 \item 
 virtual \hyperlink{class_mobile_phone_a51db1d9b4fcc52ea9f8d613dae4f6a4b}{$\sim$\+Mobile\+Phone} ()
-\item 
-const string \hyperlink{class_mobile_phone_a1eeac3141baafa75ebcf26fc3a0e4068}{get\+Name} () const override
 \item 
 const string \hyperlink{class_mobile_phone_a2b7e556d12a43e380786ad0eccf3ce04}{to\+String} () const override
 \item 
@@ -42,6 +42,11 @@ const \hyperlink{class_mobile_operator}{Mobile\+Operator} $\ast$ \hyperlink{clas
 void \hyperlink{class_mobile_phone_ad4db8203e8f2e974733357d7c3e6cf28}{set\+Mobile\+Operator} (\hyperlink{class_mobile_operator}{Mobile\+Operator} $\ast$mno)
 \item 
 double \hyperlink{class_mobile_phone_a57475711a8f85086f50067d219f1181d}{get\+Connection\+Threshold} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const string \hyperlink{class_mobile_phone_a38cabfd91b77cd839f497facb9ed937c}{get\+Header} ()
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -102,6 +107,12 @@ The default destructor.
 Returns the minimum value of the signal strength/power/quality below which the phone cannot use the signal (i.\+e. the signal is considered noise). The returned value is interpreted as signal strength, power or quality according to the connection type. \begin{DoxyReturn}{Returns}
 the minimum value of the signal strength/power/quality below which the phone cannot use the signal (i.\+e. the signal is considered noise). 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_mobile_phone_a38cabfd91b77cd839f497facb9ed937c}\label{class_mobile_phone_a38cabfd91b77cd839f497facb9ed937c}} 
+\index{Mobile\+Phone@{Mobile\+Phone}!get\+Header@{get\+Header}}
+\index{get\+Header@{get\+Header}!Mobile\+Phone@{Mobile\+Phone}}
+\subsubsection{\texorpdfstring{get\+Header()}{getHeader()}}
+{\footnotesize\ttfamily static const string Mobile\+Phone\+::get\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
 \mbox{\Hypertarget{class_mobile_phone_aba72025d08c382d8533e0cbb9166999b}\label{class_mobile_phone_aba72025d08c382d8533e0cbb9166999b}} 
 \index{Mobile\+Phone@{Mobile\+Phone}!get\+Mobile\+Operator@{get\+Mobile\+Operator}}
 \index{get\+Mobile\+Operator@{get\+Mobile\+Operator}!Mobile\+Phone@{Mobile\+Phone}}
@@ -111,19 +122,6 @@ the minimum value of the signal strength/power/quality below which the phone can
 Returns the \hyperlink{class_mobile_operator}{Mobile\+Operator} object of this mobile phone. Each \hyperlink{class_mobile_phone}{Mobile\+Phone} should belong to a Mobile Operator. \begin{DoxyReturn}{Returns}
 the \hyperlink{class_mobile_operator}{Mobile\+Operator} object of this mobile phone. Each \hyperlink{class_mobile_phone}{Mobile\+Phone} should belong to a Mobile Operator. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_mobile_phone_a1eeac3141baafa75ebcf26fc3a0e4068}\label{class_mobile_phone_a1eeac3141baafa75ebcf26fc3a0e4068}} 
-\index{Mobile\+Phone@{Mobile\+Phone}!get\+Name@{get\+Name}}
-\index{get\+Name@{get\+Name}!Mobile\+Phone@{Mobile\+Phone}}
-\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
-{\footnotesize\ttfamily const string Mobile\+Phone\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-Returns the name of this class. \begin{DoxyReturn}{Returns}
-the name of this class. 
-\end{DoxyReturn}
-
-
-Reimplemented from \hyperlink{class_holdable_agent_ab330bb40de51a957ef8826af629f94a2}{Holdable\+Agent}.
-
 \mbox{\Hypertarget{class_mobile_phone_a785d0cac08252386603c702ad8f38c5b}\label{class_mobile_phone_a785d0cac08252386603c702ad8f38c5b}} 
 \index{Mobile\+Phone@{Mobile\+Phone}!move@{move}}
 \index{move@{move}!Mobile\+Phone@{Mobile\+Phone}}
@@ -205,4 +203,4 @@ Implements \hyperlink{class_holdable_agent_a0789d757d81b43ee016e9362046f6dea}{Ho
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/\hyperlink{_mobile_phone_8h}{Mobile\+Phone.\+h}\end{DoxyCompactItemize}
+include/agent/\hyperlink{_mobile_phone_8h}{Mobile\+Phone.\+h}\end{DoxyCompactItemize}

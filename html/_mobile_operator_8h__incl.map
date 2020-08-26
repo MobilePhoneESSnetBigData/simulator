@@ -1,5 +1,6 @@
-<map id="include/MobileOperator.h" name="include/MobileOperator.h">
-<area shape="rect" id="node2" href="$_agent_8h.html" title="Agent.h" alt="" coords="275,80,341,107"/>
-<area shape="rect" id="node3" href="$_map_8h.html" title="Map.h" alt="" coords="132,155,191,181"/>
-<area shape="rect" id="node5" href="$_clock_8h.html" title="Clock.h" alt="" coords="271,155,337,181"/>
+<map id="include/agent/MobileOperator.h" name="include/agent/MobileOperator.h">
+<area shape="rect" id="node2" href="$_agent_8h.html" title="agent/Agent.h" alt="" coords="93,80,195,107"/>
+<area shape="rect" id="node3" href="$_map_8h.html" title="map/Map.h" alt="" coords="322,155,409,181"/>
+<area shape="rect" id="node10" href="$_clock_8h.html" title="Clock.h" alt="" coords="111,155,177,181"/>
+<area shape="rect" id="node6" href="$_grid_8h.html" title="map/Grid.h" alt="" coords="561,229,647,256"/>
 </map>

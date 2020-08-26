@@ -6,177 +6,224 @@
 
 
 
-Collaboration diagram for Map\+:\nopagebreak
+Inheritance diagram for Map\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_map__coll__graph}
+\includegraphics[width=186pt]{class_map__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Map\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_map__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_map_a0f5ad0fd4563497b4214038cbca8b582}{Map} ()
-\item 
-\hyperlink{class_map_a4c9545a0252613e2a6808932fe83f9ad}{Map} (double llX, double llY, double width, double height)
-\item 
-\hyperlink{class_map_ab8beab7a7dce782a23db740cd7132552}{Map} (string wkt\+File)
-\item 
 virtual \hyperlink{class_map_ac1ab46138aa61acd0a58b1fd21e0df37}{$\sim$\+Map} ()
 \item 
-const Geometry\+Factory\+::\+Ptr \& \hyperlink{class_map_a69bd639b05daa393b051c76f0dc4af7c}{get\+Global\+Factory} () const
+virtual Geometry $\ast$ \hyperlink{class_map_aa6b66dc80060a42151228f3764db539f}{get\+Boundary} () const =0
 \item 
-Geometry $\ast$ \hyperlink{class_map_a74dd5445ed90bea2a9cc3240bc23f1bc}{get\+Boundary} () const
+virtual Geometry $\ast$ \hyperlink{class_map_a40854af632e83500ca5b44180eae8e87}{get\+Envelope} () const =0
 \item 
-void \hyperlink{class_map_acede2ccba9bf0f987f3dde8c332bec17}{set\+Boundary} (Geometry $\ast$boundary)
+virtual const Geometry\+Factory\+::\+Ptr \& \hyperlink{class_map_ab4dd1529d5c9ba2232108a2de2095b76}{get\+Global\+Factory} () const =0
 \item 
-const \hyperlink{class_grid}{Grid} $\ast$ \hyperlink{class_map_aa9bf1c29b844f3b7fbf7a3153c24fef0}{get\+Grid} () const
+virtual void \hyperlink{class_map_a24246583fbf3bbed56bfb5cd595f941f}{add\+Grid} (double dim\+TileX, double dim\+TileY)
 \item 
-void \hyperlink{class_map_aa3dba78a0b52b304c39d1fa6bff71b00}{add\+Grid} (double dim\+TileX, double dim\+TileY)
+virtual unsigned long \hyperlink{class_map_aace69b7294f0da0e2ca000dfa2a29606}{get\+No\+TilesX} () const
+\item 
+virtual unsigned long \hyperlink{class_map_a13ff108a9b56c432665d36ba1cbad1d0}{get\+No\+TilesY} () const
+\item 
+virtual double \hyperlink{class_map_a0a7326f8167effc1b6c0329de3c29d60}{get\+X\+Tile\+Dim} () const
+\item 
+virtual double \hyperlink{class_map_af36385173af71e8e0cd989dceb8f8aea}{get\+Y\+Tile\+Dim} () const
+\item 
+virtual double \hyperlink{class_map_af3e4dc640ee38ff6e77ab41435fcc42d}{get\+X\+Origin} () const
+\item 
+virtual double \hyperlink{class_map_a5bf4ef0a81f82df90465136c61a440bc}{get\+Y\+Origin} () const
+\item 
+virtual const unsigned long \hyperlink{class_map_a89abf4b20e4b0e54b706452e5caa61b3}{get\+No\+Tiles} () const
+\item 
+virtual Coordinate \hyperlink{class_map_a3ade598881798896b554f2ba34d8b499}{get\+Tile\+Center} (unsigned long tile\+Index) const
+\item 
+virtual unsigned long \hyperlink{class_map_af9727bc4d5a77cb35b60d92d0e176171}{get\+Tile\+No} (const Point $\ast$p) const
+\item 
+virtual unsigned long \hyperlink{class_map_ab68490803824fc485652757d992af18e}{get\+Tile\+No} (double x, double y) const
+\item 
+virtual void \hyperlink{class_map_afb74aa56fb64f4ab4857269c7924ec5a}{dump\+Grid} (const string \&grid\+File\+Name) const
+\item 
+virtual Coordinate $\ast$ \hyperlink{class_map_a6ff5cb95191b3a749f9a14b72eba2584}{get\+Tile\+Centers} () const
+\item 
+virtual bool \hyperlink{class_map_aca471e63e8f9f9a892a5491aee94eada}{has\+Grid} () const
 \end{DoxyCompactItemize}
-\subsection*{Private Member Functions}
+\subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-Polygon $\ast$ \hyperlink{class_map_a36539152d451138361d82469218b4661}{create\+\_\+rectangle} (double llX, double llY, double width, double height)
+\hyperlink{class_map_aa9b06672216e01d51b96cc4f70d3206d}{Map} (string map\+File\+Name)
 \end{DoxyCompactItemize}
-\subsection*{Private Attributes}
+\subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
-\item 
-Geometry\+Factory\+::\+Ptr \hyperlink{class_map_ac5f30e6c144955a3638192495fd7d843}{m\+\_\+global\+Factory}
-\item 
-Geometry $\ast$ \hyperlink{class_map_af2c95561cb4ff3b9950240351cf4303c}{m\+\_\+boundary}
 \item 
 \hyperlink{class_grid}{Grid} $\ast$ \hyperlink{class_map_a0fc16621dbe307d36170c3a96b24b7d9}{m\+\_\+grid}
+\item 
+string \hyperlink{class_map_a54e527b86ef517e67b299ef06233addc}{m\+\_\+map\+File\+Name}
 \end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
-This is the map where the simulation takes place. It could be a simple rectangle or any kind of geometry object(s) read from a wkt file. The map has a boundary that is implemented as a Geometry object, a factory object of Geometry\+Factory type used to create other objects. All geometric and geographic features of the simulator uses the G\+E\+OS library. G\+E\+OS is an open source C++ library which is just a port to C++ of the well known Java Topology Suite. 
-
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_map_a0f5ad0fd4563497b4214038cbca8b582}\label{class_map_a0f5ad0fd4563497b4214038cbca8b582}} 
-\index{Map@{Map}!Map@{Map}}
-\index{Map@{Map}!Map@{Map}}
-\subsubsection{\texorpdfstring{Map()}{Map()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily Map\+::\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Creates a map with a null boundary. The user may set the boundary later, using \hyperlink{class_map_acede2ccba9bf0f987f3dde8c332bec17}{set\+Boundary()} method. \mbox{\Hypertarget{class_map_a4c9545a0252613e2a6808932fe83f9ad}\label{class_map_a4c9545a0252613e2a6808932fe83f9ad}} 
-\index{Map@{Map}!Map@{Map}}
-\index{Map@{Map}!Map@{Map}}
-\subsubsection{\texorpdfstring{Map()}{Map()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily Map\+::\+Map (\begin{DoxyParamCaption}\item[{double}]{llX,  }\item[{double}]{llY,  }\item[{double}]{width,  }\item[{double}]{height }\end{DoxyParamCaption})}
-
-Build a simple map of a rectangular shape. 
-\begin{DoxyParams}{Parameters}
-{\em llX} & X coordinate of the bottom left corner of the rectangle. \\
-\hline
-{\em llY} & Y coordinate of the bottom left corner of the rectangle. \\
-\hline
-{\em width} & the width of the rectangle. \\
-\hline
-{\em height} & the height of the rectangle. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_map_ab8beab7a7dce782a23db740cd7132552}\label{class_map_ab8beab7a7dce782a23db740cd7132552}} 
-\index{Map@{Map}!Map@{Map}}
-\index{Map@{Map}!Map@{Map}}
-\subsubsection{\texorpdfstring{Map()}{Map()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily Map\+::\+Map (\begin{DoxyParamCaption}\item[{string}]{wkt\+File }\end{DoxyParamCaption})}
-
-Builds a map reading it from a .wkt file. 
-\begin{DoxyParams}{Parameters}
-{\em wkt\+File} & the name of the .wkt file that contains the description of the map. Currently, the first row of this file should contain the external boundary geometry of the map. \\
-\hline
-\end{DoxyParams}
 \mbox{\Hypertarget{class_map_ac1ab46138aa61acd0a58b1fd21e0df37}\label{class_map_ac1ab46138aa61acd0a58b1fd21e0df37}} 
 \index{Map@{Map}!````~Map@{$\sim$\+Map}}
 \index{````~Map@{$\sim$\+Map}!Map@{Map}}
 \subsubsection{\texorpdfstring{$\sim$\+Map()}{~Map()}}
 {\footnotesize\ttfamily virtual Map\+::$\sim$\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Default destructor 
+\mbox{\Hypertarget{class_map_aa9b06672216e01d51b96cc4f70d3206d}\label{class_map_aa9b06672216e01d51b96cc4f70d3206d}} 
+\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\subsubsection{\texorpdfstring{Map()}{Map()}}
+{\footnotesize\ttfamily Map\+::\+Map (\begin{DoxyParamCaption}\item[{string}]{map\+File\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_map_aa3dba78a0b52b304c39d1fa6bff71b00}\label{class_map_aa3dba78a0b52b304c39d1fa6bff71b00}} 
+\mbox{\Hypertarget{class_map_a24246583fbf3bbed56bfb5cd595f941f}\label{class_map_a24246583fbf3bbed56bfb5cd595f941f}} 
 \index{Map@{Map}!add\+Grid@{add\+Grid}}
 \index{add\+Grid@{add\+Grid}!Map@{Map}}
 \subsubsection{\texorpdfstring{add\+Grid()}{addGrid()}}
-{\footnotesize\ttfamily void Map\+::add\+Grid (\begin{DoxyParamCaption}\item[{double}]{dim\+TileX,  }\item[{double}]{dim\+TileY }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily virtual void Map\+::add\+Grid (\begin{DoxyParamCaption}\item[{double}]{dim\+TileX,  }\item[{double}]{dim\+TileY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Adds a \hyperlink{class_grid}{Grid} that overlaps this \hyperlink{class_map}{Map} objects. 
-\begin{DoxyParams}{Parameters}
-{\em dim\+TileX} & the dimension on OX of a tile of the \hyperlink{class_grid}{Grid} object. \\
-\hline
-{\em dim\+TileY} & the dimension on OY of a tile of the \hyperlink{class_grid}{Grid} object. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_map_a36539152d451138361d82469218b4661}\label{class_map_a36539152d451138361d82469218b4661}} 
-\index{Map@{Map}!create\+\_\+rectangle@{create\+\_\+rectangle}}
-\index{create\+\_\+rectangle@{create\+\_\+rectangle}!Map@{Map}}
-\subsubsection{\texorpdfstring{create\+\_\+rectangle()}{create\_rectangle()}}
-{\footnotesize\ttfamily Polygon$\ast$ Map\+::create\+\_\+rectangle (\begin{DoxyParamCaption}\item[{double}]{llX,  }\item[{double}]{llY,  }\item[{double}]{width,  }\item[{double}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_map_afb74aa56fb64f4ab4857269c7924ec5a}\label{class_map_afb74aa56fb64f4ab4857269c7924ec5a}} 
+\index{Map@{Map}!dump\+Grid@{dump\+Grid}}
+\index{dump\+Grid@{dump\+Grid}!Map@{Map}}
+\subsubsection{\texorpdfstring{dump\+Grid()}{dumpGrid()}}
+{\footnotesize\ttfamily virtual void Map\+::dump\+Grid (\begin{DoxyParamCaption}\item[{const string \&}]{grid\+File\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
-\mbox{\Hypertarget{class_map_a74dd5445ed90bea2a9cc3240bc23f1bc}\label{class_map_a74dd5445ed90bea2a9cc3240bc23f1bc}} 
+\mbox{\Hypertarget{class_map_aa6b66dc80060a42151228f3764db539f}\label{class_map_aa6b66dc80060a42151228f3764db539f}} 
 \index{Map@{Map}!get\+Boundary@{get\+Boundary}}
 \index{get\+Boundary@{get\+Boundary}!Map@{Map}}
 \subsubsection{\texorpdfstring{get\+Boundary()}{getBoundary()}}
-{\footnotesize\ttfamily Geometry$\ast$ Map\+::get\+Boundary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily virtual Geometry$\ast$ Map\+::get\+Boundary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-Returns a pointer to the Geometry object that represents the external boundary of the map. \begin{DoxyReturn}{Returns}
-a pointer to the Geometry object that represents the external boundary of the map. 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_map_a69bd639b05daa393b051c76f0dc4af7c}\label{class_map_a69bd639b05daa393b051c76f0dc4af7c}} 
+
+
+Implemented in \hyperlink{class_w_k_t_map_a0b326822ab1bcfc0765e97f3acb545b0}{W\+K\+T\+Map}.
+
+\mbox{\Hypertarget{class_map_a40854af632e83500ca5b44180eae8e87}\label{class_map_a40854af632e83500ca5b44180eae8e87}} 
+\index{Map@{Map}!get\+Envelope@{get\+Envelope}}
+\index{get\+Envelope@{get\+Envelope}!Map@{Map}}
+\subsubsection{\texorpdfstring{get\+Envelope()}{getEnvelope()}}
+{\footnotesize\ttfamily virtual Geometry$\ast$ Map\+::get\+Envelope (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{class_w_k_t_map_af117af8392fc33f1e603f10ea57ac6b0}{W\+K\+T\+Map}.
+
+\mbox{\Hypertarget{class_map_ab4dd1529d5c9ba2232108a2de2095b76}\label{class_map_ab4dd1529d5c9ba2232108a2de2095b76}} 
 \index{Map@{Map}!get\+Global\+Factory@{get\+Global\+Factory}}
 \index{get\+Global\+Factory@{get\+Global\+Factory}!Map@{Map}}
 \subsubsection{\texorpdfstring{get\+Global\+Factory()}{getGlobalFactory()}}
-{\footnotesize\ttfamily const Geometry\+Factory\+::\+Ptr\& Map\+::get\+Global\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily virtual const Geometry\+Factory\+::\+Ptr\& Map\+::get\+Global\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-Returns a pointer to the Geometry\+Factory object which is a factory object used to create other geometric objects. The G\+E\+OS library allows users to create geometric objects only using this factory, all the constructors are made private. \begin{DoxyReturn}{Returns}
-a pointer to the Geometry\+Factory object used to create other geometric objects. 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_map_aa9bf1c29b844f3b7fbf7a3153c24fef0}\label{class_map_aa9bf1c29b844f3b7fbf7a3153c24fef0}} 
-\index{Map@{Map}!get\+Grid@{get\+Grid}}
-\index{get\+Grid@{get\+Grid}!Map@{Map}}
-\subsubsection{\texorpdfstring{get\+Grid()}{getGrid()}}
-{\footnotesize\ttfamily const \hyperlink{class_grid}{Grid}$\ast$ Map\+::get\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Returns a pointer to the \hyperlink{class_grid}{Grid} object associated with this \hyperlink{class_map}{Map}. After creation of a \hyperlink{class_map}{Map} the user should associate a \hyperlink{class_grid}{Grid} that overlaps this \hyperlink{class_map}{Map}. The gird is used to compute the probability of the localization of different events during the simulation. \begin{DoxyReturn}{Returns}
-a pointer the \hyperlink{class_grid}{Grid} object associated with this \hyperlink{class_map}{Map}. 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_map_acede2ccba9bf0f987f3dde8c332bec17}\label{class_map_acede2ccba9bf0f987f3dde8c332bec17}} 
-\index{Map@{Map}!set\+Boundary@{set\+Boundary}}
-\index{set\+Boundary@{set\+Boundary}!Map@{Map}}
-\subsubsection{\texorpdfstring{set\+Boundary()}{setBoundary()}}
-{\footnotesize\ttfamily void Map\+::set\+Boundary (\begin{DoxyParamCaption}\item[{Geometry $\ast$}]{boundary }\end{DoxyParamCaption})}
 
-Sets the boundary of the \hyperlink{class_map}{Map} object. 
-\begin{DoxyParams}{Parameters}
-{\em boundary} & the boundary of the \hyperlink{class_map}{Map} object. \\
-\hline
-\end{DoxyParams}
+Implemented in \hyperlink{class_w_k_t_map_a566b85bafc53e2013e0a21d4a387ce91}{W\+K\+T\+Map}.
+
+\mbox{\Hypertarget{class_map_a89abf4b20e4b0e54b706452e5caa61b3}\label{class_map_a89abf4b20e4b0e54b706452e5caa61b3}} 
+\index{Map@{Map}!get\+No\+Tiles@{get\+No\+Tiles}}
+\index{get\+No\+Tiles@{get\+No\+Tiles}!Map@{Map}}
+\subsubsection{\texorpdfstring{get\+No\+Tiles()}{getNoTiles()}}
+{\footnotesize\ttfamily virtual const unsigned long Map\+::get\+No\+Tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_map_aace69b7294f0da0e2ca000dfa2a29606}\label{class_map_aace69b7294f0da0e2ca000dfa2a29606}} 
+\index{Map@{Map}!get\+No\+TilesX@{get\+No\+TilesX}}
+\index{get\+No\+TilesX@{get\+No\+TilesX}!Map@{Map}}
+\subsubsection{\texorpdfstring{get\+No\+Tiles\+X()}{getNoTilesX()}}
+{\footnotesize\ttfamily virtual unsigned long Map\+::get\+No\+TilesX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_map_a13ff108a9b56c432665d36ba1cbad1d0}\label{class_map_a13ff108a9b56c432665d36ba1cbad1d0}} 
+\index{Map@{Map}!get\+No\+TilesY@{get\+No\+TilesY}}
+\index{get\+No\+TilesY@{get\+No\+TilesY}!Map@{Map}}
+\subsubsection{\texorpdfstring{get\+No\+Tiles\+Y()}{getNoTilesY()}}
+{\footnotesize\ttfamily virtual unsigned long Map\+::get\+No\+TilesY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_map_a3ade598881798896b554f2ba34d8b499}\label{class_map_a3ade598881798896b554f2ba34d8b499}} 
+\index{Map@{Map}!get\+Tile\+Center@{get\+Tile\+Center}}
+\index{get\+Tile\+Center@{get\+Tile\+Center}!Map@{Map}}
+\subsubsection{\texorpdfstring{get\+Tile\+Center()}{getTileCenter()}}
+{\footnotesize\ttfamily virtual Coordinate Map\+::get\+Tile\+Center (\begin{DoxyParamCaption}\item[{unsigned long}]{tile\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_map_a6ff5cb95191b3a749f9a14b72eba2584}\label{class_map_a6ff5cb95191b3a749f9a14b72eba2584}} 
+\index{Map@{Map}!get\+Tile\+Centers@{get\+Tile\+Centers}}
+\index{get\+Tile\+Centers@{get\+Tile\+Centers}!Map@{Map}}
+\subsubsection{\texorpdfstring{get\+Tile\+Centers()}{getTileCenters()}}
+{\footnotesize\ttfamily virtual Coordinate$\ast$ Map\+::get\+Tile\+Centers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_map_af9727bc4d5a77cb35b60d92d0e176171}\label{class_map_af9727bc4d5a77cb35b60d92d0e176171}} 
+\index{Map@{Map}!get\+Tile\+No@{get\+Tile\+No}}
+\index{get\+Tile\+No@{get\+Tile\+No}!Map@{Map}}
+\subsubsection{\texorpdfstring{get\+Tile\+No()}{getTileNo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual unsigned long Map\+::get\+Tile\+No (\begin{DoxyParamCaption}\item[{const Point $\ast$}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_map_ab68490803824fc485652757d992af18e}\label{class_map_ab68490803824fc485652757d992af18e}} 
+\index{Map@{Map}!get\+Tile\+No@{get\+Tile\+No}}
+\index{get\+Tile\+No@{get\+Tile\+No}!Map@{Map}}
+\subsubsection{\texorpdfstring{get\+Tile\+No()}{getTileNo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual unsigned long Map\+::get\+Tile\+No (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_map_af3e4dc640ee38ff6e77ab41435fcc42d}\label{class_map_af3e4dc640ee38ff6e77ab41435fcc42d}} 
+\index{Map@{Map}!get\+X\+Origin@{get\+X\+Origin}}
+\index{get\+X\+Origin@{get\+X\+Origin}!Map@{Map}}
+\subsubsection{\texorpdfstring{get\+X\+Origin()}{getXOrigin()}}
+{\footnotesize\ttfamily virtual double Map\+::get\+X\+Origin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_map_a0a7326f8167effc1b6c0329de3c29d60}\label{class_map_a0a7326f8167effc1b6c0329de3c29d60}} 
+\index{Map@{Map}!get\+X\+Tile\+Dim@{get\+X\+Tile\+Dim}}
+\index{get\+X\+Tile\+Dim@{get\+X\+Tile\+Dim}!Map@{Map}}
+\subsubsection{\texorpdfstring{get\+X\+Tile\+Dim()}{getXTileDim()}}
+{\footnotesize\ttfamily virtual double Map\+::get\+X\+Tile\+Dim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_map_a5bf4ef0a81f82df90465136c61a440bc}\label{class_map_a5bf4ef0a81f82df90465136c61a440bc}} 
+\index{Map@{Map}!get\+Y\+Origin@{get\+Y\+Origin}}
+\index{get\+Y\+Origin@{get\+Y\+Origin}!Map@{Map}}
+\subsubsection{\texorpdfstring{get\+Y\+Origin()}{getYOrigin()}}
+{\footnotesize\ttfamily virtual double Map\+::get\+Y\+Origin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_map_af36385173af71e8e0cd989dceb8f8aea}\label{class_map_af36385173af71e8e0cd989dceb8f8aea}} 
+\index{Map@{Map}!get\+Y\+Tile\+Dim@{get\+Y\+Tile\+Dim}}
+\index{get\+Y\+Tile\+Dim@{get\+Y\+Tile\+Dim}!Map@{Map}}
+\subsubsection{\texorpdfstring{get\+Y\+Tile\+Dim()}{getYTileDim()}}
+{\footnotesize\ttfamily virtual double Map\+::get\+Y\+Tile\+Dim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_map_aca471e63e8f9f9a892a5491aee94eada}\label{class_map_aca471e63e8f9f9a892a5491aee94eada}} 
+\index{Map@{Map}!has\+Grid@{has\+Grid}}
+\index{has\+Grid@{has\+Grid}!Map@{Map}}
+\subsubsection{\texorpdfstring{has\+Grid()}{hasGrid()}}
+{\footnotesize\ttfamily virtual bool Map\+::has\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{class_map_af2c95561cb4ff3b9950240351cf4303c}\label{class_map_af2c95561cb4ff3b9950240351cf4303c}} 
-\index{Map@{Map}!m\+\_\+boundary@{m\+\_\+boundary}}
-\index{m\+\_\+boundary@{m\+\_\+boundary}!Map@{Map}}
-\subsubsection{\texorpdfstring{m\+\_\+boundary}{m\_boundary}}
-{\footnotesize\ttfamily Geometry$\ast$ Map\+::m\+\_\+boundary\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_map_ac5f30e6c144955a3638192495fd7d843}\label{class_map_ac5f30e6c144955a3638192495fd7d843}} 
-\index{Map@{Map}!m\+\_\+global\+Factory@{m\+\_\+global\+Factory}}
-\index{m\+\_\+global\+Factory@{m\+\_\+global\+Factory}!Map@{Map}}
-\subsubsection{\texorpdfstring{m\+\_\+global\+Factory}{m\_globalFactory}}
-{\footnotesize\ttfamily Geometry\+Factory\+::\+Ptr Map\+::m\+\_\+global\+Factory\hspace{0.3cm}{\ttfamily [private]}}
-
 \mbox{\Hypertarget{class_map_a0fc16621dbe307d36170c3a96b24b7d9}\label{class_map_a0fc16621dbe307d36170c3a96b24b7d9}} 
 \index{Map@{Map}!m\+\_\+grid@{m\+\_\+grid}}
 \index{m\+\_\+grid@{m\+\_\+grid}!Map@{Map}}
 \subsubsection{\texorpdfstring{m\+\_\+grid}{m\_grid}}
-{\footnotesize\ttfamily \hyperlink{class_grid}{Grid}$\ast$ Map\+::m\+\_\+grid\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \hyperlink{class_grid}{Grid}$\ast$ Map\+::m\+\_\+grid\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_map_a54e527b86ef517e67b299ef06233addc}\label{class_map_a54e527b86ef517e67b299ef06233addc}} 
+\index{Map@{Map}!m\+\_\+map\+File\+Name@{m\+\_\+map\+File\+Name}}
+\index{m\+\_\+map\+File\+Name@{m\+\_\+map\+File\+Name}!Map@{Map}}
+\subsubsection{\texorpdfstring{m\+\_\+map\+File\+Name}{m\_mapFileName}}
+{\footnotesize\ttfamily string Map\+::m\+\_\+map\+File\+Name\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/\hyperlink{_map_8h}{Map.\+h}\end{DoxyCompactItemize}
+include/map/\hyperlink{_map_8h}{Map.\+h}\end{DoxyCompactItemize}

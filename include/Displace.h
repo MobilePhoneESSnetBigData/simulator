@@ -42,7 +42,7 @@ class Displace {
 public:
 
 	/**
-	 * Constructor of the class. Initialize members.
+	 * Constructor of the class. Initializes members.
 	 * @param map a pointer to the Map object of the simulation.
 	 * @param clk a pointer to the Clock object of the simulation.
 	 * @param speed the speed of displacement.
@@ -55,7 +55,7 @@ public:
 	virtual ~Displace();
 
 	/**
-	 * This pure virtual method is implemented in each of the concrete classes derived from \class Displace.
+	 * This pure virtual method is implemented in each of the concrete subclasses derived from \class Displace.
 	 * @return the new location where the object subject to the displacement operation has to move.
 	 */
 	virtual Point* generateNewLocation(Point * initLocation) = 0;

@@ -1,4 +1,4 @@
-.TH "Agent" 3 "Fri Nov 22 2019" "Simulator" \" -*- nroff -*-
+.TH "Agent" 3 "Wed Aug 26 2020" "Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,6 +14,9 @@ Inherited by \fBLocatableAgent\fP, and \fBMobileOperator\fP\&.
 
 .in +1c
 .ti -1c
+.RI "\fBAgent\fP ()"
+.br
+.ti -1c
 .RI "\fBAgent\fP (const \fBMap\fP *m, const unsigned long id, const \fBClock\fP *clock)"
 .br
 .ti -1c
@@ -23,22 +26,16 @@ Inherited by \fBLocatableAgent\fP, and \fBMobileOperator\fP\&.
 .RI "bool \fBoperator==\fP (const \fBAgent\fP &a)"
 .br
 .ti -1c
-.RI "virtual const string \fBgetName\fP () const =0"
+.RI "virtual const \fBMap\fP * \fBgetMap\fP () const"
+.br
+.ti -1c
+.RI "virtual const \fBClock\fP * \fBgetClock\fP () const"
+.br
+.ti -1c
+.RI "virtual const unsigned long \fBgetId\fP () const"
 .br
 .ti -1c
 .RI "virtual const string \fBtoString\fP () const =0"
-.br
-.ti -1c
-.RI "const \fBMap\fP * \fBgetMap\fP () const"
-.br
-.ti -1c
-.RI "void \fBsetMap\fP (const \fBMap\fP *map)"
-.br
-.ti -1c
-.RI "const \fBClock\fP * \fBgetClock\fP () const"
-.br
-.ti -1c
-.RI "const unsigned long \fBgetId\fP () const"
 .br
 .in -1c
 .SS "Private Attributes"
@@ -59,6 +56,8 @@ Inherited by \fBLocatableAgent\fP, and \fBMobileOperator\fP\&.
 This is an abstract class, the base class for all agents involved in a simulation\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
+.SS "Agent::Agent ()"
+
 .SS "Agent::Agent (const \fBMap\fP * m, const unsigned long id, const \fBClock\fP * clock)"
 Constructor of the class\&. \fBAgent\fP is the base class for all agents used in the simulator: persons, antennas, devices, mnos\&. \fBAgent\fP is an abstract class, users should build specific subclasses\&. 
 .PP
@@ -76,7 +75,7 @@ Constructor of the class\&. \fBAgent\fP is the base class for all agents used in
 Default destructor of the class\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "const \fBClock\fP* Agent::getClock () const"
+.SS "virtual const \fBClock\fP* Agent::getClock () const\fC [virtual]\fP"
 Returns a pointer to the \fBClock\fP object used for simulation\&. All Agents use the same \fBClock\fP object for a simulation\&. 
 .PP
 \fBReturns:\fP
@@ -85,7 +84,7 @@ Returns a pointer to the \fBClock\fP object used for simulation\&. All Agents us
 .RE
 .PP
 
-.SS "const unsigned long Agent::getId () const"
+.SS "virtual const unsigned long Agent::getId () const\fC [virtual]\fP"
 Returns the id of the object\&. 
 .PP
 \fBReturns:\fP
@@ -94,7 +93,7 @@ the id of the object\&.
 .RE
 .PP
 
-.SS "const \fBMap\fP* Agent::getMap () const"
+.SS "virtual const \fBMap\fP* Agent::getMap () const\fC [virtual]\fP"
 Getter that returns a pointer to the \fBMap\fP object passed to the constructor when an object was build\&. 
 .PP
 \fBReturns:\fP
@@ -103,17 +102,6 @@ a pointer to the \fBMap\fP object that was passed to the constructor\&. All agen
 .RE
 .PP
 
-.SS "virtual const string Agent::getName () const\fC [pure virtual]\fP"
-This function is used to obtain the name of the class\&. It is a pure virtual function, all subclasses implement it and return the actual name of the class\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-the name of the class\&. 
-.RE
-.PP
-
-.PP
-Implemented in \fBAntenna\fP, \fBHoldableAgent\fP, \fBPerson\fP, \fBMobilePhone\fP, \fBImmovableAgent\fP, \fBMobileOperator\fP, \fBMovableAgent\fP, \fBLocatableAgent\fP, and \fBTablet\fP\&.
 .SS "bool Agent::operator== (const \fBAgent\fP & a)"
 The equal operator for agents\&. 
 .PP
@@ -128,15 +116,6 @@ true if this object is the equal to a, false otherwise\&. Two objects are consid
 .RE
 .PP
 
-.SS "void Agent::setMap (const \fBMap\fP * map)"
-Sets the \fBMap\fP to be used by this agent during the simulation\&. It is not advisable to change the map during a simulation\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImap\fP pointer to a \fBMap\fP object\&. 
-.RE
-.PP
-
 .SS "virtual const string Agent::toString () const\fC [pure virtual]\fP"
 Builds a string with of the relevant information of the class\&. It is useful to output on the console or in a file the description of concrete agents\&. 
 .PP
@@ -147,7 +126,7 @@ a string representation of the class content\&. The values of the members are wr
 .PP
 
 .PP
-Implemented in \fBAntenna\fP, \fBHoldableAgent\fP, \fBPerson\fP, \fBMobilePhone\fP, \fBMobileOperator\fP, \fBMovableAgent\fP, \fBLocatableAgent\fP, \fBTablet\fP, and \fBImmovableAgent\fP\&.
+Implemented in \fBAntenna\fP, \fBHoldableAgent\fP, \fBMobilePhone\fP, \fBPerson\fP, \fBMobileOperator\fP, \fBMovableAgent\fP, \fBImmovableAgent\fP, \fBLocatableAgent\fP, and \fBTablet\fP\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "const \fBClock\fP* Agent::m_clock\fC [private]\fP"

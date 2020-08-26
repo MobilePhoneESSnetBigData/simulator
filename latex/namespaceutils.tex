@@ -7,14 +7,6 @@ vector$<$ Point $\ast$ $>$ \hyperlink{namespaceutils_a16e957d5c26b39c840f6e109dd
 \item 
 vector$<$ Point $\ast$ $>$ \hyperlink{namespaceutils_acd746b43155fa3033001f28a91a71cec}{generate\+Fixed\+Points} (const \hyperlink{class_map}{Map} $\ast$m, unsigned long n, unsigned seed)
 \item 
-void \hyperlink{namespaceutils_a1978a6ccb2360773215aba027d8b6f08}{print\+Person\+Header} ()
-\item 
-void \hyperlink{namespaceutils_a2080e7db5afc5bb1b4c9ef5336f78ccb}{print\+Antenna\+Header} ()
-\item 
-void \hyperlink{namespaceutils_a7633a4dfe509a009f4e02850b03ba1e4}{print\+Phone\+Header} ()
-\item 
-void \hyperlink{namespaceutils_a207e9d12cc075f601c7fa32ac010b346}{print\+Mobile\+Operator\+Header} ()
-\item 
 double \hyperlink{namespaceutils_af70f6f3c2ac66aa3b4ce64a3b48288cb}{r2d} (double x)
 \item 
 double \hyperlink{namespaceutils_a1d747e438d856e6c46cd1fe558fe3821}{d2r} (double x)
@@ -32,6 +24,8 @@ unsigned long \hyperlink{namespaceutils_aa81758518e26568880b7d74dc182c75d}{get\+
 const char $\ast$ \hyperlink{namespaceutils_ad69ebe54599ec891b3053cf9f5a1bd63}{get\+Value} (X\+M\+L\+Element $\ast$el, const char $\ast$name, const char $\ast$default\+\_\+value)
 \item 
 double \hyperlink{namespaceutils_a7347b1fde0bc9f313cd0a7051c33818a}{get\+Value} (X\+M\+L\+Element $\ast$el, const char $\ast$name)
+\item 
+double \hyperlink{namespaceutils_a58e0276c0ed6bb5e30e35568f1006af4}{inverse\+Normal\+C\+DF} (const double p, const double mu, const double sigma)
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -58,7 +52,8 @@ Transforms a number from degrees to radians.
 \begin{DoxyReturn}{Returns}
 the value of x in radians. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -119,7 +114,8 @@ Returns a pointer to an X\+M\+L\+Element which is the first child of another X\+
 \begin{DoxyReturn}{Returns}
 a pointer to an X\+M\+L\+Element which is the first child of another X\+M\+L\+Element. 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -142,7 +138,8 @@ Returns a pointer to an X\+M\+L\+Node with a specific name that belongs to an X\
 \begin{DoxyReturn}{Returns}
 a pointer to an X\+M\+L\+Node with a specific name that belongs to an X\+M\+L\+Element. 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -237,38 +234,41 @@ Returns a double value obtained by converting the text in an X\+M\+L\+Node to a 
 \begin{DoxyReturn}{Returns}
 a double value obtained by converting the text in an X\+M\+L\+Node to a double 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=249pt]{namespaceutils_a7347b1fde0bc9f313cd0a7051c33818a_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespaceutils_a2080e7db5afc5bb1b4c9ef5336f78ccb}\label{namespaceutils_a2080e7db5afc5bb1b4c9ef5336f78ccb}} 
-\index{utils@{utils}!print\+Antenna\+Header@{print\+Antenna\+Header}}
-\index{print\+Antenna\+Header@{print\+Antenna\+Header}!utils@{utils}}
-\subsubsection{\texorpdfstring{print\+Antenna\+Header()}{printAntennaHeader()}}
-{\footnotesize\ttfamily void utils\+::print\+Antenna\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{namespaceutils_a58e0276c0ed6bb5e30e35568f1006af4}\label{namespaceutils_a58e0276c0ed6bb5e30e35568f1006af4}} 
+\index{utils@{utils}!inverse\+Normal\+C\+DF@{inverse\+Normal\+C\+DF}}
+\index{inverse\+Normal\+C\+DF@{inverse\+Normal\+C\+DF}!utils@{utils}}
+\subsubsection{\texorpdfstring{inverse\+Normal\+C\+D\+F()}{inverseNormalCDF()}}
+{\footnotesize\ttfamily double utils\+::inverse\+Normal\+C\+DF (\begin{DoxyParamCaption}\item[{const double}]{p,  }\item[{const double}]{mu,  }\item[{const double}]{sigma }\end{DoxyParamCaption})}
 
-Prints out a header containing the names of the member variables from the \hyperlink{class_antenna}{Antenna} class in a human readable format It is used together with \hyperlink{class_antenna_a7fea30e065f49a3cbcee02f60bd033c8}{Antenna\+::to\+String()} to output the antennas set on console \mbox{\Hypertarget{namespaceutils_a207e9d12cc075f601c7fa32ac010b346}\label{namespaceutils_a207e9d12cc075f601c7fa32ac010b346}} 
-\index{utils@{utils}!print\+Mobile\+Operator\+Header@{print\+Mobile\+Operator\+Header}}
-\index{print\+Mobile\+Operator\+Header@{print\+Mobile\+Operator\+Header}!utils@{utils}}
-\subsubsection{\texorpdfstring{print\+Mobile\+Operator\+Header()}{printMobileOperatorHeader()}}
-{\footnotesize\ttfamily void utils\+::print\+Mobile\+Operator\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Computes the inverse of the normal C\+DF. 
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+{\em mu} & \\
+\hline
+{\em sigma} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
 
-Prints out a header containing the names of the member variables from the \hyperlink{class_mobile_operator}{Mobile\+Operator} class in a human readable format It is used together with \hyperlink{class_mobile_operator_aa83724a149499ef10678ad651a5b40df}{Mobile\+Operator\+::to\+String()} to output the mobile network operators set on console \mbox{\Hypertarget{namespaceutils_a1978a6ccb2360773215aba027d8b6f08}\label{namespaceutils_a1978a6ccb2360773215aba027d8b6f08}} 
-\index{utils@{utils}!print\+Person\+Header@{print\+Person\+Header}}
-\index{print\+Person\+Header@{print\+Person\+Header}!utils@{utils}}
-\subsubsection{\texorpdfstring{print\+Person\+Header()}{printPersonHeader()}}
-{\footnotesize\ttfamily void utils\+::print\+Person\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Prints out a header containing the names of the member variables from the \hyperlink{class_person}{Person} class in a human readable format. It is used together with \hyperlink{class_person_a68872538da519d0a04297f43376db27c}{Person\+::to\+String()} to output the Persons set on console \mbox{\Hypertarget{namespaceutils_a7633a4dfe509a009f4e02850b03ba1e4}\label{namespaceutils_a7633a4dfe509a009f4e02850b03ba1e4}} 
-\index{utils@{utils}!print\+Phone\+Header@{print\+Phone\+Header}}
-\index{print\+Phone\+Header@{print\+Phone\+Header}!utils@{utils}}
-\subsubsection{\texorpdfstring{print\+Phone\+Header()}{printPhoneHeader()}}
-{\footnotesize\ttfamily void utils\+::print\+Phone\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Prints out a header containing the names of the member variables from the \hyperlink{class_mobile_phone}{Mobile\+Phone} class in a human readable format It is used together with \hyperlink{class_mobile_phone_a2b7e556d12a43e380786ad0eccf3ce04}{Mobile\+Phone\+::to\+String()} to output the mobile phones set on console \mbox{\Hypertarget{namespaceutils_af70f6f3c2ac66aa3b4ce64a3b48288cb}\label{namespaceutils_af70f6f3c2ac66aa3b4ce64a3b48288cb}} 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{namespaceutils_a58e0276c0ed6bb5e30e35568f1006af4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceutils_af70f6f3c2ac66aa3b4ce64a3b48288cb}\label{namespaceutils_af70f6f3c2ac66aa3b4ce64a3b48288cb}} 
 \index{utils@{utils}!r2d@{r2d}}
 \index{r2d@{r2d}!utils@{utils}}
 \subsubsection{\texorpdfstring{r2d()}{r2d()}}

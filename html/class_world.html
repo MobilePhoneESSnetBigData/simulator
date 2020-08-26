@@ -74,10 +74,10 @@ Collaboration diagram for World:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_world__coll__graph.png" border="0" usemap="#_world_coll__map" alt="Collaboration graph"/></div>
 <map name="_world_coll__map" id="_world_coll__map">
-<area shape="rect" id="node15" href="class_clock.html" title="{Clock\n||+ Clock()\l+ Clock()\l+ ~Clock()\l+ tick()\l+ getCurrentTime()\l+ setCurrentTime()\l+ getIncrement()\l+ setIncrement()\l+ getInitialTime()\l+ setInitialTime()\l+ realTime()\l+ getFinalTime()\l+ setFinalTime()\l+ reset()\l}" alt="" coords="264,564,395,832"/>
-<area shape="rect" id="node10" href="class_grid.html" title="{Grid\n||+ Grid()\l+ ~Grid()\l+ getNoTilesX()\l+ getNoTilesY()\l+ getXTileDim()\l+ getYTileDim()\l+ getXOrigin()\l+ getYOrigin()\l+ toString()\l+ getTileIndexX()\land 10 more...\l&#45; computeTileCenters()\l&#45; useNetworkPrior()\l&#45; useUniformPrior()\l}" alt="" coords="414,189,567,457"/>
-<area shape="rect" id="node6" href="class_agents_collection.html" title="{AgentsCollection\n||+ AgentsCollection()\l+ ~AgentsCollection()\l+ addAgent()\l+ deleteAgent()\l+ getAgent()\l+ getAgentListByType()\l+ end()\l+ begin()\l+ size()\l+ printAgents()\l}" alt="" coords="801,593,959,803"/>
-<area shape="rect" id="node9" href="class_map.html" title="{Map\n||+ Map()\l+ Map()\l+ Map()\l+ ~Map()\l+ getGlobalFactory()\l+ getBoundary()\l+ setBoundary()\l+ getGrid()\l+ addGrid()\l&#45; create_rectangle()\l}" alt="" coords="549,593,691,803"/>
+<area shape="rect" id="node14" href="class_clock.html" title="{Clock\n||+ Clock()\l+ Clock()\l+ ~Clock()\l+ tick()\l+ getCurrentTime()\l+ setCurrentTime()\l+ getIncrement()\l+ setIncrement()\l+ getInitialTime()\l+ setInitialTime()\l+ realTime()\l+ getFinalTime()\l+ setFinalTime()\l+ reset()\l}" alt="" coords="264,689,395,957"/>
+<area shape="rect" id="node10" href="class_map.html" title="{Map\n||+ ~Map()\l+ getBoundary()\l+ getEnvelope()\l+ getGlobalFactory()\l+ addGrid()\l+ getNoTilesX()\l+ getNoTilesY()\l+ getXTileDim()\l+ getYTileDim()\l+ getXOrigin()\l+ getYOrigin()\l+ getNoTiles()\l+ getTileCenter()\l+ getTileNo()\l+ getTileNo()\l+ dumpGrid()\l+ getTileCenters()\l+ hasGrid()\l# Map()\l}" alt="" coords="1025,652,1167,993"/>
+<area shape="rect" id="node11" href="class_grid.html" title="{Grid\n||+ Grid()\l+ ~Grid()\l+ getNoTilesX()\l+ getNoTilesY()\l+ getXTileDim()\l+ getYTileDim()\l+ getXOrigin()\l+ getYOrigin()\l+ getNoTiles()\l+ getTileCenter()\l+ getTileNo()\l+ getTileNo()\l+ dumpGrid()\l+ getTileCenters()\l&#45; getTileIndexX()\l&#45; getTileIndexY()\l&#45; getTileIndexX()\l&#45; getTileIndexY()\l&#45; toString()\l&#45; computeTileCenters()\l}" alt="" coords="1019,189,1173,545"/>
+<area shape="rect" id="node6" href="class_agents_collection.html" title="{AgentsCollection\n||+ AgentsCollection()\l+ ~AgentsCollection()\l+ addAgent()\l+ deleteAgent()\l+ getAgent()\l+ getAgentListByType()\l+ end()\l+ begin()\l+ size()\l+ printAgents()\l}" alt="" coords="1191,718,1350,927"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -93,39 +93,31 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa825a43f968c8fe750c67156e64721ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cf8a54ae1f3cb61efeba2b3acebb7cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_agents_collection.html">AgentsCollection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a8cf8a54ae1f3cb61efeba2b3acebb7cc">getAgents</a> () const</td></tr>
 <tr class="separator:a8cf8a54ae1f3cb61efeba2b3acebb7cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa8e5c2943c72aa664590abbb024896b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#afa8e5c2943c72aa664590abbb024896b">setAgents</a> (<a class="el" href="class_agents_collection.html">AgentsCollection</a> *agents)</td></tr>
-<tr class="separator:afa8e5c2943c72aa664590abbb024896b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79423d285338cbe0ea501369e93e78b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_clock.html">Clock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a79423d285338cbe0ea501369e93e78b4">getClock</a> () const</td></tr>
-<tr class="separator:a79423d285338cbe0ea501369e93e78b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52ebe3eed240fe4dd37915a1dad02efd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a52ebe3eed240fe4dd37915a1dad02efd">setClock</a> (<a class="el" href="class_clock.html">Clock</a> *clock)</td></tr>
-<tr class="separator:a52ebe3eed240fe4dd37915a1dad02efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33b8543ee812ae4f8ff93329444da4cb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_map.html">Map</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a33b8543ee812ae4f8ff93329444da4cb">getMap</a> () const</td></tr>
 <tr class="separator:a33b8543ee812ae4f8ff93329444da4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dc80487d5c2d1d4f2af0c1d7f015204"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a9dc80487d5c2d1d4f2af0c1d7f015204">setMap</a> (<a class="el" href="class_map.html">Map</a> *map)</td></tr>
-<tr class="separator:a9dc80487d5c2d1d4f2af0c1d7f015204"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d07b06f9884185161c5cc34034a7212"><td class="memItemLeft" align="right" valign="top">const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a7d07b06f9884185161c5cc34034a7212">getGridFilename</a> () const</td></tr>
 <tr class="separator:a7d07b06f9884185161c5cc34034a7212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa51e0799a58035305307e398a81ffeb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_clock.html">Clock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#aa51e0799a58035305307e398a81ffeb2">getClock</a> ()</td></tr>
+<tr class="separator:aa51e0799a58035305307e398a81ffeb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad98b713484ef1c92ded7eec352a496a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#ad98b713484ef1c92ded7eec352a496a5">computeProbabilities</a> (std::map&lt; unsigned long, vector&lt; <a class="el" href="class_antenna_info.html">AntennaInfo</a> &gt;&gt; data)</td></tr>
+<tr class="separator:ad98b713484ef1c92ded7eec352a496a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a026bdf1e190cdaf02481c548b8ca1a6f"><td class="memItemLeft" align="right" valign="top">map&lt; const unsigned long, const string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a026bdf1e190cdaf02481c548b8ca1a6f">getProbFilenames</a> () const</td></tr>
 <tr class="separator:a026bdf1e190cdaf02481c548b8ca1a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5baa256a1e856e635830e0a1c9cce37b"><td class="memItemLeft" align="right" valign="top">const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a5baa256a1e856e635830e0a1c9cce37b">getAntennasFilename</a> () const</td></tr>
-<tr class="separator:a5baa256a1e856e635830e0a1c9cce37b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a206508d427e13c242855d9e11e5bed72"><td class="memItemLeft" align="right" valign="top">const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a206508d427e13c242855d9e11e5bed72">getPersonsFilename</a> () const</td></tr>
-<tr class="separator:a206508d427e13c242855d9e11e5bed72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa62f6cd42214191e37b904a672306888"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#aa62f6cd42214191e37b904a672306888">getGridDimTileX</a> () const</td></tr>
-<tr class="separator:aa62f6cd42214191e37b904a672306888"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99a004c6f3ce1a3a76894bb1f9625bbe"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a99a004c6f3ce1a3a76894bb1f9625bbe">getGridDimTileY</a> () const</td></tr>
-<tr class="separator:a99a004c6f3ce1a3a76894bb1f9625bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d7c2f5e7d357b891fac1728a932885f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_prior_type_8h.html#a61286c562e68de246982fc393a7c23a5">PriorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a9d7c2f5e7d357b891fac1728a932885f">getPrior</a> () const</td></tr>
-<tr class="separator:a9d7c2f5e7d357b891fac1728a932885f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35aafc469b9146b4b6f72c6adaa3e067"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_holdable_agent.html#ae2c334b004d7b9c5a999cf2618e4e518">HoldableAgent::CONNECTION_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a35aafc469b9146b4b6f72c6adaa3e067">getConnectionType</a> () const</td></tr>
-<tr class="separator:a35aafc469b9146b4b6f72c6adaa3e067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a176205a2d3e28cca6fb7ac2fc9e8670e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a176205a2d3e28cca6fb7ac2fc9e8670e">setPostProbMethod</a> (const std::shared_ptr&lt; <a class="el" href="class_post_loc_prob.html">PostLocProb</a> &gt; &amp;post)</td></tr>
+<tr class="separator:a176205a2d3e28cca6fb7ac2fc9e8670e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeba13dcf92dac761cf5cac1c8f2266c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_prior_type_8h.html#a61286c562e68de246982fc393a7c23a5">PriorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#aeba13dcf92dac761cf5cac1c8f2266c9">getPrior</a> ()</td></tr>
+<tr class="separator:aeba13dcf92dac761cf5cac1c8f2266c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2830d2aea7d91f98257c1e661527289e"><td class="memItemLeft" align="right" valign="top">const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a2830d2aea7d91f98257c1e661527289e">getOutputDir</a> () const</td></tr>
+<tr class="separator:a2830d2aea7d91f98257c1e661527289e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65eab81f8a895b605cbc90d887d0671a"><td class="memItemLeft" align="right" valign="top">std::map&lt; unsigned long, vector&lt; <a class="el" href="class_antenna_info.html">AntennaInfo</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a65eab81f8a895b605cbc90d887d0671a">getEvents</a> ()</td></tr>
+<tr class="separator:a65eab81f8a895b605cbc90d887d0671a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ada780d7d546a1dad038c83aad3f696df"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_person.html">Person</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#ada780d7d546a1dad038c83aad3f696df">generatePopulation</a> (unsigned long numPersons, double percentHome)</td></tr>
 <tr class="separator:ada780d7d546a1dad038c83aad3f696df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7648b24daba6b22f7fe85d5b1dc53d5e"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_person.html">Person</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a7648b24daba6b22f7fe85d5b1dc53d5e">generatePopulation</a> (const unsigned long numPersons, vector&lt; double &gt; params, <a class="el" href="class_person.html#a53376a9a5852ec7760488a01c37f0b0b">Person::AgeDistributions</a> age_distribution, double male_share, vector&lt; <a class="el" href="class_mobile_operator.html">MobileOperator</a> *&gt; mnos, double speed_walk, double speed_car, double percentHome)</td></tr>
-<tr class="separator:a7648b24daba6b22f7fe85d5b1dc53d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab92523ca0922b67e4ec77f37939edc1"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_person.html">Person</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#aab92523ca0922b67e4ec77f37939edc1">generatePopulation</a> (const unsigned long numPersons, shared_ptr&lt; <a class="el" href="class_age_distribution.html">AgeDistribution</a> &gt; age_distribution, double male_share, vector&lt; <a class="el" href="class_mobile_operator.html">MobileOperator</a> *&gt; mnos, double speed_walk, double speed_car, double percentHome)</td></tr>
+<tr class="separator:aab92523ca0922b67e4ec77f37939edc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbd58c8093be1ac349d929d9a4bc2ab0"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_antenna.html">Antenna</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#adbd58c8093be1ac349d929d9a4bc2ab0">generateAntennas</a> (unsigned long numAntennas)</td></tr>
 <tr class="separator:adbd58c8093be1ac349d929d9a4bc2ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebe7c211a9ddae90773f6ec880cdca15"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_antenna.html">Antenna</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#aebe7c211a9ddae90773f6ec880cdca15">parseAntennas</a> (const string &amp;configAntennasFile, vector&lt; <a class="el" href="class_mobile_operator.html">MobileOperator</a> *&gt; mnos) noexcept(false)</td></tr>
@@ -142,6 +134,30 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a5675c3a896891827dd59255a9761f08e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5975f2673e84c87f8640737efd04590b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a5975f2673e84c87f8640737efd04590b">getDefaultConnectionThreshold</a> (<a class="el" href="class_holdable_agent.html#ae2c334b004d7b9c5a999cf2618e4e518">HoldableAgent::CONNECTION_TYPE</a> connType)</td></tr>
 <tr class="separator:a5975f2673e84c87f8640737efd04590b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab517becd3d09009ae4b151a6ce68d073"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#ab517becd3d09009ae4b151a6ce68d073">setPersonDisplacementPattern</a> (<a class="el" href="class_person.html">Person</a> *p, <a class="el" href="_movement_type_8h.html#a8a93b61bc797a7d1907f42796a252493">MovementType</a> type, <a class="el" href="class_map.html">Map</a> *map, <a class="el" href="class_clock.html">Clock</a> *clk)</td></tr>
+<tr class="separator:ab517becd3d09009ae4b151a6ce68d073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4389a47e4f2dd361300a1e8e78fed6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#af4389a47e4f2dd361300a1e8e78fed6c">generatePhones</a> (vector&lt; <a class="el" href="class_mobile_operator.html">MobileOperator</a> *&gt; mnos)</td></tr>
+<tr class="separator:af4389a47e4f2dd361300a1e8e78fed6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa52f524e1a9116a948906592aa927285"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#aa52f524e1a9116a948906592aa927285">generateAges</a> (int n, shared_ptr&lt; <a class="el" href="class_age_distribution.html">AgeDistribution</a> &gt; distr, <a class="el" href="class_random_number_generator.html">RandomNumberGenerator</a> *rng)</td></tr>
+<tr class="separator:aa52f524e1a9116a948906592aa927285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a823ee4f34344e80a028e95211b258e7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a823ee4f34344e80a028e95211b258e7b">setPhones</a> (int *&amp;ph1, int *&amp;ph2, double probSecMobilePhone, double numPersons, <a class="el" href="class_random_number_generator.html">RandomNumberGenerator</a> *rng, vector&lt; <a class="el" href="class_mobile_operator.html">MobileOperator</a> *&gt; mnos)</td></tr>
+<tr class="separator:a823ee4f34344e80a028e95211b258e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f069fb694d8f17b23bda291bea47446"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a3f069fb694d8f17b23bda291bea47446">writeSignalAndCells</a> (ostream &amp;antennaFile)</td></tr>
+<tr class="separator:a3f069fb694d8f17b23bda291bea47446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac93f975e8fcbe76e92226bd0e9ba2e35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#ac93f975e8fcbe76e92226bd0e9ba2e35">AddMobilePhoneToPerson</a> (<a class="el" href="class_person.html">Person</a> *p, <a class="el" href="class_mobile_operator.html">MobileOperator</a> *mno, <a class="el" href="class_agents_collection.html">AgentsCollection</a> *ag, const <a class="el" href="class_map.html">Map</a> *map, <a class="el" href="class_clock.html">Clock</a> *clock, double thres, <a class="el" href="class_holdable_agent.html#ae2c334b004d7b9c5a999cf2618e4e518">HoldableAgent::CONNECTION_TYPE</a> conn)</td></tr>
+<tr class="separator:ac93f975e8fcbe76e92226bd0e9ba2e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82e2813458959f161fc116abf79f1fb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_movement_type_8h.html#a8a93b61bc797a7d1907f42796a252493">MovementType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a82e2813458959f161fc116abf79f1fb3">parseMovement</a> (XMLElement *el)</td></tr>
+<tr class="separator:a82e2813458959f161fc116abf79f1fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23531a124ce85f6d23418aa371081c90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_holdable_agent.html#ae2c334b004d7b9c5a999cf2618e4e518">HoldableAgent::CONNECTION_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a23531a124ce85f6d23418aa371081c90">parseConnectionType</a> (XMLElement *el)</td></tr>
+<tr class="separator:a23531a124ce85f6d23418aa371081c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae252bb724d2b62fb9c03e88fc91c89b8"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_mobile_operator.html">MobileOperator</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#ae252bb724d2b62fb9c03e88fc91c89b8">parseMNOs</a> (XMLElement *el)</td></tr>
+<tr class="separator:ae252bb724d2b62fb9c03e88fc91c89b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa62f6cd42214191e37b904a672306888"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#aa62f6cd42214191e37b904a672306888">getGridDimTileX</a> () const</td></tr>
+<tr class="separator:aa62f6cd42214191e37b904a672306888"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99a004c6f3ce1a3a76894bb1f9625bbe"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a99a004c6f3ce1a3a76894bb1f9625bbe">getGridDimTileY</a> () const</td></tr>
+<tr class="separator:a99a004c6f3ce1a3a76894bb1f9625bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35aafc469b9146b4b6f72c6adaa3e067"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_holdable_agent.html#ae2c334b004d7b9c5a999cf2618e4e518">HoldableAgent::CONNECTION_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a35aafc469b9146b4b6f72c6adaa3e067">getConnectionType</a> () const</td></tr>
+<tr class="separator:a35aafc469b9146b4b6f72c6adaa3e067"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -183,8 +199,12 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a66e68ec2220ea27e705aac88a920b6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac38e4d56d6bcabc35cf0e6763892a7a2"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#ac38e4d56d6bcabc35cf0e6763892a7a2">m_antennasFilename</a></td></tr>
 <tr class="separator:ac38e4d56d6bcabc35cf0e6763892a7a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e32421ab881331c06802e7719557e48"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a7e32421ab881331c06802e7719557e48">m_outputDir</a></td></tr>
+<tr class="separator:a7e32421ab881331c06802e7719557e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45e13597d542b7f2eb0b0d77e1a8633f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a45e13597d542b7f2eb0b0d77e1a8633f">m_probSecMobilePhone</a></td></tr>
 <tr class="separator:a45e13597d542b7f2eb0b0d77e1a8633f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a434bcb4c18cc7b3194d1ea6c09b76284"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="class_post_loc_prob.html">PostLocProb</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a434bcb4c18cc7b3194d1ea6c09b76284">m_postMethod</a></td></tr>
+<tr class="separator:a434bcb4c18cc7b3194d1ea6c09b76284"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This is the class where the simulation process takes place. A <a class="el" href="class_world.html">World</a> object has a <a class="el" href="class_map.html">Map</a>, a <a class="el" href="class_clock.html">Clock</a>, a set of Agents than can be persons, mobile phones, antennas, mobile operators etc. After generating all the required objects for simulation by reading the parameters from the input configuration files <a class="el" href="class_world.html#aa825a43f968c8fe750c67156e64721ff">runSimulation()</a> method is called to perform the actual simulation. The output of the simulation process is written in several files. <a class="el" href="class_antenna.html">Antenna</a> objects output their registered events in a .csv file and after the simulation ends, these files are merged in a single file that is used to compute the posterior localization probabilities for each mobile device. These probabilities are computed using a <a class="el" href="class_grid.html">Grid</a> that is overlapped on the <a class="el" href="class_map.html">Map</a>, i.e. we compute the probability of a mobile phone to be in a tile of the grid. A finer the grid means more accurate localization but this come with an important computational cost. </p>
@@ -335,6 +355,132 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac93f975e8fcbe76e92226bd0e9ba2e35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac93f975e8fcbe76e92226bd0e9ba2e35">&#9670;&nbsp;</a></span>AddMobilePhoneToPerson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void World::AddMobilePhoneToPerson </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_person.html">Person</a> *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_mobile_operator.html">MobileOperator</a> *&#160;</td>
+          <td class="paramname"><em>mno</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_agents_collection.html">AgentsCollection</a> *&#160;</td>
+          <td class="paramname"><em>ag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_map.html">Map</a> *&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_clock.html">Clock</a> *&#160;</td>
+          <td class="paramname"><em>clock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>thres</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_holdable_agent.html#ae2c334b004d7b9c5a999cf2618e4e518">HoldableAgent::CONNECTION_TYPE</a>&#160;</td>
+          <td class="paramname"><em>conn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad98b713484ef1c92ded7eec352a496a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad98b713484ef1c92ded7eec352a496a5">&#9670;&nbsp;</a></span>computeProbabilities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void World::computeProbabilities </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; unsigned long, vector&lt; <a class="el" href="class_antenna_info.html">AntennaInfo</a> &gt;&gt;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa52f524e1a9116a948906592aa927285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa52f524e1a9116a948906592aa927285">&#9670;&nbsp;</a></span>generateAges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* World::generateAges </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">shared_ptr&lt; <a class="el" href="class_age_distribution.html">AgeDistribution</a> &gt;&#160;</td>
+          <td class="paramname"><em>distr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_random_number_generator.html">RandomNumberGenerator</a> *&#160;</td>
+          <td class="paramname"><em>rng</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="adbd58c8093be1ac349d929d9a4bc2ab0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adbd58c8093be1ac349d929d9a4bc2ab0">&#9670;&nbsp;</a></span>generateAntennas()</h2>
 
@@ -397,6 +543,32 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="af4389a47e4f2dd361300a1e8e78fed6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4389a47e4f2dd361300a1e8e78fed6c">&#9670;&nbsp;</a></span>generatePhones()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void World::generatePhones </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="class_mobile_operator.html">MobileOperator</a> *&gt;&#160;</td>
+          <td class="paramname"><em>mnos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ada780d7d546a1dad038c83aad3f696df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ada780d7d546a1dad038c83aad3f696df">&#9670;&nbsp;</a></span>generatePopulation() <span class="overload">[1/2]</span></h2>
 
@@ -433,8 +605,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a7648b24daba6b22f7fe85d5b1dc53d5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7648b24daba6b22f7fe85d5b1dc53d5e">&#9670;&nbsp;</a></span>generatePopulation() <span class="overload">[2/2]</span></h2>
+<a id="aab92523ca0922b67e4ec77f37939edc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab92523ca0922b67e4ec77f37939edc1">&#9670;&nbsp;</a></span>generatePopulation() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -451,13 +623,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">vector&lt; double &gt;&#160;</td>
-          <td class="paramname"><em>params</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_person.html#a53376a9a5852ec7760488a01c37f0b0b">Person::AgeDistributions</a>&#160;</td>
+          <td class="paramtype">shared_ptr&lt; <a class="el" href="class_age_distribution.html">AgeDistribution</a> &gt;&#160;</td>
           <td class="paramname"><em>age_distribution</em>, </td>
         </tr>
         <tr>
@@ -523,26 +689,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a5baa256a1e856e635830e0a1c9cce37b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5baa256a1e856e635830e0a1c9cce37b">&#9670;&nbsp;</a></span>getAntennasFilename()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const string&amp; World::getAntennasFilename </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Returns the name of the file where the antennas exact locations are saved for later analysis. </p><dl class="section return"><dt>Returns</dt><dd>the name of the file where the antennas exact locations are saved for later analysis. </dd></dl>
-
-</div>
-</div>
-<a id="a79423d285338cbe0ea501369e93e78b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79423d285338cbe0ea501369e93e78b4">&#9670;&nbsp;</a></span>getClock()</h2>
+<a id="aa51e0799a58035305307e398a81ffeb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa51e0799a58035305307e398a81ffeb2">&#9670;&nbsp;</a></span>getClock()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -551,11 +699,10 @@ Private Attributes</h2></td></tr>
           <td class="memname"><a class="el" href="class_clock.html">Clock</a>* World::getClock </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns a pointer to a <a class="el" href="class_clock.html">Clock</a> object used for simulation. </p><dl class="section return"><dt>Returns</dt><dd>a pointer to a <a class="el" href="class_clock.html">Clock</a> object used for simulation. </dd></dl>
 
 </div>
 </div>
@@ -564,6 +711,9 @@ Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_holdable_agent.html#ae2c334b004d7b9c5a999cf2618e4e518">HoldableAgent::CONNECTION_TYPE</a> World::getConnectionType </td>
@@ -572,9 +722,13 @@ Private Attributes</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Returns the type of the handover mechanism</p>
-<dl class="section return"><dt>Returns</dt><dd>the type of the handover mechanism: HoldableAgent::CONNECTION_TYPE::USING_SIGNAL_QUALITY, HoldableAgent::CONNECTION_TYPE::USING_SIGNAL_STRENGTH, HoldableAgent::CONNECTION_TYPE::USING_POWER </dd></dl>
+<p>Returns the type of the handover mechanism </p><dl class="section return"><dt>Returns</dt><dd>the type of the handover mechanism: HoldableAgent::CONNECTION_TYPE::USING_SIGNAL_QUALITY, HoldableAgent::CONNECTION_TYPE::USING_SIGNAL_STRENGTH, HoldableAgent::CONNECTION_TYPE::USING_POWER </dd></dl>
 
 </div>
 </div>
@@ -604,11 +758,32 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a65eab81f8a895b605cbc90d887d0671a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65eab81f8a895b605cbc90d887d0671a">&#9670;&nbsp;</a></span>getEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;unsigned long, vector&lt;<a class="el" href="class_antenna_info.html">AntennaInfo</a>&gt; &gt; World::getEvents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>At the end of a simulation this method merges all the events saved by individual antennas in a single data structure. </p><dl class="section return"><dt>Returns</dt><dd>a map of &lt;MNO_ID, vector&lt;AntennInfo&gt;&gt; where for each MNO identified by its ID has vector of all events saved by all antennas belonging to that MNO. This map is needed for computation of location probabilities. </dd></dl>
+
+</div>
+</div>
 <a id="aa62f6cd42214191e37b904a672306888"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa62f6cd42214191e37b904a672306888">&#9670;&nbsp;</a></span>getGridDimTileX()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">double World::getGridDimTileX </td>
@@ -617,6 +792,11 @@ Private Attributes</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Returns the dimension of tiles on OX, this number is read from simulation configuration file. </p><dl class="section return"><dt>Returns</dt><dd>the dimension of tiles on OX, this number is read from simulation configuration file. </dd></dl>
 
@@ -627,6 +807,9 @@ Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">double World::getGridDimTileY </td>
@@ -635,6 +818,11 @@ Private Attributes</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Returns the dimension of tiles on OY, this number is read from simulation configuration file. </p><dl class="section return"><dt>Returns</dt><dd>the dimension of tiles on OY, this number is read from simulation configuration file. </dd></dl>
 
@@ -676,26 +864,26 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a206508d427e13c242855d9e11e5bed72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a206508d427e13c242855d9e11e5bed72">&#9670;&nbsp;</a></span>getPersonsFilename()</h2>
+<a id="a2830d2aea7d91f98257c1e661527289e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2830d2aea7d91f98257c1e661527289e">&#9670;&nbsp;</a></span>getOutputDir()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const string&amp; World::getPersonsFilename </td>
+          <td class="memname">const string&amp; World::getOutputDir </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the name of the file where the persons exact locations are saved for later analysis. </p><dl class="section return"><dt>Returns</dt><dd>the name of the file where the persons exact locations are saved for later analysis. </dd></dl>
+<p>Returns the name of the output folder. </p><dl class="section return"><dt>Returns</dt><dd>the name of the output folder. </dd></dl>
 
 </div>
 </div>
-<a id="a9d7c2f5e7d357b891fac1728a932885f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d7c2f5e7d357b891fac1728a932885f">&#9670;&nbsp;</a></span>getPrior()</h2>
+<a id="aeba13dcf92dac761cf5cac1c8f2266c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeba13dcf92dac761cf5cac1c8f2266c9">&#9670;&nbsp;</a></span>getPrior()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -704,11 +892,10 @@ Private Attributes</h2></td></tr>
           <td class="memname"><a class="el" href="_prior_type_8h.html#a61286c562e68de246982fc393a7c23a5">PriorType</a> World::getPrior </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the type of the prior probability used to compute the posterior localization probability. </p><dl class="section return"><dt>Returns</dt><dd>the type of the prior probability used to compute the posterior localization probability. </dd></dl>
 
 </div>
 </div>
@@ -760,6 +947,84 @@ Private Attributes</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23531a124ce85f6d23418aa371081c90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23531a124ce85f6d23418aa371081c90">&#9670;&nbsp;</a></span>parseConnectionType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_holdable_agent.html#ae2c334b004d7b9c5a999cf2618e4e518">HoldableAgent::CONNECTION_TYPE</a> World::parseConnectionType </td>
+          <td>(</td>
+          <td class="paramtype">XMLElement *&#160;</td>
+          <td class="paramname"><em>el</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae252bb724d2b62fb9c03e88fc91c89b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae252bb724d2b62fb9c03e88fc91c89b8">&#9670;&nbsp;</a></span>parseMNOs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_mobile_operator.html">MobileOperator</a>*&gt; World::parseMNOs </td>
+          <td>(</td>
+          <td class="paramtype">XMLElement *&#160;</td>
+          <td class="paramname"><em>el</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a82e2813458959f161fc116abf79f1fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82e2813458959f161fc116abf79f1fb3">&#9670;&nbsp;</a></span>parseMovement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_movement_type_8h.html#a8a93b61bc797a7d1907f42796a252493">MovementType</a> World::parseMovement </td>
+          <td>(</td>
+          <td class="paramtype">XMLElement *&#160;</td>
+          <td class="paramname"><em>el</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -880,75 +1145,129 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="afa8e5c2943c72aa664590abbb024896b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa8e5c2943c72aa664590abbb024896b">&#9670;&nbsp;</a></span>setAgents()</h2>
+<a id="ab517becd3d09009ae4b151a6ce68d073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab517becd3d09009ae4b151a6ce68d073">&#9670;&nbsp;</a></span>setPersonDisplacementPattern()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void World::setAgents </td>
+          <td class="memname">void World::setPersonDisplacementPattern </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_agents_collection.html">AgentsCollection</a> *&#160;</td>
-          <td class="paramname"><em>agents</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype"><a class="el" href="class_person.html">Person</a> *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-<p>Sets the <a class="el" href="class_agents_collection.html">AgentsCollection</a> to be used for simulation. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">agents</td><td>a pointer to <a class="el" href="class_agents_collection.html">AgentsCollection</a> object. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a52ebe3eed240fe4dd37915a1dad02efd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52ebe3eed240fe4dd37915a1dad02efd">&#9670;&nbsp;</a></span>setClock()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">void World::setClock </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_clock.html">Clock</a> *&#160;</td>
-          <td class="paramname"><em>clock</em></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="_movement_type_8h.html#a8a93b61bc797a7d1907f42796a252493">MovementType</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-<p>Sets the <a class="el" href="class_clock.html">Clock</a> of the simulation. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">clock</td><td>a pointer to a <a class="el" href="class_clock.html">Clock</a> object used for simulation. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a9dc80487d5c2d1d4f2af0c1d7f015204"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9dc80487d5c2d1d4f2af0c1d7f015204">&#9670;&nbsp;</a></span>setMap()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">void World::setMap </td>
-          <td>(</td>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="class_map.html">Map</a> *&#160;</td>
-          <td class="paramname"><em>map</em></td><td>)</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_clock.html">Clock</a> *&#160;</td>
+          <td class="paramname"><em>clk</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a823ee4f34344e80a028e95211b258e7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a823ee4f34344e80a028e95211b258e7b">&#9670;&nbsp;</a></span>setPhones()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void World::setPhones </td>
+          <td>(</td>
+          <td class="paramtype">int *&amp;&#160;</td>
+          <td class="paramname"><em>ph1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&amp;&#160;</td>
+          <td class="paramname"><em>ph2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>probSecMobilePhone</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>numPersons</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_random_number_generator.html">RandomNumberGenerator</a> *&#160;</td>
+          <td class="paramname"><em>rng</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; <a class="el" href="class_mobile_operator.html">MobileOperator</a> *&gt;&#160;</td>
+          <td class="paramname"><em>mnos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a176205a2d3e28cca6fb7ac2fc9e8670e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a176205a2d3e28cca6fb7ac2fc9e8670e">&#9670;&nbsp;</a></span>setPostProbMethod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void World::setPostProbMethod </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="class_post_loc_prob.html">PostLocProb</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>post</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the map where the simulation takes place. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">map</td><td>a pointer to a <a class="el" href="class_map.html">Map</a> object where the simulation takes place. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -977,6 +1296,32 @@ Private Attributes</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f069fb694d8f17b23bda291bea47446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f069fb694d8f17b23bda291bea47446">&#9670;&nbsp;</a></span>writeSignalAndCells()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void World::writeSignalAndCells </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>antennaFile</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -1253,6 +1598,28 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a7e32421ab881331c06802e7719557e48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e32421ab881331c06802e7719557e48">&#9670;&nbsp;</a></span>m_outputDir</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string World::m_outputDir</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a66e68ec2220ea27e705aac88a920b6fd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a66e68ec2220ea27e705aac88a920b6fd">&#9670;&nbsp;</a></span>m_personsFilename</h2>
 
@@ -1264,6 +1631,28 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">string World::m_personsFilename</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a434bcb4c18cc7b3194d1ea6c09b76284"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a434bcb4c18cc7b3194d1ea6c09b76284">&#9670;&nbsp;</a></span>m_postMethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt;<a class="el" href="class_post_loc_prob.html">PostLocProb</a>&gt; World::m_postMethod</td>
         </tr>
       </table>
   </td>

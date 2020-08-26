@@ -61,11 +61,14 @@ $(function() {
 &#160;
 
 <h3><a id="index_g"></a>- g -</h3><ul>
+<li>generateAges()
+: <a class="el" href="class_world.html#aa52f524e1a9116a948906592aa927285">World</a>
+</li>
 <li>generateAntennas()
 : <a class="el" href="class_world.html#adbd58c8093be1ac349d929d9a4bc2ab0">World</a>
 </li>
 <li>generateBernoulliInt()
-: <a class="el" href="class_random_number_generator.html#a480c13d951cbcc9dd3a3afa29145c097">RandomNumberGenerator</a>
+: <a class="el" href="class_random_number_generator.html#a2b52648a0de3e6da4c51a0f9b30a67f0">RandomNumberGenerator</a>
 </li>
 <li>generateBinomialInt()
 : <a class="el" href="class_random_number_generator.html#a417f97fb1a4362621b60107d98c3b4e7">RandomNumberGenerator</a>
@@ -73,11 +76,15 @@ $(function() {
 <li>generateExponentialDouble()
 : <a class="el" href="class_random_number_generator.html#a95d897f9265ece8d5ee18fbf2802b844">RandomNumberGenerator</a>
 </li>
+<li>generateLevy()
+: <a class="el" href="class_random_number_generator.html#acd8f93f595d980ee054ad4570a09b0b7">RandomNumberGenerator</a>
+</li>
 <li>generateMobilePhones()
 : <a class="el" href="class_world.html#a9ba6bd08d85c5f610ea30bf4f74b925d">World</a>
 </li>
 <li>generateNewLocation()
 : <a class="el" href="class_displace.html#ab35e5c066b2f4ad7ff942be00c862564">Displace</a>
+, <a class="el" href="class_levy_flight_displacement.html#ae9b877b962cfbab65ba538da0e10b0f7">LevyFlightDisplacement</a>
 , <a class="el" href="class_random_walk_displacement.html#abce6bc5d5bd68f685b8eaa7d956834c4">RandomWalkDisplacement</a>
 , <a class="el" href="class_random_walk_drift_displacement.html#a97f69f73694bc5d5813faed4fc704edf">RandomWalkDriftDisplacement</a>
 </li>
@@ -87,11 +94,17 @@ $(function() {
 <li>generateNormalDouble()
 : <a class="el" href="class_random_number_generator.html#a2598d9959bf595c3703c1d8e24f6e2f1">RandomNumberGenerator</a>
 </li>
+<li>generatePhones()
+: <a class="el" href="class_world.html#af4389a47e4f2dd361300a1e8e78fed6c">World</a>
+</li>
 <li>generatePopulation()
 : <a class="el" href="class_world.html#ada780d7d546a1dad038c83aad3f696df">World</a>
 </li>
 <li>generateTruncatedNormalDouble()
 : <a class="el" href="class_random_number_generator.html#a4e0cc6be3677ba52821cd4e0ae92cca9">RandomNumberGenerator</a>
+</li>
+<li>generateTruncatedNormalInt()
+: <a class="el" href="class_random_number_generator.html#a9204cf57bae1189b576307699b07747b">RandomNumberGenerator</a>
 </li>
 <li>generateUniformDouble()
 : <a class="el" href="class_random_number_generator.html#a0cbfb491d75d113c5bd0816576cb56ed">RandomNumberGenerator</a>
@@ -126,21 +139,13 @@ $(function() {
 <li>getAntennas()
 : <a class="el" href="class_holdable_agent.html#a226459f2721e5b7b3c72de4b0f05ffbb">HoldableAgent</a>
 </li>
-<li>getAntennasFilename()
-: <a class="el" href="class_world.html#a5baa256a1e856e635830e0a1c9cce37b">World</a>
-</li>
-<li>getAvgIntervalBetweenStays()
-: <a class="el" href="class_person.html#a59d3ea8e10928537043ee7b3d24a470c">Person</a>
-</li>
-<li>getAvgTimeStay()
-: <a class="el" href="class_person.html#a2b01d9997db6f6d4555dbc5ac9898077">Person</a>
-</li>
 <li>getBoundary()
-: <a class="el" href="class_map.html#a74dd5445ed90bea2a9cc3240bc23f1bc">Map</a>
+: <a class="el" href="class_map.html#aa6b66dc80060a42151228f3764db539f">Map</a>
+, <a class="el" href="class_w_k_t_map.html#a0b326822ab1bcfc0765e97f3acb545b0">WKTMap</a>
 </li>
 <li>getClock()
-: <a class="el" href="class_agent.html#af80a21a067d04788c23d719d07b04038">Agent</a>
-, <a class="el" href="class_world.html#a79423d285338cbe0ea501369e93e78b4">World</a>
+: <a class="el" href="class_agent.html#ae872060d974c4a5aec875680db38cc68">Agent</a>
+, <a class="el" href="class_world.html#aa51e0799a58035305307e398a81ffeb2">World</a>
 </li>
 <li>getCmdOption()
 : <a class="el" href="class_input_parser.html#aac05d7ad7794084907a0b57ab3e7d607">InputParser</a>
@@ -169,8 +174,15 @@ $(function() {
 <li>getDeviceId()
 : <a class="el" href="class_antenna_info.html#a25a6a3ca6afeba45c00f2312b8d2d9de">AntennaInfo</a>
 </li>
+<li>getEnvelope()
+: <a class="el" href="class_map.html#a40854af632e83500ca5b44180eae8e87">Map</a>
+, <a class="el" href="class_w_k_t_map.html#af117af8392fc33f1e603f10ea57ac6b0">WKTMap</a>
+</li>
 <li>getEventCode()
 : <a class="el" href="class_antenna_info.html#a898d46ed6fd2676e370ae8c325ffd679">AntennaInfo</a>
+</li>
+<li>getEvents()
+: <a class="el" href="class_world.html#a65eab81f8a895b605cbc90d887d0671a">World</a>
 </li>
 <li>getFileName()
 : <a class="el" href="class_c_s_v_parser.html#ad9a559d1c8de2a7d88a18170c9e11b80">CSVParser</a>
@@ -178,14 +190,9 @@ $(function() {
 <li>getFinalTime()
 : <a class="el" href="class_clock.html#a0b9ef0b9272d6555bb0fdca4978c705d">Clock</a>
 </li>
-<li>getGender()
-: <a class="el" href="class_person.html#adb5a4fabaaa6bf851de701aeb9df4fdf">Person</a>
-</li>
 <li>getGlobalFactory()
-: <a class="el" href="class_map.html#a69bd639b05daa393b051c76f0dc4af7c">Map</a>
-</li>
-<li>getGrid()
-: <a class="el" href="class_map.html#aa9bf1c29b844f3b7fbf7a3153c24fef0">Map</a>
+: <a class="el" href="class_map.html#ab4dd1529d5c9ba2232108a2de2095b76">Map</a>
+, <a class="el" href="class_w_k_t_map.html#a566b85bafc53e2013e0a21d4a387ce91">WKTMap</a>
 </li>
 <li>getGridDimTileX()
 : <a class="el" href="class_world.html#aa62f6cd42214191e37b904a672306888">World</a>
@@ -196,11 +203,13 @@ $(function() {
 <li>getGridFilename()
 : <a class="el" href="class_world.html#a7d07b06f9884185161c5cc34034a7212">World</a>
 </li>
-<li>getHandoverMechanism()
-: <a class="el" href="class_antenna.html#a35001fa0ad0e015c275d08ac84d2982b">Antenna</a>
-</li>
 <li>getHeader()
-: <a class="el" href="class_c_s_v_parser.html#a95b7d4b188facfec7ebab65413f0130b">CSVParser</a>
+: <a class="el" href="class_antenna.html#abd510d9e41aabe08ffdf45c3ae06acb4">Antenna</a>
+, <a class="el" href="class_c_s_v_parser.html#a95b7d4b188facfec7ebab65413f0130b">CSVParser</a>
+, <a class="el" href="class_mobile_operator.html#ad440c00732fbab02e41149fffe59a1c8">MobileOperator</a>
+, <a class="el" href="class_mobile_phone.html#a38cabfd91b77cd839f497facb9ed937c">MobilePhone</a>
+, <a class="el" href="class_person.html#a6bebe59c354f26f4cb983185d6084181">Person</a>
+, <a class="el" href="class_tablet.html#a2b9138fcc455cc8459203f8976cecaf6">Tablet</a>
 </li>
 <li>getHeaderElement()
 : <a class="el" href="class_c_s_v_parser.html#ad58dc7b467216ecb75f3bea681af3051">CSVParser</a>
@@ -209,7 +218,7 @@ $(function() {
 : <a class="el" href="class_holdable_agent.html#a51f29e5aecf9d288935ddae6da4096ed">HoldableAgent</a>
 </li>
 <li>getId()
-: <a class="el" href="class_agent.html#a51d2d781636f524dc151f3da10955613">Agent</a>
+: <a class="el" href="class_agent.html#aa5267ab07bb62f1ed3dfddca286b6ef6">Agent</a>
 </li>
 <li>getIncrement()
 : <a class="el" href="class_clock.html#a804626d5455f4a2a73321f84ed7a9819">Clock</a>
@@ -224,14 +233,20 @@ $(function() {
 : <a class="el" href="class_locatable_agent.html#ad779af171c67ce0d478fc79b904e2d90">LocatableAgent</a>
 </li>
 <li>getMap()
-: <a class="el" href="class_agent.html#ad1870edeea33b059eca75079be2eb002">Agent</a>
+: <a class="el" href="class_agent.html#a3b60b2f0a0f41ce1f14c39a33cffcc4d">Agent</a>
 , <a class="el" href="class_world.html#a33b8543ee812ae4f8ff93329444da4cb">World</a>
 </li>
-<li>getMaxConnections()
-: <a class="el" href="class_antenna.html#ac7d42215283cd7d4dc16d449f61af91d">Antenna</a>
+<li>getMaxAge()
+: <a class="el" href="class_age_distribution.html#afe071e9af9ac30666cb350ba091327b4">AgeDistribution</a>
+</li>
+<li>getMean()
+: <a class="el" href="class_truncated_normal_age_distribution.html#a97b96831807a22d0d309aa71b7e6cba6">TruncatedNormalAgeDistribution</a>
 </li>
 <li>getMin3db()
 : <a class="el" href="class_antenna.html#a1c6126c232ee496b9b693fc20e4892f5">Antenna</a>
+</li>
+<li>getMinAge()
+: <a class="el" href="class_age_distribution.html#af97ddf99213aea07728813c5a658a93c">AgeDistribution</a>
 </li>
 <li>getMNO()
 : <a class="el" href="class_antenna.html#abfbb4a654f73fe0c3a30f50777f79349">Antenna</a>
@@ -242,41 +257,27 @@ $(function() {
 <li>getMobileOperator()
 : <a class="el" href="class_mobile_phone.html#aba72025d08c382d8533e0cbb9166999b">MobilePhone</a>
 </li>
-<li>getName()
-: <a class="el" href="class_agent.html#afe6c72d91baf9ee4fe77ea1ed7fef3ba">Agent</a>
-, <a class="el" href="class_antenna.html#a4ad9da1ca9d79f20b331c22b94c57a02">Antenna</a>
-, <a class="el" href="class_holdable_agent.html#ab330bb40de51a957ef8826af629f94a2">HoldableAgent</a>
-, <a class="el" href="class_immovable_agent.html#ae8fbccc744f6f806e47dfd242fa67a1c">ImmovableAgent</a>
-, <a class="el" href="class_locatable_agent.html#a754105958bb672744b525538f1584a7b">LocatableAgent</a>
-, <a class="el" href="class_mobile_operator.html#a2b4538d96f7aa898e6e470411d40cbf7">MobileOperator</a>
-, <a class="el" href="class_mobile_phone.html#a1eeac3141baafa75ebcf26fc3a0e4068">MobilePhone</a>
-, <a class="el" href="class_movable_agent.html#abcc1218876c39c996f2cb1eba2b96379">MovableAgent</a>
-, <a class="el" href="class_person.html#aa2a6f8d7f1d94045a03ca578f2ed272c">Person</a>
-, <a class="el" href="class_tablet.html#adc7196aaee1e9714236b7cd8825d5826">Tablet</a>
-</li>
 <li>getNoTiles()
 : <a class="el" href="class_grid.html#ab0a71c762b6c33e6fa2fd49dde38228b">Grid</a>
+, <a class="el" href="class_map.html#a89abf4b20e4b0e54b706452e5caa61b3">Map</a>
 </li>
 <li>getNoTilesX()
 : <a class="el" href="class_grid.html#af29c0c404a908aa46f83afb17d7609a6">Grid</a>
+, <a class="el" href="class_map.html#aace69b7294f0da0e2ca000dfa2a29606">Map</a>
 </li>
 <li>getNoTilesY()
 : <a class="el" href="class_grid.html#a783a3153d03154cfd33e6a418bb8d390">Grid</a>
+, <a class="el" href="class_map.html#a13ff108a9b56c432665d36ba1cbad1d0">Map</a>
 </li>
 <li>getNumActiveConections()
 : <a class="el" href="class_antenna.html#a86c5c094ab6ea432609afa00f3a8080a">Antenna</a>
 </li>
-<li>getPersonsFilename()
-: <a class="el" href="class_world.html#a206508d427e13c242855d9e11e5bed72">World</a>
-</li>
-<li>getPLE()
-: <a class="el" href="class_antenna.html#ab0c45eb94291446fc48c312854f8818d">Antenna</a>
-</li>
-<li>getPower()
-: <a class="el" href="class_antenna.html#afca01d00c8e393ee911f1e9240b51d2e">Antenna</a>
+<li>getOutputDir()
+: <a class="el" href="class_mobile_operator.html#a58ac70813094ddefdf0ba2552ec31fe9">MobileOperator</a>
+, <a class="el" href="class_world.html#a2830d2aea7d91f98257c1e661527289e">World</a>
 </li>
 <li>getPrior()
-: <a class="el" href="class_world.html#a9d7c2f5e7d357b891fac1728a932885f">World</a>
+: <a class="el" href="class_world.html#aeba13dcf92dac761cf5cac1c8f2266c9">World</a>
 </li>
 <li>getProbFilenames()
 : <a class="el" href="class_world.html#a026bdf1e190cdaf02481c548b8ca1a6f">World</a>
@@ -292,27 +293,21 @@ $(function() {
 </li>
 <li>getSd()
 : <a class="el" href="class_e_m_field.html#a0fea003948a67df01174480480376169">EMField</a>
+, <a class="el" href="class_truncated_normal_age_distribution.html#afb007c645bd7c5b8fc9c0e1875da2d58">TruncatedNormalAgeDistribution</a>
 </li>
 <li>getSignalFile()
 : <a class="el" href="class_mobile_operator.html#ac39217182fd0ce7ef5da3b9018bcb965">MobileOperator</a>
 </li>
-<li>getSmid()
-: <a class="el" href="class_antenna.html#acfaf47d35cc742e76522ea31a8b01578">Antenna</a>
-</li>
-<li>getSmin()
-: <a class="el" href="class_antenna.html#a1955f59f9d3b20ffd8e79f4893bf2e61">Antenna</a>
-</li>
 <li>getSpeed()
 : <a class="el" href="class_movable_agent.html#a12fcdaee60f5bb29f15fe113a7dacaac">MovableAgent</a>
 </li>
-<li>getSSteep()
-: <a class="el" href="class_antenna.html#a096deca0fe8497c0fe53539ae80f2db5">Antenna</a>
-</li>
 <li>getTileCenter()
 : <a class="el" href="class_grid.html#aa8d3de015a2b22d0cd0d72b3e7c29088">Grid</a>
+, <a class="el" href="class_map.html#a3ade598881798896b554f2ba34d8b499">Map</a>
 </li>
 <li>getTileCenters()
 : <a class="el" href="class_grid.html#aa1b1f4c938207b16694a27cb9beb66eb">Grid</a>
+, <a class="el" href="class_map.html#a6ff5cb95191b3a749f9a14b72eba2584">Map</a>
 </li>
 <li>getTileIndexX()
 : <a class="el" href="class_grid.html#af4094832e2adedbbd47889973f5a40da">Grid</a>
@@ -322,6 +317,7 @@ $(function() {
 </li>
 <li>getTileNo()
 : <a class="el" href="class_grid.html#a93e42713b7af1f188ce90f92a5e202ab">Grid</a>
+, <a class="el" href="class_map.html#af9727bc4d5a77cb35b60d92d0e176171">Map</a>
 </li>
 <li>getTime()
 : <a class="el" href="class_antenna_info.html#aaae1e1105ba4a724c0061e3f7904b1e5">AntennaInfo</a>
@@ -337,18 +333,22 @@ $(function() {
 </li>
 <li>getXOrigin()
 : <a class="el" href="class_grid.html#a08b534c7f8e1099a6903bf08d9727842">Grid</a>
+, <a class="el" href="class_map.html#af3e4dc640ee38ff6e77ab41435fcc42d">Map</a>
 </li>
 <li>getXTileDim()
 : <a class="el" href="class_grid.html#a1c5b9ad91fac264bcdd67f99bc93f663">Grid</a>
+, <a class="el" href="class_map.html#a0a7326f8167effc1b6c0329de3c29d60">Map</a>
 </li>
 <li>getY()
 : <a class="el" href="class_antenna_info.html#aa385e3e85d783b81d69014a64b5fc94f">AntennaInfo</a>
 </li>
 <li>getYOrigin()
 : <a class="el" href="class_grid.html#a53141770920cf261579cf164a8909af9">Grid</a>
+, <a class="el" href="class_map.html#a5bf4ef0a81f82df90465136c61a440bc">Map</a>
 </li>
 <li>getYTileDim()
 : <a class="el" href="class_grid.html#aedfe477f5be79a375bd64a4d21765918">Grid</a>
+, <a class="el" href="class_map.html#af36385173af71e8e0cd989dceb8f8aea">Map</a>
 </li>
 <li>Grid()
 : <a class="el" href="class_grid.html#a84b0dc169028f21175a4549afde86153">Grid</a>
