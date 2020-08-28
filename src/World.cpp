@@ -480,10 +480,6 @@ void World::setPostProbMethod(const std::shared_ptr<PostLocProb>& post) {
 	m_postMethod = post;
 }
 
-PriorType World::getPrior() {
-	return m_prior;
-}
-
 void World::computeProbabilities(std::map<unsigned long, vector<AntennaInfo>> data) {
 	m_postMethod->computeProbabilities(data);
 }
