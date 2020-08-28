@@ -58,7 +58,7 @@ public:
 	virtual Point* generateNewLocation(Point* p) override;
 
 	/**
-	 * Destructor. Does nothing.
+	 * Destructor. It does nothing.
 	 */
 	virtual ~RandomWalkDisplacement();
 };

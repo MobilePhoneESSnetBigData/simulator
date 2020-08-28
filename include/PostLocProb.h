@@ -35,15 +35,41 @@
 #include <map>
 
 using namespace std;
-
+/**
+ * This class implements a Strategy design pattern. It acts as an interface to different algorithms for posterior
+ * location probabilities computation.
+ */
 class PostLocProb {
 public:
+	/**
+	 * Constructor of the class. It initializes the members according to the values given as parameters.
+	 * @param map a pointer to the Map object of the simulation.
+	 * @param clk a pointer to the Clock object of the simulation.
+	 * @param agents a pointer to the AgentsCollection object (it contains all the agents in a simulation).
+	 * @param probFiles a map object containing the name of the files where the probabilities are saved, one file per MNO.
+	 */
 	PostLocProb(const Map* m, Clock* clk, AgentsCollection* agents, map<const unsigned long, const string> probFiles);
 
+	/**
+	 * Default destructor.
+	 */
 	virtual ~PostLocProb();
 
-		virtual void computeProbabilities(std::map<unsigned long, vector<AntennaInfo>> data);
+	/**
+	 *  Computes the posterior location probabilities. It iterates over all time instants and mobile phone and calls the prob()
+	 *  pure virtual function which implements the actual algorithm for the location probabilities.
+	 * @param data a vector with the network events.
+	 */
+	virtual void computeProbabilities(std::map<unsigned long, vector<AntennaInfo>> data);
 
+	/**
+	 * A pure virtual function that is implemented in each of the concrete subclasses derived from \class PostLocProb.
+	 * @param t the time instant for which the location probabilities are computed.
+	 * @param m a pointer to a MobilePhone object for which the location probabilities are computed.
+	 * @param data a vector with network events registered during the simulation.
+	 * @param it iterator over the Antenna's objects.
+	 * @return a vector with posterior location probabilities for a time instant and a mobile phone.
+	 */
 	virtual vector<double> prob(unsigned long t, MobilePhone* m, vector<AntennaInfo>& data, pair<um_iterator, um_iterator> it) = 0;
 
 protected:
@@ -58,3 +84,11 @@ protected:
 };
 
 #endif /* SRC_POSTERIORLOCATIONPROBABILITIES_H_ */
+
+
+/**
+ * Constructor of the class. Initializes members.
+ * @param map a pointer to the Map object of the simulation.
+ * @param clk a pointer to the Clock object of the simulation.
+ * @param speed the speed of displacement.
+ */

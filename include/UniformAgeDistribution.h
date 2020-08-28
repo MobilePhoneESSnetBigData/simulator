@@ -25,10 +25,24 @@
 
 #include <AgeDistribution.h>
 
+/**
+ * Subclass of the \class AgeDistribution. It implements the uniform distribution.
+ */
 class UniformAgeDistribution: public AgeDistribution {
 public:
+
+	/**
+	 * Constructor of the class. It sets the members according to the values given as parameters.
+	 * @param min_age the minimum value for the age distribution.
+	 * @param max_age the maximum value for the age distribution.
+	 */
 	UniformAgeDistribution(int min_age, int max_age);
+
+	/**
+	 * Default destructor.
+	 */
 	virtual ~UniformAgeDistribution();
 };
 
 #endif /* INCLUDE_UNIFORMAGEDISTRIBUTION_H_ */
+

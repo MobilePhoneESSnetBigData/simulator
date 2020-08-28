@@ -25,13 +25,47 @@
 
 #include <AgeDistribution.h>
 
+/**
+ * Subclass of the \class AgeDistribution. It implements a truncated normal distribution.
+ */
 class TruncatedNormalAgeDistribution: public AgeDistribution {
 public:
+	/**
+	 * Constructor of the class. It sets the members according to the values given as parameters.
+	 * @param minAge the minimum value of the truncated normal age distribution.
+	 * @param maxAge the maximum value of the truncated normal age distribution.
+	 * @param meanAge the mean value of the truncated normal age distribution.
+	 * @param sd the standard deviation value of the  standard deviation.
+	 */
 	TruncatedNormalAgeDistribution(int minAge, int maxAge, double meanAge, double sd);
+
+	/**
+	 * Default destructor.
+	 */
 	virtual ~TruncatedNormalAgeDistribution();
+
+	/**
+	 * Returns the mean of the age distribution.
+	 * @return the mean value of the age distribution.
+	 */
 	double getMean() const;
+
+	/**
+	 * Sets the mean value of the age distribution.
+	 * @param mean the mean value of the age distribution.
+	 */
 	void setMean(double mean);
+
+	/**
+	 * Returns the standard deviation of the age distribution.
+	 * @return the standard deviation of the age distribution.
+	 */
 	double getSd() const;
+
+	/**
+	 * Sets the value of the standard deviation of the age distribution.
+	 * @param sd the standard deviation of the age distribution.
+	 */
 	void setSd(double sd);
 
 private:

@@ -136,9 +136,11 @@ public:
 	 */
 	map<const unsigned long, const string> getProbFilenames() const;
 
+	/**
+	 * Sets the posterior location probability method
+	 * @param post a pointer to an object implementing the method to compute the posterior location probabilities.
+	 */
 	void setPostProbMethod(const std::shared_ptr<PostLocProb>& post);
-
-	PriorType getPrior();
 
 	/**
 	 * Returns the name of the output folder.
@@ -181,7 +183,6 @@ private:
 	shared_ptr<PostLocProb> m_postMethod;
 
 	vector<Person*> generatePopulation(unsigned long numPersons, double percentHome);
-
 	vector<Person*> generatePopulation(const unsigned long numPersons, shared_ptr<AgeDistribution> age_distribution,
 			double male_share, vector<MobileOperator*> mnos, double speed_walk, double speed_car, double percentHome);
 
@@ -202,25 +203,8 @@ private:
 	MovementType parseMovement(XMLElement* el);
 	HoldableAgent::CONNECTION_TYPE parseConnectionType(XMLElement* el);
 	vector<MobileOperator*> parseMNOs(XMLElement* el);
-	//TODO make it private
-	/**
-	 * Returns the dimension of tiles on OX, this number is read from simulation configuration file.
-	 * @return the dimension of tiles on OX, this number is read from simulation configuration file.
-	 */
 	double getGridDimTileX() const;
-
-	//TODO make it private
-	/**
-	 * Returns the dimension of tiles on OY, this number is read from simulation configuration file.
-	 * @return the dimension of tiles on OY, this number is read from simulation configuration file.
-	 */
 	double getGridDimTileY() const;
-
-	//TODO make it private
-	/** Returns the type of the handover mechanism
-	 * @return the type of the handover mechanism: HoldableAgent::CONNECTION_TYPE::USING_SIGNAL_QUALITY,
-	 *  HoldableAgent::CONNECTION_TYPE::USING_SIGNAL_STRENGTH, HoldableAgent::CONNECTION_TYPE::USING_POWER
-	 */
 	HoldableAgent::CONNECTION_TYPE getConnectionType() const;
 };
 
