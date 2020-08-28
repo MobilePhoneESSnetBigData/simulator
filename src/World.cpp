@@ -337,12 +337,21 @@ vector<MobileOperator*> World::parseSimulationFile(const string& configSimulatio
 		throw std::runtime_error("Syntax error in the configuration file for simulation ");
 	else {
 		m_outputDir = getValue(simEl, "output_dir", Constants::OUTPUT_DIR);
+		#ifdef OSX
 		try{
-			std::filesystem::create_directory(filesystem::path(m_outputDir.c_str()));
-		} catch(filesystem::filesystem_error& e) {
+			std::__fs::filesystem::create_directory(std::__fs::filesystem::path(m_outputDir.c_str()));
+		} catch(std::__fs::filesystem::filesystem_error& e) {
 			cerr << "Cannot create output folder :" << m_outputDir;
 			throw e;
 		}
+		else
+			try{
+				std::filesystem::create_directory(std::filesystem::path(m_outputDir.c_str()));
+			} catch(std::filesystem::filesystem_error& e) {
+				cerr << "Cannot create output folder :" << m_outputDir;
+				throw e;
+			}
+		#endif
 		m_startTime = getValue(simEl, "start_time", Constants::SIM_START_TIME);
 		m_endTime = getValue(simEl, "end_time", Constants::SIM_END_TIME);
 		m_timeIncrement = getValue(simEl, "time_increment", Constants::SIM_INCREMENT_TIME);

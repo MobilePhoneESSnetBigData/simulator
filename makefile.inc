@@ -18,11 +18,11 @@ endif
 #-------[TARGET, FLAGS etc depending on OS]---------
 
 ifeq ($(OS),Windows_NT)
-	CXX    = g++.exe
+ 	CXX    = g++.exe
 	TARGET = simulator.exe
 	LDFLAGS = -L$(MSYS_HOME)/mingw64/lib
 	LIBS = $(GEOS_HOME)/libgeos.dll.a -lstdc++fs
-	CXXFLAGS = -march=native
+	CXXFLAGS += -march=native
 
 else
     UNAME_S := $(shell uname -s)
@@ -32,7 +32,7 @@ else
 		TARGET  = simulator
 		LDFLAGS = -L$(GEOS_HOME) -lstdc++fs
 		LIBS = $(GEOS_HOME)/libgeos.a
-		CXXFLAGS = -march=native
+		CXXFLAGS += -march=native
 
     endif
     ifeq ($(UNAME_S),Darwin)
@@ -40,9 +40,9 @@ else
 		CXX		= g++
 		TARGET	= simulator
 		LDFLAGS = -L$(GEOS_HOME)
-		LIBS = $(GEOS_HOME)/libgeos.dylib -lstdc++fs
-		CXXFLAGS = -march=native
-		CLANG_CXXFLAGS = -march=native
+		LIBS = $(GEOS_HOME)/libgeos.dylib -lstdc++
+		CXXFLAGS += -march=native
+		CLANG_CXXFLAGS += -march=native
     endif
 endif
 

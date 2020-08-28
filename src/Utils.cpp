@@ -43,6 +43,8 @@
 #include <string>
 #include <unordered_map>
 #include <limits>
+#include <sstream>
+#include<filesystem>
 
 namespace utils {
 using namespace geos;
@@ -222,7 +224,7 @@ const char* getValue(XMLElement* el, const char* name, const char* default_value
 	XMLNode* n = getNode(el, name);
 	if (n)
 		result = n->ToText()->Value();
-	;
+
 	return result;
 }
 
@@ -240,7 +242,7 @@ double getValue(XMLElement* el, const char* name) {
 	if (n)
 		result = atof(n->ToText()->Value());
 	else {
-		string msg = string { "no value for " } + string { name };
+		string msg = string ( "no value for " ) + string ( name );
 		throw runtime_error(msg);
 	}
 	return result;
