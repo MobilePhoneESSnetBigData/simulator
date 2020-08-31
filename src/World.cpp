@@ -626,7 +626,7 @@ MovementType World::parseMovement(XMLElement* el) {
 		result = MovementType::LEVY_FLIGHT;
 	}
 	else
-		result = MovementType::UNKNOWN;
+		throw runtime_error("Unknown displacement mechanism!");
 	return (result);
 }
 
